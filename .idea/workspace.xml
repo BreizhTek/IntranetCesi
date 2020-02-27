@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8a34be6-e809-496c-884a-0fdd4d0f3f77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/modele/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/bdd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/inscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="09fe6942-9121-414e-b411-63eb255d24bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ressources/modele/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +29,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
