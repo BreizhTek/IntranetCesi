@@ -8,7 +8,22 @@ class ControllerChat {
 
         $chat = new Chat();
 
-        require "./view/Chat/Default.php";
+        $messages = $chat->getMessages();
+        $allMessage = "";
+
+        foreach ($messages as $Item)
+        {
+            require "./view/Chat/message.php";
+            $allMessage = $allMessage . $message;
+        }
+
+        require "./view/Chat/index.php";
+
+    }
+
+    public function createChannel(){
+
+        require "./view/Chat/createChat.php";
 
     }
 

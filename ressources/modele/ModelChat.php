@@ -32,4 +32,15 @@ class Chat {
 
     }
 
+    public function getMessages()
+    {
+
+        $request = $this->connect()->prepare("SELECT * FROM Messages");
+
+        $request->execute();
+
+        return $request->fetchAll();
+
+    }
+
 }

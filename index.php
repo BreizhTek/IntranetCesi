@@ -37,7 +37,9 @@ switch ($request[0]) {
 
             }
             else{
-                abort();
+
+                $chat->createChannel();
+
             }
 
 
@@ -58,10 +60,8 @@ switch ($request[0]) {
         }
 
         break;
-    case '/createchannel' :
-
-
-
+    case '/user' :
+        require './view/user.php';
         break;
     default:
         http_response_code(404);
