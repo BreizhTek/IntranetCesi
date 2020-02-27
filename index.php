@@ -3,9 +3,11 @@
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
+$request = explode('?', $request)[0];
 $request = explode('/', $request);
 
 
+var_dump($request);
 function abort()
 {
     echo "404";
@@ -48,9 +50,23 @@ switch ($request[0]) {
         elseif (empty($request[1])) {
 
             if (!empty($_POST)) {
+
                 echo "post";
-            } else {
-                $chat->index();
+
+            }
+            else
+            {
+                var_dump($_GET);
+
+                if(isset($_GET['channel']))
+                {
+                    echo $_GET['channel'];
+                }
+                else
+                {
+                    $chat->index();
+                }
+
             }
 
         }
