@@ -10,8 +10,21 @@ switch ($request) {
     case '' :
         echo "root";
         break;
-    case '/about' :
-        echo "about";
+    case '/chat' :
+
+        require('controller/ControllerChat.php');
+
+        $chat = new ControllerChat();
+
+        if (!empty($_POST))
+        {
+            echo "post";
+        }
+        else
+        {
+            $chat->index();
+        }
+
         break;
     case '/user' :
         require './view/user.php';

@@ -4,24 +4,18 @@ define('DSN', 'mysql:host=localhost;dbname=Intranet');
 define('USER', 'admin');
 define('PASS', 'admin');
 
+function database() {
 
-class dataBase {
-
-    public function connect()
-    {
         try
         {
-            $bd = new PDO(DSN,USER,PASS);
+            $db = new PDO(DSN,USER,PASS);
         }
         catch(PDOException $e)
         {
-            echo 'Erreur : ' . $e->getMessage();
-
+            error_log($e->getMessage());
             return false;
         }
 
-        return $bd;
-
-    }
+        return $db;
 
 }
