@@ -9,9 +9,6 @@
       <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,7 @@
       <updated>1582722458630</updated>
       <workItem from="1582722461416" duration="65000" />
       <workItem from="1582722528968" duration="1578000" />
-      <workItem from="1582789579444" duration="18099000" />
+      <workItem from="1582789579444" duration="18827000" />
     </task>
     <task id="LOCAL-00001" summary="ajout fichiers fiche utilisateur">
       <created>1582790494273</created>
@@ -80,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582808264457</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout user par l'interface + script SQL">
+      <created>1582812018606</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582812018606</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +95,8 @@
     <MESSAGE value="formulaire et l'update pour le controlleur et la vue sont ok." />
     <MESSAGE value="lien easy fiche utilisateur" />
     <MESSAGE value="Style forulaire fiche utilisateur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style forulaire fiche utilisateur" />
+    <MESSAGE value="Ajout user par l'interface + script SQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout user par l'interface + script SQL" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582722825537">
@@ -102,18 +107,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582794404033" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582808263424">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582812017514">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582808263424" />
-    <state x="0" y="90" key="MergeDialog" timestamp="1582808322581">
+    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582812017514" />
+    <state x="0" y="90" key="MergeDialog" timestamp="1582812034151">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="0" y="90" key="MergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582808322581" />
-    <state x="192" y="244" key="MultipleFileMergeDialog" timestamp="1582808361280">
+    <state x="0" y="90" key="MergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582812034151" />
+    <state x="192" y="244" key="MultipleFileMergeDialog" timestamp="1582812035663">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="192" y="244" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582808361280" />
+    <state x="192" y="244" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582812035663" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1582794328315">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -126,18 +131,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1582806509294" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582808376053">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582812043862">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582808376053" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582812043862" />
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582791040269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582791040269" />
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582808271680">
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582813282787">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582808271680" />
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582813282787" />
     <state x="143" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1582811085837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
