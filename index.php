@@ -13,6 +13,9 @@ switch ($request) {
     case '/about' :
         echo "about";
         break;
+    case '/user' :
+        require './view/user.php';
+        break;
     default:
         http_response_code(404);
         echo "404";
