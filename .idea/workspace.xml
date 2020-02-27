@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="628de8f4-d700-4b07-83d5-52c46ddec084" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    <list default="true" id="a8a34be6-e809-496c-884a-0fdd4d0f3f77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/modele/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/bdd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,64 +24,52 @@
       <executable />
     </execution>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YLUo4aXOVKo6x8wvQRRwLY6yV9" />
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+  <component name="ProjectId" id="1YLWfaN3dafbwMAv3T6eqjmjGpY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="628de8f4-d700-4b07-83d5-52c46ddec084" name="Default Changelist" comment="" />
-      <created>1582721539162</created>
+      <changelist id="a8a34be6-e809-496c-884a-0fdd4d0f3f77" name="Default Changelist" comment="" />
+      <created>1582722458630</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582721539162</updated>
-      <workItem from="1582721540609" duration="670000" />
+      <updated>1582722458630</updated>
+      <workItem from="1582722461416" duration="65000" />
+      <workItem from="1582722528968" duration="1578000" />
+      <workItem from="1582789579444" duration="664000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582722825537">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582722825537" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1582727698184">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1582727698184" />
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582727710072">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582727710072" />
   </component>
 </project>
