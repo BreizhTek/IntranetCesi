@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8a34be6-e809-496c-884a-0fdd4d0f3f77" name="Default Changelist" comment="ajout fichiers fiche utilisateur">
-      <change afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/bdd.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/index.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/inscription.php" afterDir="false" />
@@ -10,9 +9,7 @@
       <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/user.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +49,7 @@
       <updated>1582722458630</updated>
       <workItem from="1582722461416" duration="65000" />
       <workItem from="1582722528968" duration="1578000" />
-      <workItem from="1582789579444" duration="10738000" />
+      <workItem from="1582789579444" duration="11304000" />
     </task>
     <task id="LOCAL-00001" summary="ajout fichiers fiche utilisateur">
       <created>1582790494273</created>
@@ -61,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582790494274</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="formulaire et l'update pour le controlleur et la vue sont ok.">
+      <created>1582800640759</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582800640759</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,7 +73,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout fichiers fiche utilisateur" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout fichiers fiche utilisateur" />
+    <MESSAGE value="formulaire et l'update pour le controlleur et la vue sont ok." />
+    <option name="LAST_COMMIT_MESSAGE" value="formulaire et l'update pour le controlleur et la vue sont ok." />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582722825537">
@@ -80,10 +85,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582794404033" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582790817694">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582801119864">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582790817694" />
+    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582801119864" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1582794328315">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -92,17 +97,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1582727698184" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582790513675">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582800665258">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582790513675" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582800665258" />
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582791040269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582791040269" />
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582790503422">
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582800648412">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582790503422" />
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582800648412" />
   </component>
 </project>

@@ -5,13 +5,7 @@
     <title>test</title>
 </head>
 <body>
-<?php
-    if (empty($_GET)) {
-        require_once 'controller/ControllerUser.php';
-        $controllerUser = new ControllerUser();
-        $controllerUser->index();
-    }
-?>
+<a href="view/user.php">fiche utilisateur</a>
 </body>
 </html>
 
