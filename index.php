@@ -2,7 +2,17 @@
 
 $request = $_SERVER['REQUEST_URI'];
 
-switch ($request) {
+$request = substr($request, 1);
+$request = explode('/', $request);
+
+
+function abort()
+{
+    echo "404";
+}
+
+
+switch ($request[0]) {
     case '/' :
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
@@ -10,25 +20,52 @@ switch ($request) {
     case '' :
         echo "root";
         break;
-    case '/chat' :
+    case 'chat' :
 
         require('controller/ControllerChat.php');
 
         $chat = new ControllerChat();
 
-        if (!empty($_POST))
+        if(!empty($request[1]) AND $request[1] == "createchannel")
         {
-            echo "post";
+
+            if (isset($_POST['channelName']) AND !empty($_POST['channelName']))
+            {
+
+
+                return true; //Create channel
+
+            }
+            else{
+                abort();
+            }
+
+
+
+        }
+        elseif (empty($request[1])) {
+
+            if (!empty($_POST)) {
+                echo "post";
+            } else {
+                $chat->index();
+            }
+
         }
         else
         {
-            $chat->index();
+            abort();
         }
+
+        break;
+    case '/createchannel' :
+
+
 
         break;
     default:
         http_response_code(404);
-        echo "404";
+        abort();
         break;
 }
 
