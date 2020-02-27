@@ -79,6 +79,22 @@ switch ($request[0]) {
     case '/user' :
         require './view/user.php';
         break;
+    /*case 'api' :
+
+        if(!empty($request[1]) AND $request[1] == 'depo')
+        {
+
+            depo = new depo();
+
+            switch ($request[2]) {
+                case 'getStatus':
+                    return json_encode(depo->getStatus());
+                    break;
+            }
+
+        }
+
+        break;*/
     default:
         http_response_code(404);
         abort();
