@@ -3,9 +3,11 @@
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
+$request = explode('?', $request)[0];
 $request = explode('/', $request);
 
 
+var_dump($request);
 function abort()
 {
     echo "404";
@@ -51,9 +53,23 @@ switch ($request[0]) {
         elseif (empty($request[1])) {
 
             if (!empty($_POST)) {
+
                 echo "post";
-            } else {
-                $chat->index();
+
+            }
+            else
+            {
+                var_dump($_GET);
+
+                if(isset($_GET['channel']))
+                {
+                    echo $_GET['channel'];
+                }
+                else
+                {
+                    $chat->index();
+                }
+
             }
 
         }
@@ -66,6 +82,22 @@ switch ($request[0]) {
     case '/user' :
         require './view/user.php';
         break;
+    /*case 'api' :
+
+        if(!empty($request[1]) AND $request[1] == 'depo')
+        {
+
+            depo = new depo();
+
+            switch ($request[2]) {
+                case 'getStatus':
+                    return json_encode(depo->getStatus());
+                    break;
+            }
+
+        }
+
+        break;*/
     default:
         http_response_code(404);
         abort();

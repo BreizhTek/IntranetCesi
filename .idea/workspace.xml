@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50da39d8-658e-4faf-84c9-2484343f95eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Chat/createChat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Chat/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Chat/message.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Chat/Default.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/Default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
