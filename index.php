@@ -17,7 +17,7 @@ switch ($request[0]) {
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
         break;
-    case '/depo' :
+    case 'depo' :
          require './controller/ControllerDeposit.php';
         break;
     case '' :

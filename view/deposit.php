@@ -8,6 +8,6 @@
 
 <p>Retour :<?php $Message ?> </p>
 </div>
-<!--<button><a href="deposit.php"">Afficher</a></button>-->
-<!--<button><a href="suppression.php"">Supprimmer</a></button>-->
+<button><a href="">Afficher</a></button>
+<button><a href="">Supprimmer</a></button>
 <!-------------------------------------------------------------------->
