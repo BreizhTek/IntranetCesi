@@ -1,12 +1,18 @@
 <?php
 
+$Deposit = new ControllerDeposit();
 
 class ControllerDeposit
 {
+    function __construct() {
+        require_once './ressources/composants/templatePage.php';
+        require_once './view/Deposit.php';
+    }
     public function upload(){
+
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty
         {
-            $folder = 'upload\\'; // Define the reception folder
+            $folder = '.\\storage\\'; // Define the reception folder
             $fileUpload = basename($_FILES['selectedFile']['name']); // Define the file's name
             $forbiddenExtension = array('.php'); // Define the forbidden extension for the security
             $extensionFile = strrchr($_FILES['selectedFile']['name'], '.'); // Get the file's extension
@@ -33,6 +39,8 @@ class ControllerDeposit
             }else{ $uploadReturn = 'Le fichier ne doit pas dépasser '.$fileSizeMax  .' mo.'; } // SIZE ERROR
 
         }else{ $uploadReturn = 'Aucun fichier n\'a été sélectionné.'; } // No file detected - ERROR
+
+        return $uploadReturn;
     }
 
     public function suppression(){
@@ -44,7 +52,7 @@ class ControllerDeposit
 
                 $fileName = '' . $address . $_GET['fileName'] . '';
                 unlink($fileName); // Delete file
-                echo 'Le fichier ' . $_GET['fileName'] . ' a été effacé !<br>';
+                echo 'Le fichier ' . $_GET['fileName'] . ' a bien été supprimmé.<br>';
             }
         }
     }
@@ -61,11 +69,10 @@ class ControllerDeposit
                 $i++;
             }
         }
-
-        foreach ($downloadFile as $fileName) {
-
-            echo '<a href="suppression.php?fileName=' . $fileName . '">Supprimer</a> => <a href=' . $folderAddress . $fileName . ' target="_blank">' . $fileName . '</a><BR>';
-        }
-
     }
 }
+
+?>
+
+
+

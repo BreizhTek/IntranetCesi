@@ -7,6 +7,9 @@ switch ($request) {
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
         break;
+    case '/depo' :
+         require './controller/ControllerDeposit.php';
+        break;
     case '' :
         echo "root";
         break;
