@@ -14,6 +14,21 @@
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
                     <label
+                        for="Id"
+                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    >Id : </label>
+                    <input
+                        type="text"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="Id"
+                        name="Id"
+                        value="<?php echo (($row <> "") ? $row['Id'] : "")?>"
+                    >
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label
                         for="Level"
                         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     >Status : </label>
@@ -23,6 +38,21 @@
                         id="Level"
                         name="Level"
                         value="<?php echo (($row <> "") ? $row['Level'] : "")?>"
+                    >
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label
+                        for="Post"
+                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    >Post : </label>
+                    <input
+                        type="text"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="Post"
+                        name="Post"
+                        value="<?php echo (($row <> "") ? $row['Post'] : "")?>"
                     >
                 </div>
             </div>
@@ -68,19 +98,6 @@
                         value="<?php echo (($row <> "") ? $row['Birth'] : "")?>"
                     >
                 </div>
-                <div class="form-group">
-                    <label
-                        for="Class"
-                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    >Promotion :</label>
-                    <input
-                        type="text"
-                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                        id="Class"
-                        name="Class"
-                        value="<?php echo (($row <> "") ? $row['Id_Class'] : "")?>"
-                    >
-                </div>
             </div>
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -104,8 +121,8 @@
                     <input
                         type="email"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                        id="MAil"
-                        name="MAil"
+                        id="Mail"
+                        name="Mail"
                         value="<?php echo (($row <> "") ? $row['Mail'] : "")?>"
                     >
                 </div>
@@ -150,6 +167,21 @@
                         id="MailTutor"
                         name="MailTutor"
                         value="<?php echo(($row <> "") ? $row['Tutor_mail'] : "")?>"
+                    >
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label
+                        for="Password"
+                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    >MDP : </label>
+                    <input
+                        type="text"
+                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                        id="Password"
+                        name="Password"
+                        value="<?php echo (($row <> "") ? $row['Password'] : "")?>"
                     >
                 </div>
             </div>
