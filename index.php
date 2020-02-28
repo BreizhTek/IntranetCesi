@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $request = $_SERVER['REQUEST_URI'];
 
 switch ($request) {
@@ -29,6 +29,18 @@ switch ($request) {
     case '/user' :
         require './view/user.php';
         break;
+        
+    case '/login' :
+        require('controller/ControllerLogin.php');
+        $login = new ControllerLogin();
+
+        if (!empty($_POST)){
+            $login->authentification();
+        } else {
+            $login->index();
+        }
+        break;
+        
     default:
         http_response_code(404);
         echo "404";

@@ -1,6 +1,10 @@
 <?php
+
+
 class User
 {
+
+
     public function getLastUser()
     {
         // On simule une communication BDD
@@ -9,4 +13,8 @@ class User
         $return->prenom = 'Toto';
         return $return;
     }
+
+
+
+
 }
