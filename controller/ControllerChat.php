@@ -22,7 +22,7 @@ class ControllerChat {
 
         $messages = $chat->getMessages($channelName, $userid);
 
-        if ($messages == false)
+        if ($messages === false)
             $this->index();
 
         require __DIR__ . "/../view/Chat/message.php";
