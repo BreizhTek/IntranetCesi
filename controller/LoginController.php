@@ -20,7 +20,7 @@ class LoginControll {
             /*
              * Create a function which can to check an user and her status
              */
-            $user_check = new User();
+            $user_check = new ModelUser();
 
             //Check if user's level exist
             if (!empty($user_check->getLevel()->getLibelle())){

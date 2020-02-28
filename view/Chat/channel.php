@@ -4,7 +4,7 @@
 
     <div id="displayMessage" class="bg-white min-h-full rounded-lg p-4">
 
-        <?php echo $allMessage; ?>
+        <?php echo $rendered; ?>
 
     </div>
 
