@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
@@ -45,18 +46,15 @@ switch ($request[0]) {
                 }
 
             }
-            else
+            elseif(isset($_GET['channel']) and $_GET['channel'] != null)
             {
 
-                if(isset($_GET['channel']))
-                {
-                    echo $_GET['channel'];
-                }
-                else
-                {
-                    $chat->index();
-                }
+                    $chat->channel($_GET['channel']);
 
+            }
+            else
+            {
+                $chat->index();
             }
 
         }
@@ -96,6 +94,24 @@ switch ($request[0]) {
 
         break;
 
+
+
+    case 'login' :
+        require('controller/ControllerLogin.php');
+        $login = new ControllerLogin();
+
+        if (!empty($_POST)){
+            $login->authentification();
+        } else {
+            $login->index();
+        }
+        break;
+
+    case 'logout' :
+        session_destroy();
+        header('Location: /login');
+        exit();
+        break;
 
     default:
         http_response_code(404);

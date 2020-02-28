@@ -1,10 +1,10 @@
 <?php ob_start(); ?>
 
-<div class="border-gray-700 bg-gray-500 border-2 rounded-lg p-4 w-1/2">
+<div class="bg-blue rounded-lg p-4 w-1/2">
 
     <div id="displayMessage" class="bg-white min-h-full rounded-lg p-4">
 
-        <?php echo $rendered; ?>
+        <?php echo $renderedMessages; ?>
 
     </div>
 
@@ -16,7 +16,7 @@
                 <input class="w-full appearance-none px-2 rounded-full" type="text" placeholder="Message" name="channel">
             </div>
 
-            <div class="w-1/4 py-2 px-4 bg-gray-600">
+            <div class="w-1/4 py-2 px-4 bg-blue font-bold text-white">
                 <button class="text-center w-full rounded-full">Valider</button>
             </div>
 
