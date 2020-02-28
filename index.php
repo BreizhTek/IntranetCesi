@@ -1,5 +1,9 @@
 <?php
 
+
+require __DIR__ . "/functions.php";
+require __DIR__ . "/controller/ControllerChat.php";
+
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
@@ -25,34 +29,18 @@ switch ($request[0]) {
         break;
     case 'chat' :
 
-        require('controller/ControllerChat.php');
-
         $chat = new ControllerChat();
 
-        if(!empty($request[1]) AND $request[1] == "createchannel")
-        {
-
-            if (isset($_POST['channelName']) AND !empty($_POST['channelName']))
-            {
-
-
-                return true; //Create channel
-
-            }
-            else{
-
-                ControllerChat::createChannel();
-
-            }
-
-
-
-        }
-        elseif (empty($request[1])) {
+        if (empty($request[1])) {
 
             if (!empty($_POST)) {
 
-                echo "post";
+                if (isset($_POST['newChannel']) and $_POST['newChannel'] != null)
+                {
+
+                    $chat->createChannel($_POST['newChannel']);
+
+                }
 
             }
             else

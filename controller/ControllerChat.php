@@ -8,22 +8,43 @@ class ControllerChat {
 
         $chat = new Chat();
 
-        $messages = $chat->getMessages();
-        $allMessage = "";
+        $channels = $chat->getChannels(2);
 
-        foreach ($messages as $Item)
-        {
-            require "./view/Chat/message.php";
-            $allMessage = $allMessage . $message;
-        }
-
-        require "./view/Chat/index.php";
+        require_once __DIR__ . "/../view/Chat/listChannels.php";
 
     }
 
-    public static function createChannel(){
+    public function channel(){
 
-        require "./view/Chat/createChat.php";
+        $chat = new Chat();
+
+        $messages = $chat->getMessages();
+
+        require __DIR__ . "/../view/Chat/message.php";
+
+        require __DIR__ . "/../view/Chat/channel.php";
+
+    }
+
+    public function createChannel($name){
+
+        $chat = new Chat();
+
+
+        if($chat->channelExist($name) == false)
+        {
+
+            $chat->addChannel($name, 2);
+
+        }
+        else
+        {
+            $this->index();
+            return false;
+        }
+
+        $this->index();
+        return true;
 
     }
 

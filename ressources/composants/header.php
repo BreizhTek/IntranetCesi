@@ -33,7 +33,7 @@
 
             <div class="flex flex-row w-1/3 justify-end font-bold">
                 <p class="border-b-2 border-transparent hover:border-white"><a href="">Accueil</a></p>
-                <p class="ml-4 border-b-2 border-transparent hover:border-white"><a href="">Accueil</a></p>
+                <p class="ml-4 border-b-2 border-transparent hover:border-white"><a href="/chat">Chat</a></p>
                 <p class="ml-4 border-b-2 border-transparent hover:border-white"><a href="">Accueil</a></p>
                 <input type="text" class="ml-4 appearance-none rounded-full px-4 w-2/5 text-black" placeholder="Rechercher ...">
             </div>
