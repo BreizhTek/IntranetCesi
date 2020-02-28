@@ -43,18 +43,15 @@ switch ($request[0]) {
                 }
 
             }
-            else
+            elseif(isset($_GET['channel']) and $_GET['channel'] != null)
             {
 
-                if(isset($_GET['channel']))
-                {
-                    echo $_GET['channel'];
-                }
-                else
-                {
-                    $chat->index();
-                }
+                    $chat->channel($_GET['channel']);
 
+            }
+            else
+            {
+                $chat->index();
             }
 
         }

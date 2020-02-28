@@ -14,11 +14,16 @@ class ControllerChat {
 
     }
 
-    public function channel(){
+    public function channel($channelName){
 
         $chat = new Chat();
 
-        $messages = $chat->getMessages();
+        $userid = 2;
+
+        $messages = $chat->getMessages($channelName, $userid);
+
+        if ($messages == false)
+            $this->index();
 
         require __DIR__ . "/../view/Chat/message.php";
 

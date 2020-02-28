@@ -5,8 +5,8 @@ foreach ($messages as $Item) {?>
 
 <div class="flex flex-row my-4">
 
-    <div class="w-1/12">
-        <p><?php echo $Item['Id'] ?></p>
+    <div class="px-4 mr-6 border-r border-blue">
+        <p><?php echo $Item['First_name'] ?></p>
     </div>
 
     <div>
@@ -18,4 +18,4 @@ foreach ($messages as $Item) {?>
 <?php } ?>
 
 
-<?php $rendered = ob_get_clean(); ?>
+<?php $renderedMessages = ob_get_clean(); ?>

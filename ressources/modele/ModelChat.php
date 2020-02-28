@@ -36,15 +36,48 @@ class Chat {
 
     }
 
-    public function getMessages()
+    public function getMessages($channelId, $userId)
     {
 
-        $request = $this->connect()->prepare("SELECT * FROM Messages");
+        if (!$this->channelExist($this->getChannelName($channelId)))
+            return false;
+
+
+        if (!$this->grantedToShowThisChannel($channelId, $userId))
+            return false;
+
+
+        $request = $this->connect()->prepare("SELECT U.First_name, M.Content, M.Date FROM Discussion AS D
+                                                        INNER JOIN Users AS U ON U.Id = D.Id
+                                                        INNER JOIN Messages AS M ON M.Id = D.Id_Messages
+                                                        INNER JOIN Channels AS C
+                                                        WHERE C.Id = :channelId;");
+
+        $request->bindValue(':channelId', $channelId);
 
         $request->execute();
 
         return $request->fetchAll();
 
+    }
+
+    public function grantedToShowThisChannel($channelId, $userId)
+    {
+
+        $request = $this->connect()->prepare("SELECT * FROM Channel_users WHERE Id = :channelId AND Id_Users = :userid");
+
+        $request->bindValue('channelId', $channelId);
+
+        $request->bindValue('userid', $userId);
+
+        $request->execute();
+
+        if (!empty($request->fetch()))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public function channelExist($name)
@@ -98,6 +131,28 @@ class Chat {
        {
            return false;
        }
+
+    }
+
+    public function getChannelName($channelId)
+    {
+
+        $request = $this->connect()->prepare("SELECT Name FROM Channels WHERE Id = :id");
+
+        $request->bindValue(':id', $channelId);
+
+        $request->execute();
+
+        $Name = $request->fetch();
+
+        if (!empty($Name))
+        {
+            return $Name['Name'];
+        }
+        else
+        {
+            return false;
+        }
 
     }
 

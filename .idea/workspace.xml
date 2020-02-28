@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50da39d8-658e-4faf-84c9-2484343f95eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/Chat/listChannels.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Chat/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/channel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/channel.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/channel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Chat/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/message.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,6 +83,7 @@
       <workItem from="1582789579444" duration="664000" />
       <workItem from="1582805594219" duration="1489000" />
       <workItem from="1582876326588" duration="180000" />
+      <workItem from="1582893202062" duration="1556000" />
     </task>
     <servers />
   </component>
