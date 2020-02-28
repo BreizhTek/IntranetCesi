@@ -6,8 +6,6 @@ $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
 
-
-var_dump($request);
 function abort()
 {
     echo "404";
@@ -43,7 +41,7 @@ switch ($request[0]) {
             }
             else{
 
-                $chat->createChannel();
+                ControllerChat::createChannel();
 
             }
 
@@ -59,7 +57,6 @@ switch ($request[0]) {
             }
             else
             {
-                var_dump($_GET);
 
                 if(isset($_GET['channel']))
                 {

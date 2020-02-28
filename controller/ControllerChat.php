@@ -21,7 +21,7 @@ class ControllerChat {
 
     }
 
-    public function createChannel(){
+    public static function createChannel(){
 
         require "./view/Chat/createChat.php";
 
