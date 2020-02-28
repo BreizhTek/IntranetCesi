@@ -1,8 +1,9 @@
 <?php
 
 $request = $_SERVER['REQUEST_URI'];
+$req = explode("/", $request);
 
-switch ($request) {
+switch ("/".$req["1"]) {
     case '/' :
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
@@ -26,8 +27,26 @@ switch ($request) {
         }
 
         break;
+    case '/db' :
+        require './db.php';
+        break;
     case '/user' :
-        require './view/user.php';
+        require 'controller/ControllerUser.php';
+        if(isset($_POST['envoyerUpdate'])){
+            $controllerUser = new ControllerUser();
+            $controllerUser->update();
+        }elseif (isset($_POST['envoyerInsert'])){
+            $controllerUser = new ControllerUser();
+            $controllerUser->insert();
+        }else{
+            $controllerUser = new ControllerUser();
+            $controllerUser->index();
+        }
+        break;
+    case '/allUser' :
+        require 'controller/ControllerAllUser.php';
+        $controllerAllUser = new ControllerAllUser();
+        $controllerAllUser->index();
         break;
     default:
         http_response_code(404);
