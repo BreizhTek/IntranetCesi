@@ -96,14 +96,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895385139">
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895385139" />
-    <state x="224" y="84" key="DiffContextDialog" timestamp="1582895384015">
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
+    <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895384015" />
+    <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895418413" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1582813423755">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -120,5 +120,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
   </component>
 </project>
