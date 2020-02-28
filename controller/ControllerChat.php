@@ -8,6 +8,8 @@ class ControllerChat {
 
         $chat = new Chat();
 
+        var_dump($_SESSION);
+
         $channels = $chat->getChannels(2);
 
         require_once __DIR__ . "/../view/Chat/listChannels.php";

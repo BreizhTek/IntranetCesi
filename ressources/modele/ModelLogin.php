@@ -33,7 +33,7 @@ class ModelLogin
 
     public function getUserByEmail($email){
         $db = database();
-        $sql ="SELECT * FROM users WHERE users.Mail = :email;";
+        $sql ="SELECT * FROM Users WHERE Mail = :email;";
 
         $request = $db->prepare($sql);
 

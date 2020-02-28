@@ -7,7 +7,7 @@ class Chat {
     {
         try
         {
-            $db = new PDO(DSN,USER,PASS);
+            $db = new PDO('mysql:host=localhost;dbname=Intranet','admin','admin');
         }
         catch(PDOException $e)
         {
