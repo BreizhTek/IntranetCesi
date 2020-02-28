@@ -1,5 +1,8 @@
 <?php ob_start(); ?>
 
+<?php
+foreach ($messages as $Item) {?>
+
 <div class="flex flex-row my-4">
 
     <div class="w-1/12">
@@ -12,4 +15,7 @@
 
 </div>
 
-<?php $message = ob_get_clean(); ?>
+<?php } ?>
+
+
+<?php $rendered = ob_get_clean(); ?>

@@ -1,5 +1,9 @@
 <?php
 
+
+require __DIR__ . "/functions.php";
+require __DIR__ . "/controller/ControllerChat.php";
+
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
@@ -17,42 +21,27 @@ switch ($request[0]) {
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
         break;
-    case '/depo' :
+    case 'depo' :
          require './controller/ControllerDeposit.php';
+         $Deposit = new ControllerDeposit();
         break;
     case '' :
         echo "root";
         break;
     case 'chat' :
 
-        require('controller/ControllerChat.php');
-
         $chat = new ControllerChat();
 
-        if(!empty($request[1]) AND $request[1] == "createchannel")
-        {
-
-            if (isset($_POST['channelName']) AND !empty($_POST['channelName']))
-            {
-
-
-                return true; //Create channel
-
-            }
-            else{
-
-                $chat->createChannel();
-
-            }
-
-
-
-        }
-        elseif (empty($request[1])) {
+        if (empty($request[1])) {
 
             if (!empty($_POST)) {
 
-                echo "post";
+                if (isset($_POST['newChannel']) and $_POST['newChannel'] != null)
+                {
+
+                    $chat->createChannel($_POST['newChannel']);
+
+                }
 
             }
             else
@@ -110,6 +99,7 @@ switch ($request[0]) {
         }
 
         break;*/
+
     default:
         http_response_code(404);
         abort();

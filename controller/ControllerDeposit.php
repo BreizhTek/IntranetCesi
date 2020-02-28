@@ -1,13 +1,13 @@
 <?php
 
-$Deposit = new ControllerDeposit();
+
 
 class ControllerDeposit
 {
-    function __construct() {
-        require_once './ressources/composants/templatePage.php';
-        require_once './view/Deposit.php';
-    }
+   function __construct() {
+       require_once './ressources/composants/templatePage.php';
+       require_once './view/Deposit.php';
+  }
     public function upload(){
 
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty
