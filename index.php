@@ -76,8 +76,23 @@ switch ($request[0]) {
         }
 
         break;
-    case '/user' :
-        require './view/user.php';
+    case 'user' :
+        require 'controller/ControllerUser.php';
+        if(isset($_POST['envoyerUpdate'])){
+            $controllerUser = new ControllerUser();
+            $controllerUser->update();
+        }elseif (isset($_POST['envoyerInsert'])){
+            $controllerUser = new ControllerUser();
+            $controllerUser->insert();
+        }else{
+            $controllerUser = new ControllerUser();
+            $controllerUser->index();
+        }
+        break;
+    case 'allUser' :
+        require 'controller/ControllerAllUser.php';
+        $controllerAllUser = new ControllerAllUser();
+        $controllerAllUser->index();
         break;
     /*case 'api' :
 

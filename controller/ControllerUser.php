@@ -2,9 +2,13 @@
 class ControllerUser {
 
     public function index(){
-        require_once 'ressources/modele/User.php';
-        $modelUser = new User();
-        $dernierUser = $modelUser->getLastUser();
+        require_once 'ressources/modele/ModelUser.php';
+        $request = $_SERVER['REQUEST_URI'];
+        $req = explode("/", $request);
+        $modelUser = new ModelUser();
+        $userById = ((isset($req["2"])) ? $modelUser->getUserById($req["2"]) : NULL);
+        $row = (($userById <> NULL) ? $userById->fetch(PDO::FETCH_ASSOC) : "");
+
         require_once ('view/user.php');
     }
 
