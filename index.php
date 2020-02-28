@@ -23,8 +23,9 @@ switch ($request[0]) {
         // require __DIR__ . '/views/404.php';
         break;
     case 'depo' :
-         require './controller/ControllerDeposit.php';
+         require 'controller/ControllerDeposit.php';
          $Deposit = new ControllerDeposit();
+         $Deposit->index(); // Display deposit page
         break;
     case '' :
         echo "root";
@@ -81,22 +82,18 @@ switch ($request[0]) {
         $controllerAllUser = new ControllerAllUser();
         $controllerAllUser->index();
         break;
-    /*case 'api' :
+    case 'api' :
 
-        if(!empty($request[1]) AND $request[1] == 'depo')
+        if(!empty($request[1]) AND $request[1] == 'upload')
         {
-
-            depo = new depo();
-
-            switch ($request[2]) {
-                case 'getStatus':
-                    return json_encode(depo->getStatus());
-                    break;
-            }
-
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            $messageReturn = $Deposit->upload();
+            echo  json_encode("ok");
         }
 
-        break;*/
+        break;
+
 
 
     case 'login' :
