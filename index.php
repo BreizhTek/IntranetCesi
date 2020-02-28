@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
 
@@ -98,7 +98,7 @@ switch ($request[0]) {
         break;*/
 
 
-    case '/login' :
+    case 'login' :
         require('controller/ControllerLogin.php');
         $login = new ControllerLogin();
 

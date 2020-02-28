@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +42,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -68,8 +65,23 @@
       <workItem from="1582789497798" duration="2698000" />
       <workItem from="1582818964036" duration="384000" />
       <workItem from="1582823452899" duration="3068000" />
-      <workItem from="1582876295945" duration="13381000" />
+      <workItem from="1582876295945" duration="15942000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
+      <created>1582895461496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582895461496</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
+      <created>1582895507236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582895507236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,13 +105,14 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Commit Quentin DOPPLER" />
     <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+    <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895506595">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895506595" />
     <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -108,6 +121,14 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1582813423755" />
+    <state x="184" y="90" key="MergeDialog" timestamp="1582895643704">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="184" y="90" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895643704" />
+    <state x="672" y="256" key="MultipleFileMergeDialog" timestamp="1582895647688">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="672" y="256" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895647688" />
     <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -116,13 +137,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
+    <state x="461" y="182" key="SettingsEditor" timestamp="1582897914979">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1582897914979" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1582895663246">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895663246" />
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1582789498845">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
-    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895523857">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895523857" />
   </component>
 </project>
