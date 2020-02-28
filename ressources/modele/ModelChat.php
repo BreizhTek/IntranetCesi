@@ -7,7 +7,7 @@ class Chat {
     {
         try
         {
-            $db = new PDO(DSN,USER,PASS);
+            $db = new PDO('mysql:host=localhost;dbname=Intranet','admin','admin');
         }
         catch(PDOException $e)
         {
@@ -44,11 +44,10 @@ class Chat {
             return false;
 
 
-        $request = $this->connect()->prepare("SELECT U.First_name, M.Content, M.Date FROM Discussion AS D
+        $request = $this->connect()->prepare("SELECT U.Id, U.First_name, M.Content, M.Date FROM Discussion AS D
                                                         INNER JOIN Users AS U ON U.Id = D.Id
                                                         INNER JOIN Messages AS M ON M.Id = D.Id_Messages
-                                                        INNER JOIN Channels AS C
-                                                        WHERE C.Id = :channelId;");
+                                                        WHERE Id_Channels = :channelId;");
 
         $request->bindValue(':channelId', $channelId);
 

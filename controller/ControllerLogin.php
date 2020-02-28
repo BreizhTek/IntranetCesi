@@ -32,13 +32,22 @@ class ControllerLogin {
                 // redirect to layout with her Identifiant and Level and check if an user's birthday
                 //Create SESSION
 
-                $liste = array($row['Id'], $row['Level']);
-                $_SESSION[$row['Last_name']." ".$row['First_name']]= $liste;
-                //echo print_r($_SESSION[$row['Last_name']." ".$row['First_name']],TRUE);
+                $_SESSION['User_ID'] = $row['Id'];
+
+                $_SESSION['Level'] = $row['Level'];
+
+                $_SESSION['Last_name'] = $row['Last_name'];
+
+                $_SESSION['First_name'] = $row['First_name'];
+
             }
+
+            header('Location: /');
+            exit();
+
         } else {
-            // redirect to login and send a message said "incorrect login or password, please enter a correct login and password"
-            echo "Erreur : mot de passe ou login incorrect!!";
+            header('Location: /login');
+            exit();
         }
     }
 
@@ -51,13 +60,19 @@ class ControllerLogin {
         $result = $modelLogin->getUserByEmail($email);
 
         // $result = ModelLogin::getUserByEmail($email);
-        while($row = $result->fetch()){
-            if (password_verify($password ,$row['Password'])) {
+
+        $dbPassword = $result->fetch()['Password'];
+
+            if (password_verify($password ,$dbPassword)) {
+
                 return true;
+
             } else {
+
                 return false;
+
             }
-        }
+
     }
 
 

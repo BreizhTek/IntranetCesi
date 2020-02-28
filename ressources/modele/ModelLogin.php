@@ -1,5 +1,5 @@
 <?php
-
+require_once './db.php';
 
 class ModelLogin
 {
@@ -21,7 +21,7 @@ class ModelLogin
 
     public function getUserByEmail($email){
         $db = database();
-        $sql ="SELECT * FROM users WHERE Users.Mail = :email;";
+        $sql ="SELECT * FROM Users WHERE Mail = :email;";
 
         $request = $db->prepare($sql);
 

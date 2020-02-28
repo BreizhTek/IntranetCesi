@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
 
@@ -107,6 +108,12 @@ switch ($request[0]) {
         } else {
             $login->index();
         }
+        break;
+
+    case 'logout' :
+        session_destroy();
+        header('Location: /login');
+        exit();
         break;
 
     default:
