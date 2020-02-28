@@ -41,9 +41,13 @@ class ControllerLogin {
                 $_SESSION['First_name'] = $row['First_name'];
 
             }
+
+            header('Location: /');
+            exit();
+
         } else {
-            // redirect to login and send a message said "incorrect login or password, please enter a correct login and password"
-            echo "Erreur : mot de passe ou login incorrect!!";
+            header('Location: /login');
+            exit();
         }
     }
 
@@ -61,13 +65,11 @@ class ControllerLogin {
 
             if (password_verify($password ,$dbPassword)) {
 
-                header('Location: /');
-                exit();
+                return true;
 
             } else {
 
-                header('Location: /login');
-                exit();
+                return false;
 
             }
 
