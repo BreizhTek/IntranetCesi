@@ -21,6 +21,7 @@ switch ($request[0]) {
         break;
     case 'depo' :
          require './controller/ControllerDeposit.php';
+         $Deposit = new ControllerDeposit();
         break;
     case '' :
         echo "root";
@@ -98,6 +99,7 @@ switch ($request[0]) {
         }
 
         break;*/
+
     default:
         http_response_code(404);
         abort();
