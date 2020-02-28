@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50da39d8-658e-4faf-84c9-2484343f95eb" name="Default Changelist" comment="">
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Chat/channel.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/channel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Chat/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/User.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,24 +20,18 @@
       <executable />
     </execution>
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
     </option>
-    <expand />
-    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YLWfaN3dafbwMAv3T6eqjmjGpY" />
+  <component name="ProjectId" id="1YLUo4aXOVKo6x8wvQRRwLY6yV9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -46,44 +40,35 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exercicephp/signup.php" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/view/Chat" />
+      <recent name="C:\wamp64\www\IntranetCesi\view" />
+      <recent name="C:\wamp64\www\IntranetCesi" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="50da39d8-658e-4faf-84c9-2484343f95eb" name="Default Changelist" comment="" />
-      <created>1582722458630</created>
+      <changelist id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+      <created>1582721539162</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582722458630</updated>
-      <workItem from="1582722461416" duration="65000" />
-      <workItem from="1582722528968" duration="1578000" />
-      <workItem from="1582789579444" duration="664000" />
-      <workItem from="1582805594219" duration="1489000" />
-      <workItem from="1582876326588" duration="180000" />
-      <workItem from="1582893202062" duration="1556000" />
+      <updated>1582721539162</updated>
+      <workItem from="1582721540609" duration="670000" />
+      <workItem from="1582728583825" duration="59000" />
+      <workItem from="1582789497798" duration="2698000" />
+      <workItem from="1582818964036" duration="384000" />
+      <workItem from="1582823452899" duration="3068000" />
+      <workItem from="1582876295945" duration="13381000" />
     </task>
     <servers />
   </component>
@@ -103,18 +88,41 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="debut authentification" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
+    <MESSAGE value="Commit Quentin DOPPLER" />
+    <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582722825537">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582722825537" />
-    <state x="461" y="167" key="SettingsEditor" timestamp="1582727698184">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
+    <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1582727698184" />
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582727710072">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895418413" />
+    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1582813423755">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582727710072" />
+    <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1582813423755" />
+    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582825257008" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1582790673165">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
+    <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1582789498845">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
   </component>
 </project>

@@ -98,6 +98,18 @@ switch ($request[0]) {
 
         break;*/
 
+
+    case '/login' :
+        require('controller/ControllerLogin.php');
+        $login = new ControllerLogin();
+
+        if (!empty($_POST)){
+            $login->authentification();
+        } else {
+            $login->index();
+        }
+        break;
+
     default:
         http_response_code(404);
         abort();
