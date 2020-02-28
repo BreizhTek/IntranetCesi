@@ -79,7 +79,7 @@ switch ($request[0]) {
         }
 
         break;
-    case '/user' :
+    case 'user' :
         require 'controller/ControllerUser.php';
         if(isset($_POST['envoyerUpdate'])){
             $controllerUser = new ControllerUser();
@@ -92,7 +92,7 @@ switch ($request[0]) {
             $controllerUser->index();
         }
         break;
-    case '/allUser' :
+    case 'allUser' :
         require 'controller/ControllerAllUser.php';
         $controllerAllUser = new ControllerAllUser();
         $controllerAllUser->index();
