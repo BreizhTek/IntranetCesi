@@ -8,7 +8,11 @@
       <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_connection.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,7 @@
       <workItem from="1582789579444" duration="25220000" />
       <workItem from="1582824861277" duration="12685000" />
       <workItem from="1582839782487" duration="5000" />
-      <workItem from="1582876069803" duration="500000" />
+      <workItem from="1582876069803" duration="9547000" />
     </task>
     <task id="LOCAL-00001" summary="ajout fichiers fiche utilisateur">
       <created>1582790494273</created>
@@ -108,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582876337522</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modification root">
+      <created>1582876591914</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582876591914</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,13 +133,14 @@
     <MESSAGE value="toto" />
     <MESSAGE value="liste de touts les utilisateuers et lien vers le formulaire" />
     <MESSAGE value="ajout fichiers fiche utilisateur" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout fichiers fiche utilisateur" />
+    <MESSAGE value="modification root" />
+    <option name="LAST_COMMIT_MESSAGE" value="modification root" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582722825537">
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582883713994">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582722825537" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582883713994" />
     <state x="234" y="109" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582813828343">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -137,10 +149,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582794404033" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582876335847">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1582876590416">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582876335847" />
+    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1582876590416" />
     <state x="184" y="87" key="DiffContextDialog" timestamp="1582876244483">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -165,22 +177,26 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1582806509294" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582876524049">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1582876612561">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582876524049" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582876612561" />
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582791040269">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1249" y="442" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1582791040269" />
-    <state x="176" y="260" width="607" height="536" key="find.popup" timestamp="1582836807508">
+    <state x="919" y="0" width="727" height="1036" key="dock-window-1" timestamp="1582877580239">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="176" y="260" width="607" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1582836807508" />
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582876344484">
+    <state x="919" y="0" width="727" height="1036" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1582877580239" />
+    <state x="176" y="260" width="607" height="536" key="find.popup" timestamp="1582885184158">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582876344484" />
+    <state x="176" y="260" width="607" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1582885184158" />
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog" timestamp="1582876597749">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="677" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1582876597749" />
     <state x="143" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1582811085837">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
