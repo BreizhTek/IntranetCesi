@@ -1,13 +1,18 @@
 <?php
 
-$Deposit = new ControllerDeposit();
+if(isset($_POST['action']) && !empty($_POST['action'])) {
+    $action = $_POST['action'];
+    switch($action) {
+        case 'test' : $Deposit->upload(); break;
+    }
+}
 
 class ControllerDeposit
 {
-    function __construct() {
-        require_once './ressources/composants/templatePage.php';
-        require_once './view/Deposit.php';
-    }
+   function __construct() {
+       require_once './ressources/composants/templatePage.php';
+       require_once './view/Deposit.php';
+  }
     public function upload(){
 
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty

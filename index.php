@@ -21,8 +21,9 @@ switch ($request[0]) {
         echo "dqsddqs";
         // require __DIR__ . '/views/404.php';
         break;
-    case '/depo' :
+    case 'depo' :
          require './controller/ControllerDeposit.php';
+         $Deposit = new ControllerDeposit();
         break;
     case '' :
         echo "root";
@@ -95,6 +96,7 @@ switch ($request[0]) {
         }
 
         break;*/
+
     default:
         http_response_code(404);
         abort();
