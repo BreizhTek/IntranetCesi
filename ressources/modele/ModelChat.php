@@ -33,6 +33,41 @@ class Chat {
 
     }
 
+    public function sendMessage($channelId, $userId, $message)
+    {
+
+        $date = new DateTime();
+        $date = $date->format('Y-m-d H:i:s');
+
+        $request = $this->connect()->prepare("INSERT INTO Messages (Content, Date) VALUES (:message, :date)");
+
+        $request->bindValue(':message', $message);
+
+        $request->bindValue(':date', $date);
+
+        $request->execute();
+
+        $request = $this->connect()->prepare("SELECT Id FROM Messages WHERE Content = :message AND Date = :date");
+
+        $request->bindValue(':message', $message);
+
+        $request->bindValue(':date', $date);
+
+        $request->execute();
+
+        $messageId = $request->fetch()['Id'];
+
+        $request = $this->connect()->prepare("INSERT INTO Discussion (Id, Id_Channels, Id_Messages) VALUES (:userId, :channelId, :messageId)");
+
+        $request->bindValue(':userId', $userId);
+
+        $request->bindValue('channelId', $channelId);
+
+        $request->bindValue('messageId', $messageId);
+
+        $request->execute();
+    }
+
     public function getMessages($channelId, $userId)
     {
 

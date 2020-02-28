@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
