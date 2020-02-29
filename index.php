@@ -84,12 +84,39 @@ switch ($request[0]) {
         break;
     case 'api' :
 
+        $chat = new ControllerChat();
+
         if(!empty($request[1]) AND $request[1] == 'upload')
         {
             require 'controller/ControllerDeposit.php';
             $Deposit = new ControllerDeposit();
             $messageReturn = $Deposit->upload();
             echo  json_encode("ok");
+        }
+        elseif(!empty($request[1]) AND $request[1] == 'send')
+        {
+
+            if(!empty($_POST) AND isset($_POST['message']) AND $_POST['message'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
+            {
+
+                $chat->sendMessage($_POST['channel'], $_POST['message']);
+
+                header('Location: /chat?channel=' . $_POST['channel']);
+                exit();
+
+            }
+
+        }
+        elseif(!empty($request[1]) AND $request[1] == 'adduserintochannel')
+        {
+
+            if(!empty($_POST) AND isset($_POST['newMember']) AND $_POST['newMember'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
+            {
+
+                $chat->addUserToChannel($_POST['channel'], $_POST['newMember']);
+
+            }
+
         }
 
         break;
