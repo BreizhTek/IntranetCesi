@@ -4,6 +4,7 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ . "/ressources/modele/ModelSocketAuthorization.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -29,6 +30,26 @@ switch ($request[0]) {
         break;
     case '' :
         echo "root";
+        break;
+    case 'test' :
+        $socket = new socketAuthorization();
+
+        $socket->addAuthorization(2);
+
+        $data = $socket->getAuth(2);
+
+        $Token = $data['Token'];
+        $Channel = $data['Channel_Id'];
+        $User = $_SESSION['User_ID'];
+        $Name = $_SESSION['First_name'];
+
+        //echo $Token;
+        //echo $Channel;
+
+        require_once "view/Chat/test.php";
+
+        //$socket->addAuthorization(2);
+
         break;
     case 'chat' :
 
