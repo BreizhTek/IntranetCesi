@@ -40,7 +40,7 @@
 
 
         conn.onopen = function(e) {
-            console.log("Connection established!");
+            console.log("Vous etes bien connecté !");
 
             let user = document.getElementById('User');
             let channel = document.getElementById('Channel');
@@ -63,14 +63,10 @@
         };
 
         conn.onmessage = function(e) {
-            console.log(e.data);
-
             let data = JSON.parse(e.data);
 
             box.innerHTML = box.innerHTML + '<p class="w-full text-center">' + data.User + ' : ' + data.Message + '</p>';
         };
-
-        console.log(box.innerHTML);
 
         button.onclick = function() {
             conn.send(message.value);

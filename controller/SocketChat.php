@@ -28,15 +28,6 @@ class socketChat implements MessageComponentInterface {
         $this->client->attach($conn);
     }
 
-    public function dumpVar()
-    {
-
-        //var_dump($this->sessions);
-        var_dump($this->channels);
-
-    }
-
-
     public function onClose(ConnectionInterface $conn)
     {
 
@@ -48,12 +39,13 @@ class socketChat implements MessageComponentInterface {
 
         $this->client->detach($conn);
 
-        echo "Connection {$conn->resourceId} has disconnected\n";
     }
 
     public function onError(ConnectionInterface $conn, \Exception $e)
     {
+
         $conn->close();
+
     }
 
     public function onMessage(ConnectionInterface $from, $msg)
@@ -61,6 +53,7 @@ class socketChat implements MessageComponentInterface {
 
         if (empty($this->sessions[$from->resourceId]))
         {
+
             $msg = json_decode($msg, true);
 
             $User = $msg['Auth']['User'];
@@ -70,15 +63,17 @@ class socketChat implements MessageComponentInterface {
 
             if (empty($User) OR empty($Channel) OR empty($Token))
             {
+
                 $from->send('Missing Auth, try to restart session or contact support');
                 $from->close();
+
             }
             elseif($this->model->isGranted($User, $Channel, $Token))
             {
 
                 $this->sessions[$from->resourceId] = [
                     'User' => $User,
-                    'UserName' => $User,
+                    'UserName' => $UserName,
                     'Channel' => $Channel,
                     'Connection' => $from
                 ];
@@ -96,26 +91,35 @@ class socketChat implements MessageComponentInterface {
             }
             else
             {
+
                 $from->send('Refused');
                 $from->close();
+
             }
 
 
         }
         else
         {
+
             $channelId = $this->sessions[$from->resourceId]['Channel'];
             $userId = $this->sessions[$from->resourceId]['User'];
+            $user = $this->sessions[$from->resourceId]['UserName'];
+
+            $this->model->sendMessage($channelId, $msg, $userId);
 
             $finalMessage = array();
-
-            $finalMessage['User'] = $userId;
+            $finalMessage['UserId'] = $userId;
+            $finalMessage['User'] = $user;
             $finalMessage['Message'] = $msg;
 
             foreach ($this->channels[$channelId] as $client)
             {
+
                 $client->send(json_encode($finalMessage));
+
             }
+
         }
 
     }

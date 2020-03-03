@@ -30,25 +30,21 @@ switch ($request[0]) {
         break;
     case '' :
         echo "root";
+        echo password_hash('123', PASSWORD_DEFAULT);
         break;
     case 'test' :
         $socket = new socketAuthorization();
 
-        $socket->addAuthorization(2);
-
-        $data = $socket->getAuth(2);
+        $result = $socket->addAuthorization(1);
+        $data = $socket->getAuth(1);
 
         $Token = $data['Token'];
-        $Channel = $data['Channel_Id'];
+        $Channel = $data['Id_Channels'];
         $User = $_SESSION['User_ID'];
         $Name = $_SESSION['First_name'];
 
-        //echo $Token;
-        //echo $Channel;
 
         require_once "view/Chat/test.php";
-
-        //$socket->addAuthorization(2);
 
         break;
     case 'chat' :
