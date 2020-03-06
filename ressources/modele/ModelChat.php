@@ -7,7 +7,7 @@ class Chat {
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=Intranet','admin','admin');
+            $db = new PDO('mysql:host=localhost;dbname=Intranet','root','root');
         }
         catch(PDOException $e)
         {
@@ -83,13 +83,13 @@ class Chat {
                                                         INNER JOIN Users AS U ON U.Id = D.Id
                                                         INNER JOIN Messages AS M ON M.Id = D.Id_Messages
                                                         WHERE Id_Channels = :channelId
-                                                        ORDER BY M.Id ASC");
+                                                        ORDER BY M.Id DESC LIMIT 10");
 
         $request->bindValue(':channelId', $channelId);
 
         $request->execute();
 
-        return $request->fetchAll();
+        return array_reverse($request->fetchAll());
 
     }
 

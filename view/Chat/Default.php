@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../autre/fontello/css/fontello.css">
-    <script src="../js/jquery-3.4.1.min.js"></script>
-    <script src="../js/gsap.min.js"></script>
-    <script src="../js/animation.js"></script>
+    <script src="../../ressources/js/jquery-3.4.1.min.js"></script>
+    <script src="../../ressources/js/gsap.min.js"></script>
+    <script src="../../ressources/js/animation.js"></script>
     <title>Intranet CESI</title>
 </head>
 <body class="lg:overflow-visible min-h-screen flex flex-col">
