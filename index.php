@@ -44,7 +44,7 @@ switch ($request[0]) {
         $Name = $_SESSION['First_name'];
 
 
-        require_once "view/Chat/test.php";
+        require_once "view/Chat/room.php";
 
         break;
     case 'chat' :
@@ -110,7 +110,7 @@ switch ($request[0]) {
             $messageReturn = $Deposit->upload();
             echo  json_encode("ok");
         }
-        elseif(!empty($request[1]) AND $request[1] == 'send')
+        elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
 
             if(!empty($_POST) AND isset($_POST['message']) AND $_POST['message'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)

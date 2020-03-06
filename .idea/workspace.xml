@@ -5,8 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/SocketChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SocketChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSocketAuthorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSocketAuthorization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Chat/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -106,7 +105,8 @@
       <workItem from="1582823452899" duration="3068000" />
       <workItem from="1582876295945" duration="13381000" />
       <workItem from="1583170436800" duration="10289000" />
-      <workItem from="1583257689195" duration="17245000" />
+      <workItem from="1583257689195" duration="17300000" />
+      <workItem from="1583351800326" duration="2791000" />
     </task>
     <servers />
   </component>

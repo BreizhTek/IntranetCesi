@@ -106,7 +106,7 @@ class socketChat implements MessageComponentInterface {
             $userId = $this->sessions[$from->resourceId]['User'];
             $user = $this->sessions[$from->resourceId]['UserName'];
 
-            $this->model->sendMessage($channelId, $msg, $userId);
+            //$this->model->sendMessage($channelId, $msg, $userId);
 
             $finalMessage = array();
             $finalMessage['UserId'] = $userId;

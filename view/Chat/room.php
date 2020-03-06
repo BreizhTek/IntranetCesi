@@ -9,6 +9,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../style.css">
+    <script src="../../ressources/js/jquery-3.4.1.min.js"></script>
 
     <title>Test WebSocket</title>
 </head>
@@ -38,14 +39,39 @@
         let message = document.getElementById('message');
         let box = document.getElementById('displayMessages');
 
+        let user = document.getElementById('User');
+        let channel = document.getElementById('Channel');
+        let token = document.getElementById('Token');
+        let name = document.getElementById('Name');
+
+        function getMessageFormat(message, name)
+        {
+            if (!message)
+                return false;
+
+            if (message && name)
+            {
+
+                return '<div class="w-full p-4 flex flex-row">'
+                    + '<p class="flex items-center font-bold">' + name + '</p>'
+                    + '<p class="ml-4 bg-blue p-4 rounded-lg">' + message + '</p>'
+                    + '</div>';
+
+            }
+            else
+            {
+
+                return '<div class="w-full p-4 flex flex-row justify-end">'
+                + '<p class="ml-4 bg-blue p-4 rounded-lg">' + message + '</p>'
+                + '</div>';
+
+            }
+
+        }
+
 
         conn.onopen = function(e) {
-            console.log("Vous etes bien connecté !");
-
-            let user = document.getElementById('User');
-            let channel = document.getElementById('Channel');
-            let token = document.getElementById('Token');
-            let name = document.getElementById('Name');
+            console.log("Vous etes bien connecté au chat !");
 
             conn.send(JSON.stringify({
                 Auth:
@@ -65,12 +91,33 @@
         conn.onmessage = function(e) {
             let data = JSON.parse(e.data);
 
-            box.innerHTML = box.innerHTML + '<p class="w-full text-center">' + data.User + ' : ' + data.Message + '</p>';
+            if (data.User === name.value)
+            {
+
+                box.innerHTML = box.innerHTML + getMessageFormat(data.Message);
+
+            }
+            else
+            {
+
+                box.innerHTML = box.innerHTML + getMessageFormat(data.Message, data.name);
+
+            }
         };
 
         button.onclick = function() {
             conn.send(message.value);
         };
+
+        $(document).ready(function() {
+
+
+
+            $.get("/api/chat/getmessages", {channel: channel.value})
+                .done(function( data ) {
+                    alert( "Data Loaded: " + data );
+                });
+        });
 
 </script>
 
