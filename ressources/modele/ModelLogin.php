@@ -18,18 +18,6 @@ class ModelLogin
         return $db;
     }
 
-    public function getLogin($mail, $password)
-    {
-
-        $request = $this->connect()->prepare("SELECT * FROM users WHERE Mail =".$mail." AND Password =".$password.";");
-
-        $request->execute();
-
-
-        return $request;
-
-    }
-
 
     public function getUserByEmail($email){
         $db = database();
@@ -52,14 +40,13 @@ class ModelLogin
      */
 
     public function happyBirthDay(){
-        $sql = "SELECT id, nom, prenom, YEAR(NOW()) - YEAR(Birth) as age FROM user WHERE (DAY(Birth) = DAY(NOW()) ) and (MONTH(Birth) = MONTH(NOW()) );";
+        $db  = database();
+        $sql = "SELECT Id, First_name, Last_name, YEAR(NOW()) - YEAR(Birth) as age 
+                FROM Users 
+                WHERE (DAY(Birth) = DAY(NOW()) ) and (MONTH(Birth) = MONTH(NOW()) );";
         $request = $db->prepare($sql);
         $request->execute();
 
-        $return = array();
-        foreach ($request as $row){
-            $return[$row->getId()] = $row;
-        }
-        return $return;
+        return $request->fetchAll();
     }
 }

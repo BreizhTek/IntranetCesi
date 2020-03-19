@@ -4,6 +4,7 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ . "/ressources/modele/ModelSocketAuthorization.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -29,6 +30,22 @@ switch ($request[0]) {
         break;
     case '' :
         echo "root";
+        echo password_hash('123', PASSWORD_DEFAULT);
+        break;
+    case 'test' :
+        $socket = new socketAuthorization();
+
+        $result = $socket->addAuthorization(1);
+        $data = $socket->getAuth(1);
+
+        $Token = $data['Token'];
+        $Channel = $data['Id_Channels'];
+        $User = $_SESSION['User_ID'];
+        $Name = $_SESSION['First_name'];
+
+
+        require_once "view/Chat/room.php";
+
         break;
     case 'chat' :
 
@@ -84,6 +101,8 @@ switch ($request[0]) {
         break;
     case 'api' :
 
+        $chat = new ControllerChat();
+
         if(!empty($request[1]) AND $request[1] == 'Upload')
         {
             require 'controller/ControllerDeposit.php';
@@ -91,11 +110,37 @@ switch ($request[0]) {
             echo  $Deposit->upload();
         }
 
-        if(!empty($request[1]) AND $request[1] == 'fileDisplay')
+        elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
         {
             require 'controller/ControllerDeposit.php';
             $Deposit = new ControllerDeposit();
             echo  $Deposit->display();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'chat')
+        {
+
+            if(!empty($_POST) AND isset($_POST['message']) AND $_POST['message'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
+            {
+
+                $chat->sendMessage($_POST['channel'], $_POST['message']);
+
+                header('Location: /chat?channel=' . $_POST['channel']);
+                exit();
+
+            }
+
+        }
+        elseif(!empty($request[1]) AND $request[1] == 'adduserintochannel')
+        {
+
+            if(!empty($_POST) AND isset($_POST['newMember']) AND $_POST['newMember'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
+            {
+
+                $chat->addUserToChannel($_POST['channel'], $_POST['newMember']);
+
+            }
+
         }
 
         break;
