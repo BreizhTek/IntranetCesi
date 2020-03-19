@@ -84,12 +84,18 @@ switch ($request[0]) {
         break;
     case 'api' :
 
-        if(!empty($request[1]) AND $request[1] == 'upload')
+        if(!empty($request[1]) AND $request[1] == 'Upload')
         {
             require 'controller/ControllerDeposit.php';
             $Deposit = new ControllerDeposit();
-            $messageReturn = $Deposit->upload();
-            echo  json_encode("ok");
+            echo  $Deposit->upload();
+        }
+
+        if(!empty($request[1]) AND $request[1] == 'fileDisplay')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->display();
         }
 
         break;
