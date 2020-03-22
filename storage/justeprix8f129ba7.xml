@@ -1,0 +1,11 @@
+<conversion>
+  <applied-converters>
+    <converter id="DockerRunConfigurationConverterProvider" />
+  </applied-converters>
+  <project-files>
+    <file path="C:\Users\MAIN\WebstormProjects\justeprix\.idea\justeprix.iml" timestamp="1583680513027" />
+    <file path="C:\Users\MAIN\WebstormProjects\justeprix\.idea\misc.xml" timestamp="1583680513054" />
+    <file path="C:\Users\MAIN\WebstormProjects\justeprix\.idea\workspace.xml" timestamp="1584889947411" />
+    <file path="C:\Users\MAIN\WebstormProjects\justeprix\.idea\modules.xml" timestamp="1583680513064" />
+  </project-files>
+</conversion>

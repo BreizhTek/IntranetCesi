@@ -1,0 +1,11 @@
+<conversion>
+  <applied-converters>
+    <converter id="DockerRunConfigurationConverterProvider" />
+  </applied-converters>
+  <project-files>
+    <file path="C:\Users\MAIN\PhpstormProjects\tailswindstry\.idea\tailswindstry.iml" timestamp="1584641829267" />
+    <file path="C:\Users\MAIN\PhpstormProjects\tailswindstry\.idea\modules.xml" timestamp="1584641829489" />
+    <file path="C:\Users\MAIN\PhpstormProjects\tailswindstry\.idea\misc.xml" timestamp="1584641829452" />
+    <file path="C:\Users\MAIN\PhpstormProjects\tailswindstry\.idea\workspace.xml" timestamp="1584805754958" />
+  </project-files>
+</conversion>
