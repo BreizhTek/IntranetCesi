@@ -1,8 +1,6 @@
 <?php
 
-define('DSN', 'mysql:host=localhost;dbname=Intranet');
-define('USER', 'admin');
-define('PASS', 'admin');
+
 
 class Chat {
 

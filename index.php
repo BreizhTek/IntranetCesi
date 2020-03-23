@@ -3,6 +3,7 @@
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require_once __DIR__ ."/db.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
