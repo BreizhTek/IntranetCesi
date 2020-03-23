@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
+      <change afterPath="$PROJECT_DIR$/view/Chat/list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/SocketChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SocketChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/Default.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/channel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/createChat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/listChannels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/room.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/userIntoChannel.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +143,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584960309959">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584960309959" />
     <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -151,10 +164,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582825257008" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1582790673165">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog" timestamp="1584969822209">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584969822209" />
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor" timestamp="1584949763653">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>

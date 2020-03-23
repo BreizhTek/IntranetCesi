@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../style.css">
     <script src="../../ressources/js/jquery-3.4.1.min.js"></script>
 
-    <title>Test WebSocket</title>
+    <title><?php echo $ChannelName; ?></title>
 </head>
 <body>
 
@@ -34,7 +34,7 @@
             </div>
 
             <form onsubmit="eventSendMessage();return false" id="formMessage" class="w-full flex flex-row p-4">
-                <input type="text" id="inputMessage" class="w-3/4 mr-4 px-4 rounded-full">
+                <input type="text" required id="inputMessage" class="w-3/4 mr-4 px-4 rounded-full">
                 <input type="submit" value="Envoyer" class="w-1/4 py-2 appearance-none hover:bg-white rounded-full cursor-pointer">
             </form>
 
@@ -59,7 +59,7 @@
 
 <script>
 
-        let conn = new WebSocket('ws://51.15.2.200:8080');
+        let conn = new WebSocket('ws://localhost:8080');
         let message = document.getElementById('inputMessage');
         let box = document.getElementById('displayMessages');
 
@@ -111,7 +111,16 @@
         };
 
         conn.onmessage = function(e) {
+
+            console.log(e.data);
+
             let data = JSON.parse(e.data);
+
+            if (data.message === "Erreur")
+            {
+                console.log('Erreur');
+                return false;
+            }
 
             if (data.User === name.value)
             {
@@ -158,6 +167,7 @@
         {
 
             conn.send(message.value);
+            message.value = "";
 
             return false;
 
@@ -167,7 +177,7 @@
         {
             let messageBox = $('#displayMessages');
 
-            messageBox.scrollTop(messageBox.height());
+            messageBox.scrollTop(1e4);
 
         }
 

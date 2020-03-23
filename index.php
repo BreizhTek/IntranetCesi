@@ -14,7 +14,9 @@ $request = explode('/', $request);
 
 function abort()
 {
+    http_response_code(404);
     echo "404";
+    exit();
 }
 
 
@@ -32,24 +34,38 @@ switch ($request[0]) {
         echo "root";
         echo password_hash('123', PASSWORD_DEFAULT);
         break;
-    case 'test' :
+    case 'chat' :
         $socket = new socketAuthorization();
         $chat = new ControllerChat();
 
-        $result = $socket->addAuthorization(1);
-        $data = $socket->getAuth(1);
+        if (isset($_GET['channel']) AND !empty($_GET['channel']))
+        {
 
-        $Token = $data['Token'];
-        $Channel = $data['Id_Channels'];
-        $User = $_SESSION['User_ID'];
-        $Name = $_SESSION['First_name'];
-        $ChannelName = $chat->getChannelName($Channel);
+            if($chat->thisChannelExist($_GET['channel']) AND $chat->isAllowed($_GET['channel']))
+            {
+                $result = $socket->addAuthorization($_GET['channel']);
+                $data = $socket->getAuth($_GET['channel']);
 
+                $Token = $data['Token'];
+                $Channel = $data['Id_Channels'];
+                $User = $_SESSION['User_ID'];
+                $Name = $_SESSION['First_name'];
+                $ChannelName = $chat->getChannelName($Channel);
+                require_once "view/Chat/room.php";
+            }
+            else
+            {
+                abort();
+            }
 
-        require_once "view/Chat/room.php";
+        }
+
+        $channels = $chat->getChannelList();
+
+        require_once "view/Chat/list.php";
 
         break;
-    case 'chat' :
+    /*case 'chat' :
 
         if (empty($request[1])) {
 
@@ -80,7 +96,7 @@ switch ($request[0]) {
             abort();
         }
 
-        break;
+        break;*/
     case 'user' :
         require 'controller/ControllerUser.php';
         if(isset($_POST['envoyerUpdate'])){
@@ -133,16 +149,32 @@ switch ($request[0]) {
                 }
 
             }
+            else if(!empty($_GET) AND isset($_GET['createchannel']) AND $_GET['createchannel'] != null AND $_SESSION)
+            {
+
+                if ($chat->createChannel($_GET['createchannel']))
+                {
+                    http_response_code(200);
+                    echo json_encode(array(
+                        'channel' => $chat->getChannelId($_GET['createchannel'])
+                    ));
+                }
+                else
+                {
+                    http_response_code(404);
+                }
+
+            }
             else
             {
-                http_response_code(404);
+                abort();
             }
 
         }
 
         else
         {
-            http_response_code(404);
+            abort();
         }
 
         break;
@@ -167,7 +199,6 @@ switch ($request[0]) {
         break;
 
     default:
-        http_response_code(404);
         abort();
         break;
 }

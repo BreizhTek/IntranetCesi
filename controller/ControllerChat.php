@@ -11,26 +11,9 @@ class ControllerChat {
         $this->chat = new Chat();
     }
 
-    public function index(){
+    public function getChannelList(){
 
-        var_dump($_SESSION);
-
-        $channels = $this->chat->getChannels();
-
-        require_once __DIR__ . "/../view/Chat/listChannels.php";
-
-    }
-
-    public function channel($channelId){
-
-        $messages = $this->chat->getMessages($channelId);
-
-        if ($messages === false)
-            $this->index();
-
-        require __DIR__ . "/../view/Chat/message.php";
-
-        require __DIR__ . "/../view/Chat/channel.php";
+        return $this->chat->getChannels();
 
     }
 
@@ -54,11 +37,21 @@ class ControllerChat {
 
     }
 
+    public function isAllowed($channelId)
+    {
+        return $this->chat->grantedToShowThisChannel($channelId);
+    }
+
     public function sendMessage($channelId, $message)
     {
 
         $this->chat->sendMessage($channelId, $message);
 
+    }
+
+    public function thisChannelExist($id)
+    {
+        return $this->chat->getChannelName($id);
     }
 
     public function createChannel($name){
@@ -71,11 +64,9 @@ class ControllerChat {
         }
         else
         {
-            $this->index();
             return false;
         }
 
-        $this->index();
         return true;
 
     }
@@ -89,6 +80,12 @@ class ControllerChat {
         }
 
         return false;
+    }
+    public function getChannelId($channelName)
+    {
+
+        return $this->getChannelId($channelName);
+
     }
 
     public function addUserToChannel($channelId, $userMail)
