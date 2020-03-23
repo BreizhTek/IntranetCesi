@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
-      <change afterPath="$PROJECT_DIR$/controller/ControllerSignature.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/autre/img/cookie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/js/rgpd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/js/signature.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/rgpd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/signature.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/templatePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/templatePage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/css/depo.css" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/css/depo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/0index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/0test1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/CHECK.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/COPYING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/E-Whoring-TUTO-1.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/E-Whoring-TUTO-2.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/E-Whoring.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/IntranetCesi786cf568.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/LOG-AMAZONE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Operateur-Ty-ly-phone-1-euro.odt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Outils-SEO-en-ligne.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Outils-en-ligne.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Outils.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/PROXY-SITE-LIST.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Site-de-cly-GAMING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Sy-curity-.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/VPN-CHECKER.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/VPS-VPN-RPD.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Veille-Techno.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/justeprix8f129ba7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/tailswindstry4c9948ec.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/test1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/test2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/weed.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +103,7 @@
       <workItem from="1584832841835" duration="19122000" />
       <workItem from="1584889951755" duration="21755000" />
       <workItem from="1584948027087" duration="21993000" />
-      <workItem from="1584973826316" duration="6189000" />
+      <workItem from="1584973826316" duration="8428000" />
     </task>
     <servers />
   </component>
