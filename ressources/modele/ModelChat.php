@@ -46,7 +46,7 @@ class Chat {
         $request->bindValue(':date', $date);
 
         $request->execute();
-
+        
         $request = $this->connect()->prepare("SELECT Id FROM Messages WHERE Content = :message AND Date = :date");
 
         $request->bindValue(':message', $message);

@@ -4,13 +4,18 @@ require_once "ressources/modele/ModelChat.php";
 
 class ControllerChat {
 
-    public function index(){
+    private $chat;
 
-        $chat = new Chat();
+    public function __construct()
+    {
+        $this->chat = new Chat();
+    }
+
+    public function index(){
 
         var_dump($_SESSION);
 
-        $channels = $chat->getChannels();
+        $channels = $this->chat->getChannels();
 
         require_once __DIR__ . "/../view/Chat/listChannels.php";
 
@@ -18,9 +23,7 @@ class ControllerChat {
 
     public function channel($channelId){
 
-        $chat = new Chat();
-
-        $messages = $chat->getMessages($channelId);
+        $messages = $this->chat->getMessages($channelId);
 
         if ($messages === false)
             $this->index();
@@ -31,24 +34,39 @@ class ControllerChat {
 
     }
 
+    public function getMessages($channelId)
+    {
+
+        if($this->chat->grantedToShowThisChannel($channelId))
+        {
+
+            http_response_code(200);
+            header('Content-Type: application/json');
+            echo json_encode($this->chat->getMessages($channelId));
+
+        }
+        else
+        {
+
+            http_response_code(404);
+
+        }
+
+    }
+
     public function sendMessage($channelId, $message)
     {
 
-        $chat = new Chat();
-
-        $chat->sendMessage($channelId, $message);
+        $this->chat->sendMessage($channelId, $message);
 
     }
 
     public function createChannel($name){
 
-        $chat = new Chat();
-
-
-        if($chat->channelExist($name) == false)
+        if($this->chat->channelExist($name) == false)
         {
 
-            $chat->addChannel($name);
+            $this->chat->addChannel($name);
 
         }
         else
@@ -65,13 +83,11 @@ class ControllerChat {
     public function addUserToChannel($channelId, $userMail)
     {
 
-        $chat = new Chat();
+        $channelName = $this->chat->getChannelName($channelId);
 
-        $channelName = $chat->getChannelName($channelId);
+        $userId = $this->chat->getUserIdByMail($userMail);
 
-        $userId = $chat->getUserIdByMail($userMail);
-
-        $chat->addUserToAChannel($channelName, $userId);
+        $this->chat->addUserToAChannel($channelName, $userId);
 
     }
 
