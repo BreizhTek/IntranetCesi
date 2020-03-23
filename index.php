@@ -34,6 +34,7 @@ switch ($request[0]) {
         break;
     case 'test' :
         $socket = new socketAuthorization();
+        $chat = new ControllerChat();
 
         $result = $socket->addAuthorization(1);
         $data = $socket->getAuth(1);
@@ -42,14 +43,13 @@ switch ($request[0]) {
         $Channel = $data['Id_Channels'];
         $User = $_SESSION['User_ID'];
         $Name = $_SESSION['First_name'];
+        $ChannelName = $chat->getChannelName($Channel);
 
 
         require_once "view/Chat/room.php";
 
         break;
     case 'chat' :
-
-        $chat = new ControllerChat();
 
         if (empty($request[1])) {
 
@@ -123,7 +123,14 @@ switch ($request[0]) {
             if(!empty($_GET) AND isset($_GET['channel']) AND $_GET['channel'] != null AND $_SESSION)
             {
 
-                $chat->getMessages($_GET['channel']);
+                if (isset($_GET['adduser']) AND $_GET['adduser'] != null)
+                {
+                    $chat->addUserToChannel($_GET['channel'], $_GET['adduser']);
+                }
+                else
+                {
+                    $chat->getMessages($_GET['channel']);
+                }
 
             }
             else
@@ -132,16 +139,10 @@ switch ($request[0]) {
             }
 
         }
-        elseif(!empty($request[1]) AND $request[1] == 'adduserintochannel')
+
+        else
         {
-
-            if(!empty($_POST) AND isset($_POST['newMember']) AND $_POST['newMember'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
-            {
-
-                $chat->addUserToChannel($_POST['channel'], $_POST['newMember']);
-
-            }
-
+            http_response_code(404);
         }
 
         break;

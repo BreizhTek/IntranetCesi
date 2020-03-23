@@ -80,15 +80,41 @@ class ControllerChat {
 
     }
 
-    public function addUserToChannel($channelId, $userMail)
+    public function getChannelName($channelId)
     {
 
-        $channelName = $this->chat->getChannelName($channelId);
+        if ($this->chat->grantedToShowThisChannel($channelId))
+        {
+            return $this->chat->getChannelName($channelId);
+        }
 
-        $userId = $this->chat->getUserIdByMail($userMail);
+        return false;
+    }
 
-        $this->chat->addUserToAChannel($channelName, $userId);
+    public function addUserToChannel($channelId, $userMail)
+    {
+        http_response_code(200);
+        header('Content-Type: application/json');
 
+        if($this->chat->grantedToShowThisChannel($channelId))
+        {
+            $channelName = $this->chat->getChannelName($channelId);
+
+            if($userId = $this->chat->getUserIdByMail($userMail))
+            {
+                $this->chat->addUserToAChannel($channelName, $userId);
+
+                echo json_encode(array(
+                    'message' => 'ok',
+                ));
+
+                return true;
+            }
+        }
+
+        echo json_encode(array(
+            'message' => 'error'
+        ));
     }
 
 }
