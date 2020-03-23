@@ -1,18 +1,13 @@
 <?php
 
-if(isset($_POST['action']) && !empty($_POST['action'])) {
-    $action = $_POST['action'];
-    switch($action) {
-        case 'test' : $Deposit->upload(); break;
-    }
-}
 
 class ControllerDeposit
 {
-   function __construct() {
-       require_once './ressources/composants/templatePage.php';
-       require_once './view/Deposit.php';
-  }
+     public function index() {
+         //require './ressources/composants/templatePage.php';
+           require './view/deposit.php';
+      }
+
     public function upload(){
 
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty
@@ -45,17 +40,17 @@ class ControllerDeposit
 
         }else{ $uploadReturn = 'Aucun fichier n\'a été sélectionné.'; } // No file detected - ERROR
 
-        return $uploadReturn;
+        return json_encode($uploadReturn);
     }
 
     public function suppression(){
 
-        $address = "upload\\"; // folder address.
+        $folderAddress = ".\\storage\\"; // folder address.
         if (isset($_GET['fileName'])) // Check if file name if empty
         {
             if ($_GET['fileName'] != "." && "..") {
 
-                $fileName = '' . $address . $_GET['fileName'] . '';
+                $fileName = '' . $folderAddress . $_GET['fileName'] . '';
                 unlink($fileName); // Delete file
                 echo 'Le fichier ' . $_GET['fileName'] . ' a bien été supprimmé.<br>';
             }
@@ -64,16 +59,18 @@ class ControllerDeposit
 
     public function display(){
 
-        $folderAddress = "upload\\"; // Define the folder's address
+        $folderAddress = ".\\storage\\"; // Define the folder's address
         $openFolder = Opendir($folderAddress); // Open folder
         $i = 0;
         while ($file = readdir($openFolder)) // Get the name's file into foler opened
         {
             if ($file != "." && $file != "..") {
-                $downloadFile[$i] = $file;
+                $fileList[$i] = $file;
                 $i++;
             }
         }
+        closedir($openFolder);
+        return json_encode($fileList);
     }
 }
 

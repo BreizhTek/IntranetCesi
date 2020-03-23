@@ -3,7 +3,6 @@
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require_once __DIR__ ."/db.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -23,11 +22,28 @@ switch ($request[0]) {
         // require __DIR__ . '/views/404.php';
         break;
     case 'depo' :
-         require './controller/ControllerDeposit.php';
+         require 'controller/ControllerDeposit.php';
          $Deposit = new ControllerDeposit();
+         $Deposit->index(); // Display deposit page
         break;
     case '' :
         echo "root";
+        echo password_hash('123', PASSWORD_DEFAULT);
+        break;
+    case 'test' :
+        $socket = new socketAuthorization();
+
+        $result = $socket->addAuthorization(1);
+        $data = $socket->getAuth(1);
+
+        $Token = $data['Token'];
+        $Channel = $data['Id_Channels'];
+        $User = $_SESSION['User_ID'];
+        $Name = $_SESSION['First_name'];
+
+
+        require_once "view/Chat/room.php";
+
         break;
     case 'chat' :
 
@@ -45,18 +61,15 @@ switch ($request[0]) {
                 }
 
             }
-            else
+            elseif(isset($_GET['channel']) and $_GET['channel'] != null)
             {
 
-                if(isset($_GET['channel']))
-                {
-                    echo $_GET['channel'];
-                }
-                else
-                {
-                    $chat->index();
-                }
+                    $chat->channel($_GET['channel']);
 
+            }
+            else
+            {
+                $chat->index();
             }
 
         }
@@ -84,22 +97,71 @@ switch ($request[0]) {
         $controllerAllUser = new ControllerAllUser();
         $controllerAllUser->index();
         break;
-    /*case 'api' :
+    case 'api' :
 
-        if(!empty($request[1]) AND $request[1] == 'depo')
+        $chat = new ControllerChat();
+
+        if(!empty($request[1]) AND $request[1] == 'Upload')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->upload();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->display();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
 
-            depo = new depo();
+            if(!empty($_GET) AND isset($_GET['channel']) AND $_GET['channel'] != null AND $_SESSION)
+            {
 
-            switch ($request[2]) {
-                case 'getStatus':
-                    return json_encode(depo->getStatus());
-                    break;
+                $chat->getMessages($_GET['channel']);
+
+            }
+            else
+            {
+                http_response_code(404);
+            }
+
+        }
+        elseif(!empty($request[1]) AND $request[1] == 'adduserintochannel')
+        {
+
+            if(!empty($_POST) AND isset($_POST['newMember']) AND $_POST['newMember'] != null AND isset($_POST['channel']) AND $_POST['channel'] != null)
+            {
+
+                $chat->addUserToChannel($_POST['channel'], $_POST['newMember']);
+
             }
 
         }
 
-        break;*/
+        break;
+
+
+
+    case 'login' :
+        require('controller/ControllerLogin.php');
+        $login = new ControllerLogin();
+
+        if (!empty($_POST)){
+            $login->authentification();
+        } else {
+            $login->index();
+        }
+        break;
+
+    case 'logout' :
+        session_destroy();
+        header('Location: /login');
+        exit();
+        break;
 
     default:
         http_response_code(404);
