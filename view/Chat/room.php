@@ -59,7 +59,7 @@
 
 <script>
 
-        let conn = new WebSocket('ws://localhost:8080');
+        let conn = new WebSocket('ws://51.15.2.200:8080');
         let message = document.getElementById('inputMessage');
         let box = document.getElementById('displayMessages');
 
