@@ -1,5 +1,8 @@
 <?php
 
+define('DSN', 'mysql:host=localhost;dbname=Intranet');
+define('USER', 'admin');
+define('PASS', 'admin');
 
 class Chat {
 
@@ -46,7 +49,7 @@ class Chat {
         $request->bindValue(':date', $date);
 
         $request->execute();
-        
+
         $request = $this->connect()->prepare("SELECT Id FROM Messages WHERE Content = :message AND Date = :date");
 
         $request->bindValue(':message', $message);

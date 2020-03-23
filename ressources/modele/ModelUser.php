@@ -37,7 +37,8 @@ class ModelUser
                         users.Tutor = :tutor,
                         users.Tutor_mail = :tutor_mail,
                         users.Mail = :mail,
-                        users.Password = :pwd
+                        users.Password = :pwd,
+                        users.Picture = :picture
                            WHERE users.Id = :id";
         $statement = $db->prepare($sql);
         $statement->bindValue(":id", $data['Id']);
@@ -52,6 +53,7 @@ class ModelUser
         $statement->bindValue(":tutor_mail", $data['MailTutor'],PDO::PARAM_STR);
         $statement->bindValue(":mail", $data['Mail'],PDO::PARAM_STR);
         $statement->bindValue(":pwd", $data['pwd'],PDO::PARAM_STR);
+        $statement->bindValue(":picture", $data['Picture'],PDO::PARAM_STR);
         $statement->execute();
         return $statement;
     }
@@ -59,8 +61,6 @@ class ModelUser
     public function insertUser($data)
     {
         $db = database();
-        echo "<pre>";
-        var_dump($data);
         $sql = "INSERT INTO users
                     (
                         Level,
@@ -68,6 +68,7 @@ class ModelUser
                         First_name,
                         Birth,
                         Post,
+                        Picture,
                         Phone,
                         Address,
                         Tutor,
@@ -82,6 +83,7 @@ class ModelUser
                         :first_naeme,
                         :birth,
                         :post,
+                        :picture,
                         :phone,
                         :address,
                         :tutor,
@@ -89,6 +91,7 @@ class ModelUser
                         :mail,
                         :pwd
                     )";
+
         $statement = $db->prepare($sql);
         $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
         $statement->bindValue(":last_name", $data['LastName'],PDO::PARAM_STR);
@@ -101,6 +104,7 @@ class ModelUser
         $statement->bindValue(":tutor_mail", $data['MailTutor'],PDO::PARAM_STR);
         $statement->bindValue(":mail", $data['Mail'],PDO::PARAM_STR);
         $statement->bindValue(":pwd", $data['pwd'],PDO::PARAM_STR);
+        $statement->bindValue(":picture", $data['Picture'],PDO::PARAM_STR);
         $statement->execute();
         return $statement;
     }
