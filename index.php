@@ -1,8 +1,10 @@
 <?php
 
+session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ . "/ressources/modele/ModelSocketAuthorization.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
