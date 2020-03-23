@@ -103,13 +103,20 @@ switch ($request[0]) {
 
         $chat = new ControllerChat();
 
-        if(!empty($request[1]) AND $request[1] == 'upload')
+        if(!empty($request[1]) AND $request[1] == 'Upload')
         {
             require 'controller/ControllerDeposit.php';
             $Deposit = new ControllerDeposit();
-            $messageReturn = $Deposit->upload();
-            echo  json_encode("ok");
+            echo  $Deposit->upload();
         }
+
+        elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->display();
+        }
+
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
 

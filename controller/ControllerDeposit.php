@@ -4,6 +4,7 @@
 class ControllerDeposit
 {
      public function index() {
+         //require './ressources/composants/templatePage.php';
            require './view/deposit.php';
       }
 
@@ -44,12 +45,12 @@ class ControllerDeposit
 
     public function suppression(){
 
-        $address = "upload\\"; // folder address.
+        $folderAddress = ".\\storage\\"; // folder address.
         if (isset($_GET['fileName'])) // Check if file name if empty
         {
             if ($_GET['fileName'] != "." && "..") {
 
-                $fileName = '' . $address . $_GET['fileName'] . '';
+                $fileName = '' . $folderAddress . $_GET['fileName'] . '';
                 unlink($fileName); // Delete file
                 echo 'Le fichier ' . $_GET['fileName'] . ' a bien été supprimmé.<br>';
             }
@@ -58,16 +59,18 @@ class ControllerDeposit
 
     public function display(){
 
-        $folderAddress = "upload\\"; // Define the folder's address
+        $folderAddress = ".\\storage\\"; // Define the folder's address
         $openFolder = Opendir($folderAddress); // Open folder
         $i = 0;
         while ($file = readdir($openFolder)) // Get the name's file into foler opened
         {
             if ($file != "." && $file != "..") {
-                $downloadFile[$i] = $file;
+                $fileList[$i] = $file;
                 $i++;
             }
         }
+        closedir($openFolder);
+        return json_encode($fileList);
     }
 }
 
