@@ -117,6 +117,13 @@ switch ($request[0]) {
             echo  $Deposit->display();
         }
 
+        elseif(!empty($request[1]) AND $request[1] == 'folderCreation')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo $Deposit->folderCreation($_POST['name'], $_POST['path']);
+        }
+
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
 
@@ -143,6 +150,14 @@ switch ($request[0]) {
 
         }
 
+        elseif(!empty($request[1]) AND $request[1] == 'sign')
+        {
+            require 'controller/ControllerSignature.php';
+            $sign = new ControllerSignature();
+            echo $sign->sign();
+        }
+
+
         break;
 
 
@@ -162,6 +177,12 @@ switch ($request[0]) {
         session_destroy();
         header('Location: /login');
         exit();
+        break;
+
+    case 'signature' :
+        require 'controller/ControllerSignature.php';
+        $signature = new ControllerSignature();
+        $signature->index(); // Display pop up to make the electronic signature
         break;
 
     default:

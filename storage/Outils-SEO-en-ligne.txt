@@ -1,5 +1,0 @@
-Alyze - Crawler 
-https://alyze.info/ 
-
-crawler-google-sitemap-generator
-https://freetools.webmasterworld.com/tools/crawler-google-sitemap-generator/
