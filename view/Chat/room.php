@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../style.css">
     <script src="../../ressources/js/jquery-3.4.1.min.js"></script>
 
-    <title>Test WebSocket</title>
+    <title><?php echo $ChannelName; ?></title>
 </head>
 <body>
 
@@ -20,14 +20,39 @@
 <input type="hidden" value="<?php echo $Token; ?>" id="Token">
 <input type="hidden" value="<?php echo $Name; ?>" id="Name">
 
-<div class="p-10">
-    <input class="bg-black text-white" placeholder="message" id="message" type="text">
-    <button class="bg-orange-600 px-4" id="button">Send</button>
-</div>
+<div class="w-full min-h-screen flex flex-row justify-center items-center">
 
-<div class="min-h-screen w-full flex flex-col justify-center items-center">
+    <div class="w-full lg:flex lg:flex-row lg:mx-2 xl:mx-0 justify-center">
 
-    <div id="displayMessages" class="w-1/2 border-8 border-black">
+        <div class="bg-blue p-2 lg:w-2/3 xl:w-1/2 lg:p-4 xl:p-8 rounded-lg">
+
+            <div class="flex justify-center pb-2 font-extrabold text-xl text-white">
+                <h1><?php echo $ChannelName; ?></h1>
+            </div>
+
+            <div id="displayMessages" style="height: 700px;" class="w-full bg-white rounded-lg overflow-y-scroll">
+            </div>
+
+            <form onsubmit="eventSendMessage();return false" id="formMessage" class="w-full flex flex-row p-4">
+                <input type="text" required id="inputMessage" class="w-3/4 mr-4 px-4 rounded-full">
+                <input type="submit" value="Envoyer" class="w-1/4 py-2 appearance-none hover:bg-white rounded-full cursor-pointer">
+            </form>
+
+        </div>
+
+        <div class="h-full mt-4 lg:mt-0 lg:ml-8 bg-blue p-8 rounded-lg text-white">
+            <h3 class="font-bold">Ajouter un utilisateur</h3>
+
+            <div class="mt-2">
+
+                <input type="text" class="rounded-full px-2 text-black" id="inputNewUser" placeholder="E-mail"/>
+                <button onclick="addNewUser()" class="ml-2 bg-white rounded-lg text-black p-1 px-2">Ajouter</button>
+
+                <div id="responseAddUser" class="font-bold text-red-400"></div>
+
+            </div>
+        </div>
+
     </div>
 
 </div>
@@ -35,8 +60,7 @@
 <script>
 
         let conn = new WebSocket('ws://localhost:8080');
-        let button = document.getElementById('button');
-        let message = document.getElementById('message');
+        let message = document.getElementById('inputMessage');
         let box = document.getElementById('displayMessages');
 
         let user = document.getElementById('User');
@@ -46,15 +70,13 @@
 
         function getMessageFormat(message, name)
         {
-            if (!message)
-                return false;
 
             if (message && name)
             {
 
                 return '<div class="w-full p-4 flex flex-row">'
                     + '<p class="flex items-center font-bold">' + name + '</p>'
-                    + '<p class="ml-4 bg-blue p-4 rounded-lg">' + message + '</p>'
+                    + '<p class="ml-4 bg-blue p-4 rounded-lg text-white">' + message + '</p>'
                     + '</div>';
 
             }
@@ -62,7 +84,7 @@
             {
 
                 return '<div class="w-full p-4 flex flex-row justify-end">'
-                + '<p class="ml-4 bg-blue p-4 rounded-lg">' + message + '</p>'
+                + '<p class="ml-4 bg-blue p-4 rounded-lg text-white">' + message + '</p>'
                 + '</div>';
 
             }
@@ -89,35 +111,98 @@
         };
 
         conn.onmessage = function(e) {
+
+            console.log(e.data);
+
             let data = JSON.parse(e.data);
+
+            if (data.message === "Erreur")
+            {
+                console.log('Erreur');
+                return false;
+            }
 
             if (data.User === name.value)
             {
-
                 box.innerHTML = box.innerHTML + getMessageFormat(data.Message);
-
             }
             else
             {
-
-                box.innerHTML = box.innerHTML + getMessageFormat(data.Message, data.name);
-
+                box.innerHTML = box.innerHTML + getMessageFormat(data.Message, data.User);
             }
-        };
 
-        button.onclick = function() {
-            conn.send(message.value);
+            scrollBottom();
         };
 
         $(document).ready(function() {
 
-
-
-            $.get("/api/chat/getmessages", {channel: channel.value})
+            $.get("/api/chat/", {channel: channel.value})
                 .done(function( data ) {
-                    alert( "Data Loaded: " + data );
+
+                    for (let i=0; i < data.length; i++)
+                    {
+
+                        if (data[i].First_name === name.value)
+                        {
+
+                            box.innerHTML = box.innerHTML + getMessageFormat(data[i].Content);
+
+                        }
+                        else
+                        {
+
+                            box.innerHTML = box.innerHTML + getMessageFormat(data[i].Content, data[i].First_name);
+
+                        }
+
+                    }
+
+                    scrollBottom();
+
                 });
+
         });
+
+        function eventSendMessage()
+        {
+
+            conn.send(message.value);
+            message.value = "";
+
+            return false;
+
+        }
+
+        function scrollBottom()
+        {
+            let messageBox = $('#displayMessages');
+
+            messageBox.scrollTop(1e4);
+
+        }
+
+        function addNewUser()
+        {
+            let newUser = document.getElementById('inputNewUser');
+            let response = document.getElementById('responseAddUser');
+
+            $.get("/api/chat/", {channel: channel.value, adduser: newUser.value})
+                .done(function( data ) {
+
+                    response.innerHTML = "";
+
+                    if (data.message === 'ok')
+                    {
+                        response.append("Utilisateur ajouté !");
+                    }
+                    else
+                    {
+                        response.append("Utilisateur non trouvé !");
+                    }
+
+                });
+
+        }
 
 </script>
 

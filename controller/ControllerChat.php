@@ -4,75 +4,114 @@ require_once "ressources/modele/ModelChat.php";
 
 class ControllerChat {
 
-    public function index(){
+    private $chat;
 
-        $chat = new Chat();
+    public function __construct()
+    {
+        $this->chat = new Chat();
+    }
 
-        var_dump($_SESSION);
+    public function getChannelList(){
 
-        $channels = $chat->getChannels();
-
-        require_once __DIR__ . "/../view/Chat/listChannels.php";
+        return $this->chat->getChannels();
 
     }
 
-    public function channel($channelId){
+    public function getMessages($channelId)
+    {
 
-        $chat = new Chat();
+        if($this->chat->grantedToShowThisChannel($channelId))
+        {
 
-        $messages = $chat->getMessages($channelId);
+            http_response_code(200);
+            header('Content-Type: application/json');
+            echo json_encode($this->chat->getMessages($channelId));
 
-        if ($messages === false)
-            $this->index();
+        }
+        else
+        {
 
-        require __DIR__ . "/../view/Chat/message.php";
+            http_response_code(404);
 
-        require __DIR__ . "/../view/Chat/channel.php";
+        }
 
+    }
+
+    public function isAllowed($channelId)
+    {
+        return $this->chat->grantedToShowThisChannel($channelId);
     }
 
     public function sendMessage($channelId, $message)
     {
 
-        $chat = new Chat();
+        $this->chat->sendMessage($channelId, $message);
 
-        $chat->sendMessage($channelId, $message);
+    }
 
+    public function thisChannelExist($id)
+    {
+        return $this->chat->getChannelName($id);
     }
 
     public function createChannel($name){
 
-        $chat = new Chat();
-
-
-        if($chat->channelExist($name) == false)
+        if($this->chat->channelExist($name) == false)
         {
 
-            $chat->addChannel($name);
+            $this->chat->addChannel($name);
 
         }
         else
         {
-            $this->index();
             return false;
         }
 
-        $this->index();
         return true;
+
+    }
+
+    public function getChannelName($channelId)
+    {
+
+        if ($this->chat->grantedToShowThisChannel($channelId))
+        {
+            return $this->chat->getChannelName($channelId);
+        }
+
+        return false;
+    }
+    public function getChannelId($channelName)
+    {
+
+        return $this->getChannelId($channelName);
 
     }
 
     public function addUserToChannel($channelId, $userMail)
     {
+        http_response_code(200);
+        header('Content-Type: application/json');
 
-        $chat = new Chat();
+        if($this->chat->grantedToShowThisChannel($channelId))
+        {
+            $channelName = $this->chat->getChannelName($channelId);
 
-        $channelName = $chat->getChannelName($channelId);
+            if($userId = $this->chat->getUserIdByMail($userMail))
+            {
+                $this->chat->addUserToAChannel($channelName, $userId);
 
-        $userId = $chat->getUserIdByMail($userMail);
+                echo json_encode(array(
+                    'message' => 'ok',
+                ));
 
-        $chat->addUserToAChannel($channelName, $userId);
+                return true;
+            }
+        }
 
+        echo json_encode(array(
+            'message' => 'error'
+        ));
     }
 
 }

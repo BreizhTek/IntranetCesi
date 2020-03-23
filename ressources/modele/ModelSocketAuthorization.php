@@ -7,7 +7,7 @@ class socketAuthorization
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=Intranet','admin','admin');
+            $db = new PDO('mysql:host=localhost;dbname=Intranet','root','root');
         }
         catch(PDOException $e)
         {

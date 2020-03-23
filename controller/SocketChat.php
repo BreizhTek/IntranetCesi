@@ -21,6 +21,7 @@ class socketChat implements MessageComponentInterface {
         $this->client = new \SplObjectStorage;
         $this->model = new \socketAuthorization();
         $this->channels = array();
+        $this->sessions = array();
     }
 
     public function onOpen(ConnectionInterface $conn)
@@ -44,6 +45,12 @@ class socketChat implements MessageComponentInterface {
     public function onError(ConnectionInterface $conn, \Exception $e)
     {
 
+        $channelId = $this->sessions[$conn->resourceId]['Channel'];
+        $userId = $this->sessions[$conn->resourceId]['User'];
+
+        unset($this->channels[$channelId][$userId]);
+        unset($this->sessions[$conn->resourceId]);
+
         $conn->close();
 
     }
@@ -51,7 +58,7 @@ class socketChat implements MessageComponentInterface {
     public function onMessage(ConnectionInterface $from, $msg)
     {
 
-        if (empty($this->sessions[$from->resourceId]))
+        if (!array_key_exists($from->resourceId, $this->sessions))
         {
 
             $msg = json_decode($msg, true);
@@ -64,7 +71,9 @@ class socketChat implements MessageComponentInterface {
             if (empty($User) OR empty($Channel) OR empty($Token))
             {
 
-                $from->send('Missing Auth, try to restart session or contact support');
+                $from->send(json_encode(array(
+                    'message' => 'Erreur'
+                )));
                 $from->close();
 
             }
@@ -106,7 +115,7 @@ class socketChat implements MessageComponentInterface {
             $userId = $this->sessions[$from->resourceId]['User'];
             $user = $this->sessions[$from->resourceId]['UserName'];
 
-            //$this->model->sendMessage($channelId, $msg, $userId);
+            $this->model->sendMessage($channelId, $msg, $userId);
 
             $finalMessage = array();
             $finalMessage['UserId'] = $userId;
