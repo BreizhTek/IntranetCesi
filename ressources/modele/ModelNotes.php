@@ -1,5 +1,4 @@
 <?php
-//require_once './db.php';
 
 class Notes
 {
@@ -7,7 +6,7 @@ class Notes
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=intranet_cesi','root','');
+            $db = new PDO(DSN,USER,PASS);
         }
         catch(PDOException $e)
         {

@@ -4,10 +4,9 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require __DIR__ . "/controller/ControllerClass.php";
 require __DIR__ . "/controller/ControllerNotes.php";
 require_once "./controller/api/ApiChat.php";
-
+require_once "./db.php";
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
@@ -21,19 +20,16 @@ function abort()
     exit();
 }
 
-
 switch ($request[0]) {
-    case '/' :
-        echo "dqsddqs";
-        // require __DIR__ . '/views/404.php';
-        break;
     case 'depo' :
-         require 'controller/ControllerDeposit.php';
-         $Deposit = new ControllerDeposit();
-         $Deposit->index(); // Display deposit page
+        require 'controller/ControllerDeposit.php';
+        $Deposit = new ControllerDeposit();
+        $Deposit->index(); // Display deposit page
         break;
     case '' :
-        echo password_hash('123', PASSWORD_DEFAULT);
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
         break;
     case 'chat' :
         $chat = new ControllerChat();
@@ -49,14 +45,13 @@ switch ($request[0]) {
         break;
     case 'user' :
         require 'controller/ControllerUser.php';
+        $controllerUser = new ControllerUser();
+
         if(isset($_POST['envoyerUpdate'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->update();
         }elseif (isset($_POST['envoyerInsert'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->insert();
         }else{
-            $controllerUser = new ControllerUser();
             $controllerUser->index();
         }
         break;
@@ -66,20 +61,29 @@ switch ($request[0]) {
         $controllerAllUser->index();
         break;
     case 'api' :
+        require 'controller/ControllerDeposit.php';
+        $Deposit = new ControllerDeposit();
 
         if(!empty($request[1]) AND $request[1] == 'Upload')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->upload();
         }
 
         elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->display();
         }
+
+        elseif(!empty($request[1]) AND $request[1] == 'deleteFiles')
+        {
+            echo  $Deposit->delete();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'folderCreation')
+        {
+            echo  $Deposit->folderCreation($_POST['name'], $_POST['path']);
+        }
+
 
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
@@ -153,7 +157,10 @@ switch ($request[0]) {
         $layout->index();
         break;
 
-
+    case 'class' :
+        $class = new ControllerClass();
+        $class->index();
+        break;
 
     case 'note-user' :
 
@@ -170,6 +177,14 @@ switch ($request[0]) {
             $notes->addAction();
         }
         break;
+
+    case 'signature' :
+    {
+    require 'controller/ControllerSignature.php';
+        $sign = new ControllerSignature();
+        echo  $sign->sign();
+    }
+    break;
 
     default:
         http_response_code(404);

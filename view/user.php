@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div>
+
+    <div class="flex justify-center my-4">
         <form action="user" method="POST" class="w-full max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
+
+            <div class="flex flex-wrap -mx-3 mb-6 hidden">
                 <div class="w-full px-3">
                     <label
                         for="Id"
@@ -26,6 +28,7 @@
                     >
                 </div>
             </div>
+
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
                     <label
@@ -41,6 +44,7 @@
                     >
                 </div>
             </div>
+
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
                     <label
@@ -56,6 +60,7 @@
                     >
                 </div>
             </div>
+
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
@@ -177,7 +182,7 @@
                         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     >MDP : </label>
                     <input
-                        type="text"
+                        type="password"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="Password"
                         name="Password"
@@ -190,22 +195,62 @@
                 Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
             </div>
             <?php
-            if($row <> "" && $row['Picture'] <>""){
-            ?>
-                <img src="\\storage\\users\\<?php echo $row['Picture'] ?>" width="270" height="295">
-            <?php
+            if (isset($row['Picture'])){
+                ?>
+                <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
+                <?php
+            } else {
+                ?>
+                <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                <?php
             }
             ?>
+            </br>
             <button
                 type="submit"
-                class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
+                class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded mt-6"
                 name="<?php echo(($row <> "") ? "envoyerUpdate" : "envoyerInsert")?>"
             >Enregistrer</button>
         </form>
     </div>
-</body>
+    </br>
+    <?php if(isset($row) && $row <> null && $row <> ""){
+        ?>
+        <div>
+            <h1>Voiture(s) : (Nb : <?php echo $nbCar ?>)</h1>
+            <a href="../car">Ajout Voiture</a>
+            <table>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Plaque d'immatriculation</th>
+                    <th scope="col">Marque</th>
+                    <th scope="col">Modèle</th>
+                    <th scope="col">Couleur</th>
+                </tr>
+                <?php
+                foreach ($carByUser as $car){
+                    ?>
+                    <tr>
+                        <td>
+                            <a href="../car/<?php echo $car['Id'] ?>">Lien de modification</a>
+                        </td><td>
+                            <?php echo $car['Plate'] ?>
+                        </td><td>
+                            <?php echo ((isset($car['Brand']) && isset($car['Brand']) <> "" && isset($car['Brand']) <> null) ? $car['Brand'] : "-")?>
+                        </td><td>
+                            <?php echo ((isset($car['Model']) && isset($car['Model']) <> "" && isset($car['Model']) <> null) ? $car['Model'] : "-")?>
+                        </td><td>
+                            <?php echo ((isset($car['Color']) && isset($car['Color']) <> "" && isset($car['Color']) <> null) ? $car['Color'] : "-")?>
+                        </td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </table>
+            </br>
+        </div>
+    <?php
+    }
+    ?>
+    </body>
 </html>
-
-
-
-

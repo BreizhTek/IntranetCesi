@@ -15,6 +15,8 @@
 </head>
 <body>
 
+<?php require_once __DIR__ . "/../../ressources/composants/header.php";?>
+
 <input type="hidden" value="<?php echo $User; ?>" id="User">
 <input type="hidden" value="<?php echo $Channel; ?>" id="Channel">
 <input type="hidden" value="<?php echo $Token; ?>" id="Token">
@@ -22,7 +24,7 @@
 
 <div class="w-full min-h-screen flex flex-row justify-center items-center">
 
-    <div class="w-full lg:flex lg:flex-row lg:mx-2 xl:mx-0 justify-center">
+    <div class="w-full lg:flex lg:flex-row mx-4 lg:mx-2 xl:mx-0 justify-center">
 
         <div class="bg-blue p-2 lg:w-2/3 xl:w-1/2 lg:p-4 xl:p-8 rounded-lg">
 
@@ -56,7 +58,7 @@
                 <div class="mt-2">
 
                     <input type="text" class="rounded-full px-2 text-black" id="inputNewUser" placeholder="E-mail"/>
-                    <button onclick="addNewUser()" class="ml-2 bg-white rounded-lg text-black p-1 px-2">Ajouter</button>
+                    <button onclick="addNewUser()" class="ml-2 mt-2 md:mt-0 lg:mt-2 xl:mt-0 bg-white rounded-lg text-black p-1 px-2">Ajouter</button>
 
                     <div id="responseAddUser" class="font-bold text-red-400"></div>
 
@@ -208,7 +210,7 @@
                 {
                     for (let i=0; i<data.content.length;i++)
                     {
-                        if (data.owner)
+                        if (data.owner && data.content[i].Id !== user.value)
                         {
                             usersList.innerHTML = usersList.innerHTML + '<div class="flex flex-row justify-between my-2"><p class="text-sm">' + data.content[i].First_name + ' ' + data.content[i].Last_name + '</p><button onclick="deleteUser(' + channel.value + ',' + data.content[i].Id + ')" class="bg-red-500 px-2 rounded-full font-extrabold">-</button></div>';
                         }

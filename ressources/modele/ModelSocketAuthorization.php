@@ -5,9 +5,13 @@ class socketAuthorization
 
     private function connect()
     {
+        $dsn = 'mysql:host=localhost;dbname=Intranet';
+        $user = 'root';
+        $pass = 'root';
+
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=Intranet','root','root');
+            $db = new PDO($dsn,$user,$pass);
         }
         catch(PDOException $e)
         {

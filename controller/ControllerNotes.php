@@ -23,9 +23,6 @@ class ControllerNotes
             $listeNotes = $modelNotes->findAll();
         }
 
-        //$row = $listeNotes->
-        //$listeMoyenne = $modelNotes->getMoyenneByModuleAndUser($id);
-
         require_once __DIR__ . "/../view/Notes/indexNotes.php";
 
     }
@@ -51,7 +48,7 @@ class ControllerNotes
 
 
             $modelClass = new ModelClass();
-            $listeClass = $modelClass->findAll();
+            $listeClass = $modelClass->find($req["2"]);
 
             $modelClasses = new ModelClasses();
             $listeClasses = $modelClasses->findAllByIdClass($req["2"]);

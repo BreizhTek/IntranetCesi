@@ -100,8 +100,16 @@ class apiChat
     {
         if ($this->modelChat->isChannelOwner($channelId))
         {
-            $this->modelChat->deleteUserFromChannel($channelId, $userId);
-            http_response_code(200);
+            if ($userId != $_SESSION['User_ID'])
+            {
+                $this->modelChat->deleteUserFromChannel($channelId, $userId);
+                http_response_code(200);
+            }
+            else
+            {
+                http_response_code(404);
+                exit();
+            }
         }
         else
         {
