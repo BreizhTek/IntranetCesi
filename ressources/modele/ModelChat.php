@@ -1,8 +1,8 @@
 <?php
 
 define('DSN', 'mysql:host=localhost;dbname=Intranet');
-define('USER', 'admin');
-define('PASS', 'admin');
+define('USER', 'root');
+define('PASS', '');
 
 class Chat {
 
@@ -133,16 +133,16 @@ class Chat {
 
     }
 
-    public function addChannel($name){
+    public function addChannel($name, $userid){
 
         $request = $this->connect()->prepare("INSERT INTO Channels (Name, Id_Users) VALUES (:name, :iduser)");
 
         $request->bindValue(':name', $name);
-        $request->bindValue(':iduser', $_SESSION['User_ID']);
+        $request->bindValue(':iduser', $userid);
 
         $request->execute();
 
-        $this->addUserToAChannel($name, $_SESSION['User_ID']);
+        $this->addUserToAChannel($name, $userid);
 
         return true;
     }
@@ -166,41 +166,6 @@ class Chat {
        {
            return false;
        }
-
-    }
-
-    public function getChannelName($channelId)
-    {
-
-        $request = $this->connect()->prepare("SELECT Name FROM Channels WHERE Id = :id");
-
-        $request->bindValue(':id', $channelId);
-
-        $request->execute();
-
-        $Name = $request->fetch();
-
-        if (!empty($Name))
-        {
-            return $Name['Name'];
-        }
-        else
-        {
-            return false;
-        }
-
-    }
-
-    public function getUserIdByMail($userMail)
-    {
-
-        $request = $this->connect()->prepare("SELECT Id FROM Users WHERE Mail = :mail");
-
-        $request->bindValue(':mail', $userMail);
-
-        $request->execute();
-
-        return $request->fetch()['Id'];
 
     }
 
