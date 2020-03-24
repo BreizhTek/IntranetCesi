@@ -4,6 +4,8 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ . "/controller/ControllerClass.php";
+require __DIR__ . "/controller/ControllerNotes.php";
 require_once "./db.php";
 require_once "./controller/api/ApiChat.php";
 
