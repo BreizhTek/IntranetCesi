@@ -1,9 +1,15 @@
-
-<?php
-require './ressources/composants/templatePage.php';
-?>
-
-<div>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div>
         <form action="user" method="POST" class="w-full max-w-lg">
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
@@ -179,6 +185,17 @@ require './ressources/composants/templatePage.php';
                     >
                 </div>
             </div>
+            <div>
+                <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+                Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
+            </div>
+            <?php
+            if($row <> "" && $row['Picture'] <>""){
+            ?>
+                <img src="\\storage\\users\\<?php echo $row['Picture'] ?>" width="270" height="295">
+            <?php
+            }
+            ?>
             <button
                 type="submit"
                 class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
@@ -186,6 +203,8 @@ require './ressources/composants/templatePage.php';
             >Enregistrer</button>
         </form>
     </div>
+</body>
+</html>
 
 
 

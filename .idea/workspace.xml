@@ -1,7 +1,699 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;index.php&#10;#&#9;ressources/modele/ModelLogin.php" />
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Intranet.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IntranetV2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/ControllerDb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/SocketChat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/api/ApiChat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/autre/gif/waiting.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ressources/modele/ModelSocketAuthorization.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-chat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/AbstractConnectionDecorator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/App.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/ComponentInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/ConnectionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/CloseResponseTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpRequestParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/HttpServerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/NoOpHttpServerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/OriginCheck.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Http/Router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/MessageComponentInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/MessageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/EchoServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/FlashPolicy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IoConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Server/IpBlackList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/HandlerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/PhpBinaryHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Serialize/PhpHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/SessionProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Storage/Proxy/VirtualProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Session/Storage/VirtualSessionStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/Exception.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/JsonException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/ServerProtocol.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/Topic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/TopicManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/Wamp/WampServerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/ConnContext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/MessageCallableInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/MessageComponentInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/src/Ratchet/WebSocket/WsServerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/bin/fuzzingserver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-all.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-profile.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/autobahn/fuzzingclient-quick.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/AbstractMessageComponentTestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/Component.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/ConnectionDecorator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Mock/WampComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/NullComponent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/Wamp/Stub/WsWampServerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/helpers/Ratchet/WebSocket/Stub/WsMessageComponentInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/AbstractConnectionDecoratorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/HttpRequestParserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/HttpServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/OriginCheckTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Http/RouterTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/EchoServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/FlashPolicyComponentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IoConnectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IoServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Server/IpBlackListComponentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/Serialize/PhpHandlerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/SessionComponentTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Session/Storage/VirtualSessionStoragePDOTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/ServerProtocolTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/TopicManagerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/TopicTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/WampConnectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/cboden/ratchet/tests/unit/Wamp/WampServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/doc/00-intro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/doc/01-api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/doc/02-plugin-system.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-no-arguments.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-once.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit-one-argument.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-emit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/examples/benchmark-remove-listener-once.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/src/Evenement/EventEmitterTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/EventEmitterTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/Listener.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/evenement/evenement/tests/Evenement/Tests/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/AppendStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/BufferStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/CachingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/DroppingStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/FnStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/InflateStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LimitStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MessageTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MultipartStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/NoSeekStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/PumpStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Rfc7230.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/ServerRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Stream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UploadedFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Uri.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/RequestInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ServerRequestInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/StreamInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UploadedFileInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UriInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ralouphie/getallheaders/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ralouphie/getallheaders/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ralouphie/getallheaders/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ralouphie/getallheaders/src/getallheaders.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ClientNegotiator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/NegotiatorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/RequestVerifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ResponseVerifier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Handshake/ServerNegotiator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/CloseFrameChecker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/DataInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/Frame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/FrameInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/MessageBuffer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/src/Messaging/MessageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/AbResultsTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/clientRunner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/fuzzingclient.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/fuzzingserver.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/run_ab_tests.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/ab/startServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/RequestVerifierTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/ResponseVerifierTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Handshake/ServerNegotiatorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/FrameTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/MessageBufferTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/ratchet/rfc6455/tests/unit/Messaging/MessageTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/src/ArrayCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/src/CacheInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/tests/ArrayCacheTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/tests/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/cache/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/01-one.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/02-concurrent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/03-cached.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/11-all-ips.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/12-all-types.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/13-reverse-dns.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/91-query-a-and-aaaa.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/examples/92-query-any.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/BadServerException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Config/Config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Config/HostsFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Model/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Model/Record.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Protocol/BinaryDumper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Protocol/Parser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/CachingExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/CancellationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/CoopExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/ExecutorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/HostsFileExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/Query.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/RetryExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/SelectiveTransportExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/TcpTransportExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/TimeoutException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/TimeoutExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Query/UdpTransportExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/RecordNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Resolver/Factory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Resolver/Resolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/src/Resolver/ResolverInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Config/ConfigTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Config/HostsFileTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Fixtures/etc/resolv.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/FunctionalResolverTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Model/MessageTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Protocol/BinaryDumperTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Protocol/ParserTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/CachingExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/CoopExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/HostsFileExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/RetryExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/SelectiveTransportExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/TcpTransportExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/TimeoutExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Query/UdpTransportExecutorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/FactoryTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/ResolveAliasesTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/Resolver/ResolverTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/dns/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtEvLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtEventLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtLibevLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtLibeventLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/ExtUvLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/Factory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/LoopInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/SignalsHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/StreamSelectLoop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/Tick/FutureTickQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/Timer/Timer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/Timer/Timers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/event-loop/src/TimerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/src/TimeoutException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionRejectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionResolveTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/FunctionTimeoutTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise-timer/tests/TimeoutExceptionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/CancellablePromiseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/CancellationQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/Deferred.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/Exception/LengthException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/ExtendedPromiseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/FulfilledPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/LazyPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/Promise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/PromiseInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/PromisorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/RejectedPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/UnhandledRejectionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/src/functions_include.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/CancellationQueueTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/DeferredTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FulfilledPromiseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionAllTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionAnyTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionCheckTypehintTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionMapTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionRaceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionReduceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionRejectTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionResolveTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/FunctionSomeTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/LazyPromiseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseAdapter/CallbackPromiseAdapter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseAdapter/PromiseAdapterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/CancelTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/FullTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/NotifyTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseFulfilledTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromisePendingTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseRejectedTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/PromiseSettledTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/RejectTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/PromiseTest/ResolveTestTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/RejectedPromiseTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/Stub/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleFulfilledTestPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleFulfilledTestThenable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleRejectedTestPromise.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleTestCancellable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/promise/tests/fixtures/SimpleTestCancellableThenable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/01-echo-server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/02-chat-server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/03-http-server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/11-http-client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/12-https-client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/21-netcat-client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/22-http-client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/91-benchmark-server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/99-generate-self-signed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/localhost.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/examples/localhost_swordfish.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/Connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/ConnectionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/Connector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/ConnectorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/DnsConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/FixedUriConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/LimitingServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/SecureConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/SecureServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/Server.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/ServerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/StreamEncryption.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/TcpConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/TcpServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/TimeoutConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/UnixConnector.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/src/UnixServer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/ConnectionTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/ConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/DnsConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/FixedUriConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalSecureServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/FunctionalTcpServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/IntegrationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/LimitingServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/SecureConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/SecureIntegrationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/SecureServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/ServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/ConnectionStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/Stub/ServerStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/TcpConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/TcpServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/TimeoutConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/UnixConnectorTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/socket/tests/UnixServerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/examples/01-http.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/examples/02-https.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/examples/11-cat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/examples/91-benchmark-throughput.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/CompositeStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/DuplexResourceStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/DuplexStreamInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/ReadableResourceStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/ReadableStreamInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/ThroughStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/Util.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/WritableResourceStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/src/WritableStreamInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/CallableStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/CompositeStreamTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/DuplexResourceStreamIntegrationTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/DuplexResourceStreamTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/EnforceBlockingWrapper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/FunctionalInternetTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/ReadableResourceStreamTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/Stub/ReadableStreamStub.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/ThroughStreamTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/UtilTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/react/stream/tests/WritableStreamResourceTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/AcceptHeaderItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Cookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/ConflictingHeadersException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/RequestExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Exception/SuspiciousOperationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/ExpressionRequestMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/AccessDeniedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/CannotWriteFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/ExtensionFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FileNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/FormSizeFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/IniSizeFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/NoFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/NoTmpDirFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/PartialFileException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UnexpectedTypeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Exception/UploadException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/File.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/Stream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/File/UploadedFile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/FileBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/HeaderUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/IpUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/JsonResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/ParameterBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RedirectResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestMatcherInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/RequestStack.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/ResponseHeaderBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/ServerBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/AttributeBagInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Attribute/NamespacedAttributeBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/AutoExpireFlashBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Flash/FlashBagInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionBagInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionBagProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/SessionUtils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/AbstractSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MemcachedSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MigratingSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NativeFileSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/NullSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/PdoSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/RedisSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/SessionHandlerFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Handler/StrictSessionHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MetadataBag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockArraySessionStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/MockFileSessionStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/NativeSessionStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/PhpBridgeSessionStorage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Proxy/AbstractProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/Proxy/SessionHandlerProxy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Session/Storage/SessionStorageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/StreamedResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/RequestAttributeValueSame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseCookieValueSame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseHasCookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseHasHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseHeaderSame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseIsRedirected.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseIsSuccessful.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Test/Constraint/ResponseStatusCodeSame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/UrlHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Address.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/BodyRendererInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/CharacterStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Crypto/SMime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Crypto/SMimeEncrypter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Crypto/SMimeSigner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/DependencyInjection/AddMimeTypeGuesserPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Email.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/AddressEncoderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/Base64ContentEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/Base64Encoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/Base64MimeHeaderEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/ContentEncoderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/EightBitContentEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/EncoderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/IdnAddressEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/MimeHeaderEncoderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/QpContentEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/QpEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/QpMimeHeaderEncoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Encoder/Rfc2231Encoder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/AddressEncoderException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/ExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/InvalidArgumentException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/LogicException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/RfcComplianceException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Exception/RuntimeException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/FileBinaryMimeTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/FileinfoMimeTypeGuesser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/AbstractHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/DateHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/HeaderInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/Headers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/IdentificationHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/MailboxHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/MailboxListHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/ParameterizedHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/PathHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Header/UnstructuredHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/MessageConverter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/MimeTypeGuesserInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/MimeTypes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/MimeTypesInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/AbstractMultipartPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/AbstractPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/DataPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/MessagePart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/Multipart/AlternativePart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/Multipart/DigestPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/Multipart/FormDataPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/Multipart/MixedPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/Multipart/RelatedPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/SMimePart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/TextPart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/RawMessage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Resources/bin/update_mime_types.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailAddressContains.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailAttachmentCount.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailHasHeader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailHeaderSame.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailHtmlBodyContains.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/Test/Constraint/EmailTextBodyContains.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/mime/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/Idn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Mbstring.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/lowerCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/titleCaseRegexp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/Resources/unidata/upperCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/Php72.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php72/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Annotation/Route.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/CompiledRoute.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/DependencyInjection/RoutingResolverPass.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/ExceptionInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/InvalidParameterException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/MethodNotAllowedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/MissingMandatoryParametersException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/NoConfigurationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/ResourceNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Exception/RouteNotFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/CompiledUrlGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/ConfigurableRequirementsInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/CompiledUrlGeneratorDumper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/GeneratorDumper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/Dumper/GeneratorDumperInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/UrlGenerator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/UrlGeneratorInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationDirectoryLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/AnnotationFileLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ClosureLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/CollectionConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/ImportConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/RouteConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/RoutingConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/Traits/AddTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/Configurator/Traits/RouteTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ContainerLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/DirectoryLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/GlobFileLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/ObjectLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/PhpFileLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/XmlFileLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/YamlFileLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/schema/routing/routing-1.0.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/CompiledUrlMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherDumper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherTrait.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/MatcherDumper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/MatcherDumperInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RedirectableUrlMatcherInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/RequestMatcherInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/TraceableUrlMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/UrlMatcherInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RequestContext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RequestContextAwareInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Route.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RouteCollection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RouteCollectionBuilder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RouteCompiler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RouteCompilerInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/Router.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/RouterInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/symfony/routing/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Chat/list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IntranetCesi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IntranetCesi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerAllUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerAllUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/Default.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/channel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/createChat.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/listChannels.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +707,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
@@ -22,6 +715,30 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/ratchet/rfc6455" />
+      <path value="$PROJECT_DIR$/vendor/cboden/ratchet" />
+      <path value="$PROJECT_DIR$/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/vendor/react/stream" />
+      <path value="$PROJECT_DIR$/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1YLUo4aXOVKo6x8wvQRRwLY6yV9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,6 +763,18 @@
       <recent name="C:\wamp64\www\IntranetCesi" />
     </key>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -61,32 +790,12 @@
       <workItem from="1582789497798" duration="2698000" />
       <workItem from="1582818964036" duration="384000" />
       <workItem from="1582823452899" duration="3068000" />
-      <workItem from="1582876295945" duration="15942000" />
-      <workItem from="1584267412910" duration="1161000" />
-      <workItem from="1584562040441" duration="942000" />
-      <workItem from="1584708449234" duration="6977000" />
-      <workItem from="1584785155931" duration="5522000" />
-      <workItem from="1584799931686" duration="917000" />
-      <workItem from="1584808353623" duration="14037000" />
-      <workItem from="1584874717538" duration="7578000" />
-      <workItem from="1584948692888" duration="25791000" />
-      <workItem from="1585035756525" duration="3439000" />
+      <workItem from="1582876295945" duration="13381000" />
+      <workItem from="1583009169347" duration="1161000" />
+      <workItem from="1583589429306" duration="1276000" />
+      <workItem from="1584396013651" duration="35000" />
+      <workItem from="1584949623289" duration="4265000" />
     </task>
-    <task id="LOCAL-00001" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
-      <created>1582895461496</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1582895461496</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
-      <created>1582895507236</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1582895507236</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,64 +819,52 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Commit Quentin DOPPLER" />
     <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
-    <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="710" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584949462915">
+    <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584960309959">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584960309959" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="710" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584949462915" />
-    <state x="714" y="171" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582904870847">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="714" y="171" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582904870847" />
-    <state x="63" y="28" width="1813" height="987" key="CommitChangelistDialog2" timestamp="1584960209470">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="63" y="28" width="1813" height="987" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584960209470" />
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895506595" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
     <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895418413" />
-    <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1582813423755">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2907" y="295" width="424" height="487" key="FileChooserDialogImpl" timestamp="1584396046711">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1582813423755" />
-    <state x="184" y="90" key="MergeDialog" timestamp="1582895643704">
+    <state x="2907" y="295" width="424" height="487" key="FileChooserDialogImpl/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584396046711" />
+    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="184" y="90" key="MergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895643704" />
-    <state x="672" y="256" key="MultipleFileMergeDialog" timestamp="1582895647688">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="672" y="256" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895647688" />
-    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1584969152937">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584969152937" />
-    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582900894893" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1584974936553">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582825257008" />
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog" timestamp="1584978065049">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584974936553" />
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
-    <state x="461" y="182" key="SettingsEditor" timestamp="1582897914979">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584978065049" />
+    <state x="2704" y="190" width="992" height="733" key="SettingsEditor" timestamp="1584949763653">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="461" y="182" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1582897914979" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1582895663246">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895663246" />
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1582789498845">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
+    <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
-    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895523857">
+    <state x="2795" y="364" key="com.intellij.ide.util.TipDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585035963820" />
+    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1584958756176">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584958756176" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895523857" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
   </component>
 </project>

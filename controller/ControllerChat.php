@@ -1,57 +1,82 @@
 <?php
 
 require_once "ressources/modele/ModelChat.php";
+require_once "ressources/modele/ModelSocketAuthorization.php";
 
 class ControllerChat {
 
-    public function index(){
+    private $chat;
+    private $socket;
 
-        $chat = new Chat();
+    public function __construct()
+    {
+        $this->chat = new Chat();
+        $this->socket = new socketAuthorization();
+    }
 
-        var_dump($_SESSION);
+    public function getChannelList(){
 
-        $channels = $chat->getChannels(2);
-
-        require_once __DIR__ . "/../view/Chat/listChannels.php";
+        return $this->chat->getChannels();
 
     }
 
-    public function channel($channelName){
-
-        $chat = new Chat();
-
-        $userid = 2;
-
-        $messages = $chat->getMessages($channelName, $userid);
-
-        if ($messages === false)
-            $this->index();
-
-        require __DIR__ . "/../view/Chat/message.php";
-
-        require __DIR__ . "/../view/Chat/channel.php";
-
+    public function isAllowed($channelId)
+    {
+        return $this->chat->grantedToShowThisChannel($channelId);
     }
 
-    public function createChannel($name){
+    public function thisChannelExist($id)
+    {
+        return $this->chat->getChannelName($id);
+    }
 
-        $chat = new Chat();
+    public function displayChannel($channelId)
+    {
 
-
-        if($chat->channelExist($name) == false)
+        if($this->chat->channelExist($this->chat->getChannelName($channelId)) AND $this->chat->grantedToShowThisChannel($channelId))
         {
+            $result = $this->socket->addAuthorization($channelId);
+            $data = $this->socket->getAuth($channelId);
 
-            $chat->addChannel($name, 2);
-
+            $Token = $data['Token'];
+            $Channel = $data['Id_Channels'];
+            $User = $_SESSION['User_ID'];
+            $Name = $_SESSION['First_name'];
+            $ChannelName = $this->chat->getChannelName($Channel);
+            $channelOwner = $this->chat->isChannelOwner($Channel);
+            require_once "view/Chat/room.php";
         }
         else
         {
-            $this->index();
-            return false;
+            http_response_code(404);
+            echo "404";
+            exit();
         }
 
-        $this->index();
-        return true;
+    }
+
+    public function displayChannelList()
+    {
+        $channels = $this->chat->getChannels();
+
+        require_once "view/Chat/list.php";
+
+    }
+
+    public function getChannelName($channelId)
+    {
+
+        if ($this->chat->grantedToShowThisChannel($channelId))
+        {
+            return $this->chat->getChannelName($channelId);
+        }
+
+        return false;
+    }
+    public function getChannelId($channelName)
+    {
+
+        return $this->chat->getChannelId($channelName);
 
     }
 
