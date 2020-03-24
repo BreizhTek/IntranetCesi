@@ -79,6 +79,21 @@ switch ($request[0]) {
         }
 
         break;
+
+    case 'car' :
+        require 'controller/ControlleurCar.php';
+        if(isset($_POST['envoyerUpdate'])){
+            $controllerCar = new ControllerCar();
+            $controllerCar->update();
+        }elseif (isset($_POST['envoyerInsert'])){
+            $controllerCar = new ControllerCar();
+            $controllerCar->insert();
+        }else{
+            $controllerCar = new ControllerCar();
+            $controllerCar->index();
+        }
+        break;
+
     case 'user' :
         require 'controller/ControllerUser.php';
         if(isset($_POST['envoyerUpdate'])){

@@ -1,30 +1,36 @@
 <?php
-require_once "./db.php";
+
 class ModelUser
 {
+    private function connect() {
+        try {
+            $db = new PDO('mysql:host=localhost;dbname=intranetcesi','root','');
+        } catch(PDOException $e) {
+            error_log($e->getMessage());
+            return false;
+        }
+        return $db;
+    }
+
    public function getUserAll(){
-        $db = database();
         $sql = "SELECT * 
                     FROM users";
-        $statement = $db->prepare($sql);
+        $statement = $this->connect()->prepare($sql);
         $statement->execute();
         return $statement;
     }
 
     public function getUserById($id){
-        $db = database();
         $sql = "SELECT * 
                     FROM users
                     WHERE users.Id = :id";
-        $statement = $db->prepare($sql);
+        $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":id", $id);
         $statement->execute();
         return $statement;
     }
 
-    public function updateUser($data)
-    {
-        $db = database();
+    public function updateUser($data){
         $sql = "UPDATE users
                     SET
                         users.Level = :level,
@@ -40,7 +46,7 @@ class ModelUser
                         users.Password = :pwd,
                         users.Picture = :picture
                            WHERE users.Id = :id";
-        $statement = $db->prepare($sql);
+        $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":id", $data['Id']);
         $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
         $statement->bindValue(":last_name", $data['LastName'],PDO::PARAM_STR);
@@ -58,9 +64,7 @@ class ModelUser
         return $statement;
     }
 
-    public function insertUser($data)
-    {
-        $db = database();
+    public function insertUser($data){
         $sql = "INSERT INTO users
                     (
                         Level,
@@ -92,7 +96,7 @@ class ModelUser
                         :pwd
                     )";
 
-        $statement = $db->prepare($sql);
+        $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
         $statement->bindValue(":last_name", $data['LastName'],PDO::PARAM_STR);
         $statement->bindValue(":first_naeme", $data['FristName'],PDO::PARAM_STR);
