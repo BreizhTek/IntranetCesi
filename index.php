@@ -24,9 +24,9 @@ function abort()
 
 switch ($request[0]) {
     case 'depo' :
-         require 'controller/ControllerDeposit.php';
-         $Deposit = new ControllerDeposit();
-         $Deposit->index(); // Display deposit page
+        require 'controller/ControllerDeposit.php';
+        $Deposit = new ControllerDeposit();
+        $Deposit->index(); // Display deposit page
         break;
     case '' :
         require('controller/ControllerLayout.php');
@@ -45,31 +45,15 @@ switch ($request[0]) {
         }
 
         break;
-
-    case 'car' :
-        require 'controller/ControlleurCar.php';
-        if(isset($_POST['envoyerUpdate'])){
-            $controllerCar = new ControllerCar();
-            $controllerCar->update();
-        }elseif (isset($_POST['envoyerInsert'])){
-            $controllerCar = new ControllerCar();
-            $controllerCar->insert();
-        }else{
-            $controllerCar = new ControllerCar();
-            $controllerCar->index();
-        }
-        break;
-
     case 'user' :
         require 'controller/ControllerUser.php';
+        $controllerUser = new ControllerUser();
+
         if(isset($_POST['envoyerUpdate'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->update();
         }elseif (isset($_POST['envoyerInsert'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->insert();
         }else{
-            $controllerUser = new ControllerUser();
             $controllerUser->index();
         }
         break;
@@ -79,20 +63,29 @@ switch ($request[0]) {
         $controllerAllUser->index();
         break;
     case 'api' :
+        require 'controller/ControllerDeposit.php';
+        $Deposit = new ControllerDeposit();
 
         if(!empty($request[1]) AND $request[1] == 'Upload')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->upload();
         }
 
         elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->display();
         }
+
+        elseif(!empty($request[1]) AND $request[1] == 'deleteFiles')
+        {
+            echo  $Deposit->delete();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'folderCreation')
+        {
+            echo  $Deposit->folderCreation($_POST['name'], $_POST['path']);
+        }
+
 
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
@@ -180,9 +173,16 @@ switch ($request[0]) {
         }
         break;
 
+    case 'signature' :
+    {
+    require 'controller/ControllerSignature.php';
+        $sign = new ControllerSignature();
+        echo  $sign->sign();
+    }
+    break;
+
     default:
         http_response_code(404);
         abort();
         break;
 }
-

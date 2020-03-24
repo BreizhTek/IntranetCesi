@@ -4,7 +4,7 @@ class ModelUser
 {
     private function connect() {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=intranetcesi','root','');
+            $db = new PDO(DSN,USER,PASS);
         } catch(PDOException $e) {
             error_log($e->getMessage());
             return false;
@@ -14,7 +14,7 @@ class ModelUser
 
    public function getUserAll(){
         $sql = "SELECT * 
-                    FROM users";
+                    FROM Users";
         $statement = $this->connect()->prepare($sql);
         $statement->execute();
         return $statement;
@@ -22,8 +22,8 @@ class ModelUser
 
     public function getUserById($id){
         $sql = "SELECT * 
-                    FROM users
-                    WHERE users.Id = :id";
+                    FROM Users
+                    WHERE Users.Id = :id";
         $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":id", $id);
         $statement->execute();
@@ -32,7 +32,7 @@ class ModelUser
 
     public function getUsersByClass($idClass){
 
-        $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name FROM users u WHERE u.Id_Class = :idClass;");
+        $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name FROM Users u WHERE u.Id_Class = :idClass;");
 
         $request->bindValue(':idClass', $idClass);
         $request->execute();
@@ -45,21 +45,21 @@ class ModelUser
     public function updateUser($data)
     {
         $db = database();
-        $sql = "UPDATE users
+        $sql = "UPDATE Users
                     SET
-                        users.Level = :level,
-                        users.Last_name = :last_name,
-                        users.First_name = :first_naeme,
-                        users.Birth = :birth,
-                        users.Post = :post,
-                        users.Phone = :phone,
-                        users.Address = :address,
-                        users.Tutor = :tutor,
-                        users.Tutor_mail = :tutor_mail,
-                        users.Mail = :mail,
-                        users.Password = :pwd,
-                        users.Picture = :picture
-                           WHERE users.Id = :id";
+                        Users.Level = :level,
+                        Users.Last_name = :last_name,
+                        Users.First_name = :first_naeme,
+                        Users.Birth = :birth,
+                        Users.Post = :post,
+                        Users.Phone = :phone,
+                        Users.Address = :address,
+                        Users.Tutor = :tutor,
+                        Users.Tutor_mail = :tutor_mail,
+                        Users.Mail = :mail,
+                        Users.Password = :pwd,
+                        Users.Picture = :picture
+                           WHERE Users.Id = :id";
         $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":id", $data['Id']);
         $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
@@ -79,7 +79,7 @@ class ModelUser
     }
 
     public function insertUser($data){
-        $sql = "INSERT INTO users
+        $sql = "INSERT INTO Users
                     (
                         Level,
                         Last_name,
