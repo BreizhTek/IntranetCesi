@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="3c6b2261-0e30-40bd-86b2-8f8dd2f252d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../userexo/bdd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="">
     <list default="true" id="4ba3e211-5be3-4a28-a4ee-a47cb33ade66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/car.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Notes/noteAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Notes/noteAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +36,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -62,12 +77,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -110,14 +125,6 @@
       <workItem from="1585035964714" duration="3883000" />
       <workItem from="1585041935832" duration="553000" />
     </task>
-    <task id="LOCAL-00001" summary="QGT: root voiture et changement entre nom et prénom">
-      <created>1585062958690</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1585062958690</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,27 +158,20 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Commit Quentin DOPPLER" />
     <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
-    <MESSAGE value="QGT: root voiture et changement entre nom et prénom" />
-    <option name="LAST_COMMIT_MESSAGE" value="QGT: root voiture et changement entre nom et prénom" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2952" y="360" width="486" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585056908291">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="2952" y="360" width="486" height="392" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585056908291" />
     <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584960309959">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584960309959" />
-    <state x="2249" y="113" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1585062957289">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="2249" y="113" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585062957289" />
     <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
-    <state x="2144" y="82" width="2048" height="864" key="DiffContextDialog" timestamp="1585062992903">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="2219" y="84" width="2048" height="864" key="DiffContextDialog" timestamp="1585043061515">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2144" y="82" key="DiffContextDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585062992903" />
     <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895418413" />
     <state x="2219" y="84" width="2048" height="864" key="DiffContextDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585043061515" />
     <state x="2907" y="295" width="424" height="487" key="FileChooserDialogImpl" timestamp="1584396046711">
@@ -204,10 +204,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585062994607">
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585061742440">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585062994607" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585061742440" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -218,10 +218,9 @@
     </state>
     <state x="2649" y="160" width="607" height="759" key="find.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585062847682" />
     <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585039289061" />
-    <state x="2597" y="322" key="git4idea.merge.GitPullDialog" timestamp="1585062967318">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="2597" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585062967318" />
     <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
     <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585061485038">
       <screen x="1920" y="0" width="2560" height="1080" />

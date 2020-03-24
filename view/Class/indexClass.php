@@ -159,8 +159,7 @@ require './ressources/composants/templatePage.php';
                                 ?>
 
                                 <td class="p-4 w-1/4">
-                                    <a name="form-note-edit" id="" class="cursor-pointer bg-orange-400 hover:bg-orange-400 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded"> Edit </a>
-                                    <a name="form-note-delete" id="" class="cursor-pointer bg-red-400 hover:bg-red-400 shadow-xl px-5 py-2 inline-block text-red-100 hover:text-white rounded"> Supprimer </a>
+                                    <a name="form-note-show" id="" class="cursor-pointer bg-orange-400 hover:bg-orange-400 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded"> Détails </a>
                                 </td>
                             </tr>
                             <?php

@@ -37,11 +37,6 @@
                                         </button>
                                     </div>
                                 </form>
-                                <div class="text-center mt-4"> <!--{{ route('password.request') }}-->
-                                    <a class="class="no-underline hover:underline text-blue-dark text-xs" href="#" href="#">
-                                        Forgot Your Password?
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>

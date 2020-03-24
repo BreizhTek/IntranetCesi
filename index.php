@@ -4,11 +4,9 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require __DIR__ . "/controller/ControllerClass.php";
 require __DIR__ . "/controller/ControllerNotes.php";
-require_once "./db.php";
 require_once "./controller/api/ApiChat.php";
-
+require_once "./db.php";
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
@@ -172,6 +170,12 @@ switch ($request[0]) {
         exit();
         break;
 
+    case 'layout' :
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
+        break;
+
     case 'class' :
         $class = new ControllerClass();
         $class->index();
@@ -185,7 +189,8 @@ switch ($request[0]) {
 
     case 'note-add' :
         if(!empty($_POST)){
-
+            $notes = new ControllerNotes();
+            $notes->addAction();
         } else {
             $notes = new ControllerNotes();
             $notes->addAction();
@@ -205,3 +210,4 @@ switch ($request[0]) {
         abort();
         break;
 }
+

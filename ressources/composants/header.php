@@ -31,14 +31,14 @@
                                 <?php
                                     if ($_SESSION['Level'] == 2 || $_SESSION['Level'] == 3) {
                                         ?>
-                                        <li><a href="class"
+                                        <li><a href="note-user"
                                                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Gestions des Notes</a>
                                         </li>
                                         <?php
                                     } else {
                                         ?>
                                         <li><a href="note-user"
-                                               class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notes</a>
+                                               class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Mes Notes</a>
                                         </li>
                                         <?php
                                     }
