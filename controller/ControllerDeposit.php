@@ -19,7 +19,7 @@ class ControllerDeposit
 
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty
         {
-            $folder = './storage/'; // Define the reception folder
+            $folder = '.\\storage\\'; // Define the reception folder
             $forbiddenExtension = array('.php'); // Define the forbidden extension for the security
             $fileSizeMax = 250000000; // Define the maximum file's size
             $uploadReturn = array();
@@ -97,7 +97,7 @@ class ControllerDeposit
            }
            return json_encode($fileList);
        }else{
-           return json_encode('e');
+           return json_encode(false);
        }
 
 
@@ -116,8 +116,6 @@ class ControllerDeposit
         }
     }
 }
-
-
 
 ?>
 

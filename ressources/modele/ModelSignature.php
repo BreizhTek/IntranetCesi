@@ -7,7 +7,7 @@ class ModelSignature
     {
         try
         {
-            $db = new PDO('DNS','USER','PASS');
+            $db = new PDO(DSN, USER, PASS);
         }
         catch(PDOException $e)
         {
