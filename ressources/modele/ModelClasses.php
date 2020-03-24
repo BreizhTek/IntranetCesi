@@ -34,7 +34,7 @@ class ModelClasses
         $request = $this->connect()->prepare("SELECT c.Id, c.Name, c.Matter, c.`Begin`, c.`End`, c.Id_Users FROM classes c 
                                                     INNER JOIN timetable t ON t.Id_Classes = c.Id
                                                     INNER JOIN class c2 ON c2.Id = t.Id_Class
-                                                    WHERE c2.Id = ;");
+                                                    WHERE c2.Id = :classid ;");
         $request->bindValue(':classid', $idClass);
         $request->execute();
 

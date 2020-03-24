@@ -4,6 +4,8 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ . "/controller/ControllerClass.php";
+require __DIR__ . "/controller/ControllerNotes.php";
 require_once "./controller/api/ApiChat.php";
 
 $request = $_SERVER['REQUEST_URI'];
@@ -151,10 +153,7 @@ switch ($request[0]) {
         $layout->index();
         break;
 
-    case 'class' :
-        $class = new ControllerClass();
-        $class->index();
-        break;
+
 
     case 'note-user' :
 

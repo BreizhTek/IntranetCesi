@@ -41,7 +41,7 @@ class Notes
                                                     INNER JOIN notes n2 ON n2.Id = n.Id_Notes
                                                     INNER JOIN classes c ON c.Id = n.Id_Classes
                                                     INNER JOIN users u ON u.Id = n.Id_Users
-                                                    WHERE n.Id = :userid;");
+                                                    WHERE u.Id = :userid;");
 
         $request->bindValue(':userid', $idUser);
         $request->execute();
@@ -64,7 +64,17 @@ class Notes
 
 
     public function getMoyenneByModuleAndUser($idUser){
+        $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name, c.Name, c.Matter, avg(n2.Note) AS Note  FROM note n
+                                                    INNER JOIN notes n2 ON n2.Id = n.Id_Notes
+                                                    INNER JOIN classes c ON c.Id = n.Id_Classes
+                                                    INNER JOIN users u ON u.Id = n.Id_Users
+                                                    WHERE u.Id = :userid
+                                                    GROUP BY concat(u.Id, c.Matter);");
 
+        $request->bindValue(':userid', $idUser);
+        $request->execute();
+
+        return $request->fetchAll();
     }
 
     protected function save($datas){
