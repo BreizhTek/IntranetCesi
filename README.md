@@ -2,6 +2,8 @@
 
 ## Instructions
 
+Importer la base de données avec le fichiers `Intranet.sql`
+
 Veuillez renseigné vos données de connexion en base de données.
 
 Dans :
