@@ -13,7 +13,7 @@ $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
 
-if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login')
+if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login' AND $request[0] != 'signin')
 {
     $request[0] = 'login';
 }
@@ -170,10 +170,10 @@ switch ($request[0]) {
         exit();
         break;
 
-    case 'layout' :
-        require('controller/ControllerLayout.php');
-        $layout = new ControllerLayout();
-        $layout->index();
+    case 'signin' :
+        require 'controller/ControllerUser.php';
+        $controllerUser = new ControllerUser();
+        $controllerUser->index();
         break;
 
     case 'class' :

@@ -29,7 +29,7 @@
                                         <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400" name="password" required placeholder="Password">
                                     </div>
                                     <div class="flex items-center mt-4">
-                                        <input type="checkbox" name="remember" id="remember" class="mr-2"> <label for="remember" class="text-sm text-grey-dark">Remember Me</label>
+                                        <p class="text-sm text-grey-dark text-white p-2 rounded-lg bg-orange-500 hover:bg-orange-400 cursor-pointer"><a href="/signin">S'inscrire</a></p>
                                     </div>
                                     <div class="flex flex-col mt-8">
                                         <button id="login" type="submit" class="cursor-pointer bg-grey-500 hover:bg-grey-400 shadow-xl px-5 py-2 inline-block text-black hover:text-white rounded" disabled >

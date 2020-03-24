@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="">
+    <list default="true" id="894162ae-f69f-432f-9906-adb9faa05387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/Chat/room.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
