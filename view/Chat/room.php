@@ -85,7 +85,7 @@
 
 <script>
 
-        let conn = new WebSocket('ws://localhost:8080');
+        let conn = new WebSocket('ws://' + window.location.host + ':8080');
         let message = document.getElementById('inputMessage');
         let box = document.getElementById('displayMessages');
 

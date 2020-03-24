@@ -47,7 +47,6 @@ class ModelUser
     {
         $sql = "UPDATE Users
                     SET
-                        Users.Level = :level,
                         Users.Last_name = :last_name,
                         Users.First_name = :first_naeme,
                         Users.Birth = :birth,
@@ -62,7 +61,6 @@ class ModelUser
                            WHERE Users.Id = :id";
         $statement = $this->connect()->prepare($sql);
         $statement->bindValue(":id", $data['Id']);
-        $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
         $statement->bindValue(":last_name", $data['LastName'],PDO::PARAM_STR);
         $statement->bindValue(":first_naeme", $data['FristName'],PDO::PARAM_STR);
         $statement->bindValue(":birth", $data['Brith'],PDO::PARAM_STR);
@@ -75,13 +73,13 @@ class ModelUser
         $statement->bindValue(":pwd", $data['pwd'],PDO::PARAM_STR);
         $statement->bindValue(":picture", $data['Picture'],PDO::PARAM_STR);
         $statement->execute();
-        return $statement;
+       header('Location: /');
+       exit();
     }
 
     public function insertUser($data){
         $sql = "INSERT INTO Users
                     (
-                        Level,
                         Last_name,
                         First_name,
                         Birth,
@@ -96,7 +94,6 @@ class ModelUser
                     )
                     VALUES
                     (
-                        :level,
                         :last_name,
                         :first_naeme,
                         :birth,
@@ -111,7 +108,6 @@ class ModelUser
                     )";
 
         $statement = $this->connect()->prepare($sql);
-        $statement->bindValue(":level", $data['Level'],PDO::PARAM_INT);
         $statement->bindValue(":last_name", $data['LastName'],PDO::PARAM_STR);
         $statement->bindValue(":first_naeme", $data['FristName'],PDO::PARAM_STR);
         $statement->bindValue(":birth", $data['Brith'],PDO::PARAM_STR);
@@ -124,6 +120,7 @@ class ModelUser
         $statement->bindValue(":pwd", $data['pwd'],PDO::PARAM_STR);
         $statement->bindValue(":picture", $data['Picture'],PDO::PARAM_STR);
         $statement->execute();
-        return $statement;
+        header('Location: /');
+        exit();
     }
 }

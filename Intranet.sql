@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 29, 2020 at 09:10 PM
--- Server version: 5.7.27-0ubuntu0.18.04.1
--- PHP Version: 7.2.24-0ubuntu0.18.04.1
+-- Generation Time: Mar 24, 2020 at 05:41 PM
+-- Server version: 5.7.29-0ubuntu0.18.04.1
+-- PHP Version: 7.2.28-3+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,7 +33,7 @@ CREATE TABLE `Cars` (
   `Color` varchar(20) DEFAULT NULL,
   `Model` varchar(100) DEFAULT NULL,
   `Id_Users` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -45,24 +45,7 @@ CREATE TABLE `Channels` (
   `Id` int(11) NOT NULL,
   `Name` varchar(100) NOT NULL,
   `Id_Users` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Channels`
---
-
-INSERT INTO `Channels` (`Id`, `Name`, `Id_Users`) VALUES
-(1, 'TEST', 1),
-(2, 'Discord', 2),
-(3, 'Refund', 2),
-(4, 'PFR', 2),
-(5, 'Intranet', 2),
-(6, 'Bonjour', 2),
-(7, 'oklm', 2),
-(8, 'Timote', 2),
-(9, 'Perso', 2),
-(10, 'Second Test', 2),
-(11, 'BG', 2);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -73,7 +56,7 @@ INSERT INTO `Channels` (`Id`, `Name`, `Id_Users`) VALUES
 CREATE TABLE `Channels_class` (
   `Id` int(11) NOT NULL,
   `Id_Channels` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -84,23 +67,7 @@ CREATE TABLE `Channels_class` (
 CREATE TABLE `Channel_users` (
   `Id` int(11) NOT NULL,
   `Id_Users` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Channel_users`
---
-
-INSERT INTO `Channel_users` (`Id`, `Id_Users`) VALUES
-(2, 1),
-(4, 1),
-(2, 2),
-(4, 2),
-(8, 2),
-(9, 2),
-(10, 2),
-(11, 2),
-(2, 3),
-(4, 3);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -114,7 +81,7 @@ CREATE TABLE `Class` (
   `Year_begin` date NOT NULL,
   `Year_end` date NOT NULL,
   `etablishment` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -129,7 +96,7 @@ CREATE TABLE `Classes` (
   `Begin` datetime NOT NULL,
   `End` datetime NOT NULL,
   `Id_Users` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -143,7 +110,7 @@ CREATE TABLE `Depo` (
   `Id_Deposit` int(11) NOT NULL,
   `File` longtext NOT NULL,
   `Date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -153,9 +120,12 @@ CREATE TABLE `Depo` (
 
 CREATE TABLE `Deposit` (
   `Id` int(11) NOT NULL,
-  `Name` int(11) NOT NULL,
-  `Date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `Name` varchar(250) NOT NULL,
+  `Date` date DEFAULT NULL,
+  `Size` int(11) NOT NULL,
+  `Type` varchar(1) NOT NULL,
+  `Author` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -167,25 +137,7 @@ CREATE TABLE `Discussion` (
   `Id` int(11) NOT NULL,
   `Id_Channels` int(11) NOT NULL,
   `Id_Messages` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Discussion`
---
-
-INSERT INTO `Discussion` (`Id`, `Id_Channels`, `Id_Messages`) VALUES
-(1, 2, 2),
-(1, 2, 9),
-(1, 2, 10),
-(1, 2, 11),
-(2, 2, 3),
-(2, 2, 5),
-(2, 2, 6),
-(2, 2, 7),
-(2, 2, 8),
-(3, 2, 12),
-(3, 2, 13),
-(3, 2, 14);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -197,27 +149,7 @@ CREATE TABLE `Messages` (
   `Id` int(11) NOT NULL,
   `Content` varchar(500) DEFAULT NULL,
   `Date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Messages`
---
-
-INSERT INTO `Messages` (`Id`, `Content`, `Date`) VALUES
-(1, 'Bonjour !', '0000-00-00 00:00:00'),
-(2, 'Salut ! ', '0000-00-00 00:00:00'),
-(3, 'Comment ça va ?', '0000-00-00 00:00:00'),
-(4, 'Tranquille et toi ? ', '0000-00-00 00:00:00'),
-(5, 'Tranquille, tranquille', '0000-00-00 00:00:00'),
-(6, 'Test', '2020-02-28 16:01:54'),
-(7, 'Bonjour tout le monde', '2020-02-28 16:03:23'),
-(8, 'Bien ou bien ? ', '2020-02-28 16:03:32'),
-(9, 'Salam ', '2020-02-28 16:04:32'),
-(10, 'Ã§a va ? ', '2020-02-28 16:07:19'),
-(11, 'Test', '2020-02-28 16:43:36'),
-(12, 'Salut les gars', '2020-02-28 16:49:39'),
-(13, 'Ã§a va et vous ? ', '2020-02-28 16:49:49'),
-(14, 'Test', '2020-02-28 16:50:51');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -227,9 +159,10 @@ INSERT INTO `Messages` (`Id`, `Content`, `Date`) VALUES
 
 CREATE TABLE `Note` (
   `Id` int(11) NOT NULL,
+  `Id_Users` int(11) NOT NULL,
   `Id_Classes` int(11) NOT NULL,
   `Id_Notes` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -241,7 +174,21 @@ CREATE TABLE `Notes` (
   `Id` int(11) NOT NULL,
   `Note` int(11) NOT NULL,
   `Date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Socket`
+--
+
+CREATE TABLE `Socket` (
+  `Id` int(11) NOT NULL,
+  `Token` text NOT NULL,
+  `Expire` datetime NOT NULL,
+  `Id_Channels` int(11) NOT NULL,
+  `Id_Users` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -251,8 +198,9 @@ CREATE TABLE `Notes` (
 
 CREATE TABLE `Timetable` (
   `Id` int(11) NOT NULL,
+  `Id_Classes` int(11) NOT NULL,
   `Id_Class` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -262,7 +210,7 @@ CREATE TABLE `Timetable` (
 
 CREATE TABLE `Users` (
   `Id` int(11) NOT NULL,
-  `Level` int(11) NOT NULL,
+  `Level` int(11) DEFAULT NULL,
   `Last_name` varchar(100) NOT NULL,
   `First_name` varchar(100) NOT NULL,
   `Birth` date DEFAULT NULL,
@@ -274,18 +222,9 @@ CREATE TABLE `Users` (
   `Tutor_mail` varchar(150) DEFAULT NULL,
   `Mail` varchar(150) NOT NULL,
   `Password` varchar(255) NOT NULL,
-  `Id_Class` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `Users`
---
-
-INSERT INTO `Users` (`Id`, `Level`, `Last_name`, `First_name`, `Birth`, `Post`, `Picture`, `Phone`, `Address`, `Tutor`, `Tutor_mail`, `Mail`, `Password`, `Id_Class`) VALUES
-(1, 1, 'LAGOUTTE', 'Lorenzo', '2020-02-28', 'Eleve', NULL, NULL, NULL, NULL, NULL, 'thelorenzo533@gmail.com', '$2y$10$yu95aanZmR.lNvRcLhi/yO1nOZ2siyY/VDBI1/uFgrg9JzWOOUoCS', NULL),
-(2, 1, 'LAINE', 'Timothe', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tlaine@viacesi.fr', '$2y$10$yu95aanZmR.lNvRcLhi/yO1nOZ2siyY/VDBI1/uFgrg9JzWOOUoCS', NULL),
-(3, 1, 'DOPPLER', 'Quentin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'qdoppler@viacesi.fr', '$2y$10$yu95aanZmR.lNvRcLhi/yO1nOZ2siyY/VDBI1/uFgrg9JzWOOUoCS', NULL),
-(4, 1, 'GROSDOIGT', 'Quentin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'qgrosdoigt@viacesi.fr', '123', NULL);
+  `Id_Class` int(11) DEFAULT NULL,
+  `Sign` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -364,8 +303,9 @@ ALTER TABLE `Messages`
 -- Indexes for table `Note`
 --
 ALTER TABLE `Note`
-  ADD PRIMARY KEY (`Id`,`Id_Classes`,`Id_Notes`),
-  ADD KEY `Note_Classes0_FK` (`Id_Classes`),
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `Note_Users_FK` (`Id_Users`),
+  ADD KEY `Note_Classes_FK` (`Id_Classes`),
   ADD KEY `Note_Notes1_FK` (`Id_Notes`);
 
 --
@@ -375,10 +315,19 @@ ALTER TABLE `Notes`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Indexes for table `Socket`
+--
+ALTER TABLE `Socket`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `Socket_Channels_FK` (`Id_Channels`),
+  ADD KEY `Socket_Users0_FK` (`Id_Users`);
+
+--
 -- Indexes for table `Timetable`
 --
 ALTER TABLE `Timetable`
-  ADD PRIMARY KEY (`Id`,`Id_Class`),
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `Timetable_Classes_FK` (`Id_Classes`),
   ADD KEY `Timetable_Class0_FK` (`Id_Class`);
 
 --
@@ -401,7 +350,7 @@ ALTER TABLE `Cars`
 -- AUTO_INCREMENT for table `Channels`
 --
 ALTER TABLE `Channels`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `Class`
 --
@@ -421,17 +370,27 @@ ALTER TABLE `Deposit`
 -- AUTO_INCREMENT for table `Messages`
 --
 ALTER TABLE `Messages`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `Notes`
 --
 ALTER TABLE `Notes`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `Socket`
+--
+ALTER TABLE `Socket`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `Timetable`
+--
+ALTER TABLE `Timetable`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
@@ -488,16 +447,23 @@ ALTER TABLE `Discussion`
 -- Constraints for table `Note`
 --
 ALTER TABLE `Note`
-  ADD CONSTRAINT `Note_Classes0_FK` FOREIGN KEY (`Id_Classes`) REFERENCES `Classes` (`Id`),
+  ADD CONSTRAINT `Note_Classes_FK` FOREIGN KEY (`Id_Classes`) REFERENCES `Classes` (`Id`),
   ADD CONSTRAINT `Note_Notes1_FK` FOREIGN KEY (`Id_Notes`) REFERENCES `Notes` (`Id`),
-  ADD CONSTRAINT `Note_Users_FK` FOREIGN KEY (`Id`) REFERENCES `Users` (`Id`);
+  ADD CONSTRAINT `Note_Users_FK` FOREIGN KEY (`Id_Users`) REFERENCES `Users` (`Id`);
+
+--
+-- Constraints for table `Socket`
+--
+ALTER TABLE `Socket`
+  ADD CONSTRAINT `Socket_Channels_FK` FOREIGN KEY (`Id_Channels`) REFERENCES `Channels` (`Id`),
+  ADD CONSTRAINT `Socket_Users0_FK` FOREIGN KEY (`Id_Users`) REFERENCES `Users` (`Id`);
 
 --
 -- Constraints for table `Timetable`
 --
 ALTER TABLE `Timetable`
   ADD CONSTRAINT `Timetable_Class0_FK` FOREIGN KEY (`Id_Class`) REFERENCES `Class` (`Id`),
-  ADD CONSTRAINT `Timetable_Classes_FK` FOREIGN KEY (`Id`) REFERENCES `Classes` (`Id`);
+  ADD CONSTRAINT `Timetable_Classes_FK` FOREIGN KEY (`Id_Classes`) REFERENCES `Classes` (`Id`);
 
 --
 -- Constraints for table `Users`

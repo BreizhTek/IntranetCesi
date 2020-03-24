@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="">
+    <list default="true" id="913f052a-19b5-4d52-8baa-b086620c6f04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,10 +169,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2166" y="109" width="2048" height="897" key="MergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040243487" />
-    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog" timestamp="1585040244969">
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog" timestamp="1585065769202">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040244969" />
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585065769202" />
     <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -201,9 +199,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
-    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585046724554">
+    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585067808557">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585046724554" />
+    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585067808557" />
   </component>
 </project>

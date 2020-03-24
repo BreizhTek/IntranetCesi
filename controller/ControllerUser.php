@@ -4,7 +4,6 @@ class ControllerUser {
     public function index(){
         require_once 'ressources/modele/ModelCar.php';
         require_once 'ressources/modele/ModelUser.php';
-        require './ressources/composants/templatePage.php';
         $request = $_SERVER['REQUEST_URI'];
         $req = explode("/", $request);
         $modelUser = new ModelUser();
