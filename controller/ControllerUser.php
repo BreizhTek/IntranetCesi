@@ -2,6 +2,7 @@
 class ControllerUser {
 
     public function index(){
+        require_once 'ressources/modele/ModelCar.php';
         require_once 'ressources/modele/ModelUser.php';
         require './ressources/composants/templatePage.php';
         $request = $_SERVER['REQUEST_URI'];
@@ -9,7 +10,12 @@ class ControllerUser {
         $modelUser = new ModelUser();
         $userById = ((isset($req["2"])) ? $modelUser->getUserById($req["2"]) : NULL);
         $row = (($userById <> NULL) ? $userById->fetch(PDO::FETCH_ASSOC) : "");
-
+        if(isset($row) && $row <> null && $row <> "") {
+            $modelCar = new ModelCar();
+            $carByUser = ((isset($req["2"])) ? $modelCar->getCarByUser($req["2"]) : NULL);
+            $carByUser = (($carByUser <> NULL) ? $carByUser->fetchAll(PDO::FETCH_ASSOC) : "");
+            $nbCar = count($carByUser);
+        }
         require_once ('view/user.php');
     }
 
@@ -17,7 +23,7 @@ class ControllerUser {
         require_once 'ressources/modele/ModelUser.php';
 
         if(isset($_FILES['Picture'])) { // Check if the file is not empty
-            $folder = './/storage//users//'; // Define the reception folder
+            $folder = './storage/users/'; // Define the reception folder
             $fileUpload = basename($_FILES['Picture']['name']); // Define the file's name
             $existExtension = array('.png', '.jpg','.gif','.jpeg'); // Define the exist extension for the security
             $extensionFile = strrchr($_FILES['Picture']['name'], '.'); // Get the file's extension
@@ -68,7 +74,7 @@ class ControllerUser {
         require_once 'ressources/modele/ModelUser.php';
 
         if(isset($_FILES['Picture'])) { // Check if the file is not empty
-            $folder = '\\storage\\users\\'; // Define the reception folder
+            $folder = './storage/users/'; // Define the reception folder
             $fileUpload = basename($_FILES['Picture']['name']); // Define the file's name
             $existExtension = array('.png', '.jpg','.gif','.jpeg'); // Define the exist extension for the security
             $extensionFile = strrchr($_FILES['Picture']['name'], '.'); // Get the file's extension
@@ -105,7 +111,7 @@ class ControllerUser {
             'Adress' => $_POST['Adress'],
             'NameTutor' => $_POST['NameTutor'],
             'MailTutor' => $_POST['MailTutor'],
-            'pwd' => $_POST['Password'],
+            'pwd' => password_hash($_POST['Password'], PASSWORD_DEFAULT),
             'Picture' => isset($_POST['Picture']) ? $_POST['Picture'] : null,
         );
         $modelUser = new ModelUser();

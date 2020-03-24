@@ -28,10 +28,11 @@ class ModelClass
 
     }
 
+
     public function find($idClass){
 
-        $request = $this->connect()->prepare("SELECT c.Id, c.Name, year(c.Year_begin) AS Y_begin, year(c.Year_end) AS Y_end, c.etablishment FROM class c WHERE c.Id = ;");
-        $request->bindValue(':userid', $idUser);
+        $request = $this->connect()->prepare("SELECT c.Id, c.Name, year(c.Year_begin) AS Y_begin, year(c.Year_end) AS Y_end, c.etablishment FROM class c WHERE c.Id = :idClass;");
+        $request->bindValue(':idClass', $idClass);
         $request->execute();
 
         return $request->fetchAll();

@@ -4,16 +4,19 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require __DIR__ . "/controller/ControllerClass.php";
 require __DIR__ . "/controller/ControllerNotes.php";
-require_once "./db.php";
 require_once "./controller/api/ApiChat.php";
-
+require_once "./db.php";
 $request = $_SERVER['REQUEST_URI'];
 
 $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
+
+if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login')
+{
+    $request[0] = 'login';
+}
 
 function abort()
 {
@@ -57,6 +60,20 @@ switch ($request[0]) {
             $controllerUser->index();
         }
         break;
+
+    case 'car' :
+        require 'controller/ControlleurCar.php';
+        $controllerCar = new ControllerCar();
+
+        if(isset($_POST['envoyerUpdate'])){
+            $controllerCar->update();
+        }elseif (isset($_POST['envoyerInsert'])){
+            $controllerCar->insert();
+        }else{
+            $controllerCar->index();
+        }
+        break;
+
     case 'allUser' :
         require 'controller/ControllerAllUser.php';
         $controllerAllUser = new ControllerAllUser();
@@ -153,6 +170,12 @@ switch ($request[0]) {
         exit();
         break;
 
+    case 'layout' :
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
+        break;
+
     case 'class' :
         $class = new ControllerClass();
         $class->index();
@@ -166,7 +189,8 @@ switch ($request[0]) {
 
     case 'note-add' :
         if(!empty($_POST)){
-
+            $notes = new ControllerNotes();
+            $notes->addAction();
         } else {
             $notes = new ControllerNotes();
             $notes->addAction();
@@ -186,3 +210,4 @@ switch ($request[0]) {
         abort();
         break;
 }
+

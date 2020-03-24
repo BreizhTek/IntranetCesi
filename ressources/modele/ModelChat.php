@@ -48,13 +48,13 @@ class Chat {
                                                         INNER JOIN Users AS U ON U.Id = D.Id
                                                         INNER JOIN Messages AS M ON M.Id = D.Id_Messages
                                                         WHERE Id_Channels = :channelId
-                                                        ORDER BY M.Id DESC LIMIT 10");
+                                                        ORDER BY M.Id DESC LIMIT 50");
 
         $request->bindValue(':channelId', $channelId);
 
         $request->execute();
 
-        return array_reverse($request->fetch());
+        return array_reverse($request->fetchAll());
 
     }
 

@@ -31,14 +31,14 @@
                                 <?php
                                     if ($_SESSION['Level'] == 2 || $_SESSION['Level'] == 3) {
                                         ?>
-                                        <li><a href="class"
+                                        <li><a href="note-user"
                                                class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Gestions des Notes</a>
                                         </li>
                                         <?php
                                     } else {
                                         ?>
                                         <li><a href="note-user"
-                                               class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notes</a>
+                                               class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Mes Notes</a>
                                         </li>
                                         <?php
                                     }
@@ -69,7 +69,7 @@
                 <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
                     <li class="mr-6 my-2 md:my-0">
                         <a href="/" class="block py-1 md:py-3 pl-1 align-middle text-orange-200 no-underline hover:text-gray-900 border-b-2 border-orange-200 hover:border-orange-600">
-                            <i class="fas fa-home fa-fw mr-3 text-orange-600"></i><span class="pb-1 md:pb-0 text-sm">Acceuil</span>
+                            <i class="fas fa-home fa-fw mr-3 text-orange-600"></i><span class="pb-1 md:pb-0 text-sm">Accueil</span>
                         </a>
                     </li>
                     <li class="mr-6 my-2 md:my-0">
