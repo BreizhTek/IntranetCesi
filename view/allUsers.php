@@ -18,7 +18,7 @@
                 <article class="overflow-hidden rounded-lg shadow-lg">
                     <a href="user/<?php echo $allUsers['Id'] ?>">
                         <?php
-                        if (isset($allUsers['Picture'])){
+                        if (isset($allUsers['Picture']) && $allUsers['Picture'] <> "" && $allUsers['Picture'] <> null){
                             ?>
                             <img class="h-64 w-56" src="../storage/users/<?php echo $allUsers['Picture'] ?>">
                             <?php
