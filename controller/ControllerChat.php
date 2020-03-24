@@ -1,14 +1,17 @@
 <?php
 
 require_once "ressources/modele/ModelChat.php";
+require_once "ressources/modele/ModelSocketAuthorization.php";
 
 class ControllerChat {
 
     private $chat;
+    private $socket;
 
     public function __construct()
     {
         $this->chat = new Chat();
+        $this->socket = new socketAuthorization();
     }
 
     public function getChannelList(){
@@ -17,36 +20,9 @@ class ControllerChat {
 
     }
 
-    public function getMessages($channelId)
-    {
-
-        if($this->chat->grantedToShowThisChannel($channelId))
-        {
-
-            http_response_code(200);
-            header('Content-Type: application/json');
-            echo json_encode($this->chat->getMessages($channelId));
-
-        }
-        else
-        {
-
-            http_response_code(404);
-
-        }
-
-    }
-
     public function isAllowed($channelId)
     {
         return $this->chat->grantedToShowThisChannel($channelId);
-    }
-
-    public function sendMessage($channelId, $message)
-    {
-
-        $this->chat->sendMessage($channelId, $message);
-
     }
 
     public function thisChannelExist($id)
@@ -54,20 +30,36 @@ class ControllerChat {
         return $this->chat->getChannelName($id);
     }
 
-    public function createChannel($name){
+    public function displayChannel($channelId)
+    {
 
-        if($this->chat->channelExist($name) == false)
+        if($this->chat->channelExist($this->chat->getChannelName($channelId)) AND $this->chat->grantedToShowThisChannel($channelId))
         {
+            $result = $this->socket->addAuthorization($channelId);
+            $data = $this->socket->getAuth($channelId);
 
-            $this->chat->addChannel($name);
-
+            $Token = $data['Token'];
+            $Channel = $data['Id_Channels'];
+            $User = $_SESSION['User_ID'];
+            $Name = $_SESSION['First_name'];
+            $ChannelName = $this->chat->getChannelName($Channel);
+            $channelOwner = $this->chat->isChannelOwner($Channel);
+            require_once "view/Chat/room.php";
         }
         else
         {
-            return false;
+            http_response_code(404);
+            echo "404";
+            exit();
         }
 
-        return true;
+    }
+
+    public function displayChannelList()
+    {
+        $channels = $this->chat->getChannels();
+
+        require_once "view/Chat/list.php";
 
     }
 
@@ -84,34 +76,8 @@ class ControllerChat {
     public function getChannelId($channelName)
     {
 
-        return $this->getChannelId($channelName);
+        return $this->chat->getChannelId($channelName);
 
-    }
-
-    public function addUserToChannel($channelId, $userMail)
-    {
-        http_response_code(200);
-        header('Content-Type: application/json');
-
-        if($this->chat->grantedToShowThisChannel($channelId))
-        {
-            $channelName = $this->chat->getChannelName($channelId);
-
-            if($userId = $this->chat->getUserIdByMail($userMail))
-            {
-                $this->chat->addUserToAChannel($channelName, $userId);
-
-                echo json_encode(array(
-                    'message' => 'ok',
-                ));
-
-                return true;
-            }
-        }
-
-        echo json_encode(array(
-            'message' => 'error'
-        ));
     }
 
 }

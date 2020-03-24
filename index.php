@@ -4,7 +4,7 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require __DIR__ . "/ressources/modele/ModelSocketAuthorization.php";
+require_once "./controller/api/ApiChat.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -31,72 +31,20 @@ switch ($request[0]) {
          $Deposit->index(); // Display deposit page
         break;
     case '' :
-        echo "root";
         echo password_hash('123', PASSWORD_DEFAULT);
         break;
     case 'chat' :
-        $socket = new socketAuthorization();
         $chat = new ControllerChat();
 
         if (isset($_GET['channel']) AND !empty($_GET['channel']))
         {
-
-            if($chat->thisChannelExist($_GET['channel']) AND $chat->isAllowed($_GET['channel']))
-            {
-                $result = $socket->addAuthorization($_GET['channel']);
-                $data = $socket->getAuth($_GET['channel']);
-
-                $Token = $data['Token'];
-                $Channel = $data['Id_Channels'];
-                $User = $_SESSION['User_ID'];
-                $Name = $_SESSION['First_name'];
-                $ChannelName = $chat->getChannelName($Channel);
-                require_once "view/Chat/room.php";
-            }
-            else
-            {
-                abort();
-            }
-
+            $chat->displayChannel($_GET['channel']);
         }
-
-        $channels = $chat->getChannelList();
-
-        require_once "view/Chat/list.php";
+        else{
+            $chat->displayChannelList();
+        }
 
         break;
-    /*case 'chat' :
-
-        if (empty($request[1])) {
-
-            if (!empty($_POST)) {
-
-                if (isset($_POST['newChannel']) and $_POST['newChannel'] != null)
-                {
-
-                    $chat->createChannel($_POST['newChannel']);
-
-                }
-
-            }
-            elseif(isset($_GET['channel']) and $_GET['channel'] != null)
-            {
-
-                    $chat->channel($_GET['channel']);
-
-            }
-            else
-            {
-                $chat->index();
-            }
-
-        }
-        else
-        {
-            abort();
-        }
-
-        break;*/
     case 'user' :
         require 'controller/ControllerUser.php';
         if(isset($_POST['envoyerUpdate'])){
@@ -117,8 +65,6 @@ switch ($request[0]) {
         break;
     case 'api' :
 
-        $chat = new ControllerChat();
-
         if(!empty($request[1]) AND $request[1] == 'Upload')
         {
             require 'controller/ControllerDeposit.php';
@@ -135,35 +81,36 @@ switch ($request[0]) {
 
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
+            $apiChat = new apiChat();
 
             if(!empty($_GET) AND isset($_GET['channel']) AND $_GET['channel'] != null AND $_SESSION)
             {
 
                 if (isset($_GET['adduser']) AND $_GET['adduser'] != null)
                 {
-                    $chat->addUserToChannel($_GET['channel'], $_GET['adduser']);
+                    $apiChat->addUserToChannel($_GET['channel'], $_GET['adduser']);
                 }
                 else
                 {
-                    $chat->getMessages($_GET['channel']);
+                    $apiChat->getMessages($_GET['channel']);
                 }
 
             }
             else if(!empty($_GET) AND isset($_GET['createchannel']) AND $_GET['createchannel'] != null AND $_SESSION)
             {
-
-                if ($chat->createChannel($_GET['createchannel']))
-                {
-                    http_response_code(200);
-                    echo json_encode(array(
-                        'channel' => $chat->getChannelId($_GET['createchannel'])
-                    ));
-                }
-                else
-                {
-                    http_response_code(404);
-                }
-
+                $apiChat->addChannel($_GET['createchannel']);
+            }
+            else if(!empty($_GET) AND isset($_GET['getuserslist']) AND $_GET['getuserslist'] != null AND $_SESSION)
+            {
+                $apiChat->getAllUsers($_GET['getuserslist']);
+            }
+            else if(!empty($_GET) AND isset($_GET['deletechannel']) AND $_GET['deletechannel'] != null AND $_SESSION)
+            {
+                $apiChat->deleteChannel($_GET['deletechannel']);
+            }
+            else if(!empty($_GET) AND isset($_GET['deleteuserfromchannel']) AND $_GET['deleteuserfromchannel'] != null AND isset($_GET['channelid']) AND $_GET['channelid'] != null AND $_SESSION)
+            {
+                $apiChat->deleteUserInChannel($_GET['channelid'],$_GET['deleteuserfromchannel']);
             }
             else
             {
