@@ -11,7 +11,7 @@
 <body>
 
     <div class="flex justify-center my-4">
-        <form method="POST" class="w-full max-w-lg">
+        <form method="POST" action="/user" class="w-full max-w-lg">
 
             <div class="flex flex-wrap -mx-3 mb-6 hidden">
                 <div class="w-full px-3">

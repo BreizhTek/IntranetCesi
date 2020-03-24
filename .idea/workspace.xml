@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="894162ae-f69f-432f-9906-adb9faa05387" name="Default Changelist" comment="">
+    <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/storage/logo/logo_cesi.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Chat/room.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,10 +176,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2166" y="109" width="2048" height="897" key="MergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040243487" />
-    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog" timestamp="1585040244969">
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog" timestamp="1585065769202">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040244969" />
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585065769202" />
     <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

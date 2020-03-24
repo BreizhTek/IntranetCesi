@@ -9,7 +9,7 @@
 
             <div class="w-1/2 pl-2 md:pl-0">
                 <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
-                    <img src="" href="layout" alt="Logo CESI">
+                    <img class="h-20 w-64" src="../storage/logo/logo_cesi.jpg" href="layout" alt="Logo CESI">
                 </a>
             </div>
             <div class="w-1/2 pr-0">
@@ -77,11 +77,6 @@
                             <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Chat</span>
                         </a>
                     </li>
-                    <li class="mr-6 my-2 md:my-0">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
-                            <i class="fa fa-envelope fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Actualités</span>
-                        </a>
-                    </li>
                     <?php
                         if ($_SESSION['Level'] == 2 || $_SESSION['Level'] == 3) {
                             ?>
@@ -95,8 +90,9 @@
                         }
                     ?>
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-red-500">
-                            <i class="fa fa-wallet fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Notifications</span>
+                        <a href="allUser"
+                           class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-red-500">
+                            <i class="fa fa-wallet fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Trombinoscope</span>
                         </a>
                     </li>
                 </ul>

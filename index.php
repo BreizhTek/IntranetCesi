@@ -13,7 +13,7 @@ $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
 
-if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login' AND $request[0] != 'signin')
+if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login' AND $request[0] != 'signin' AND $request[0] != 'user')
 {
     $request[0] = 'login';
 }
