@@ -64,28 +64,28 @@
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
-                        for="FristName"
+                        for="LastName"
                         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     >Nom : </label>
                     <input
                         type="text"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="FristName"
-                        name="FristName"
-                        value="<?php echo (($row <> "") ? $row['First_name'] : "")?>"
+                        id="LastName"
+                        name="LastName"
+                        value="<?php echo (($row <> "") ? $row['Last_name'] : "")?>"
                     >
                 </div>
                 <div class="w-full md:w-1/2 px-3">
                     <label
-                        for="LastName"
+                        for="FristName"
                         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     >Prénom : </label>
                     <input
                         type="text"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                        id="LastName"
-                        name="LastName"
-                        value="<?php echo (($row <> "") ? $row['Last_name'] : "")?>"
+                        id="FristName"
+                        name="FristName"
+                        value="<?php echo (($row <> "") ? $row['First_name'] : "")?>"
                     >
                 </div>
             </div>
@@ -195,13 +195,13 @@
                 Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
             </div>
             <?php
-            if (isset($row['Picture'])){
+            if (isset($row['Picture']) && $row['Picture'] <> "" && $row['Picture'] <> null){
                 ?>
-                <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
+                <img class="h-64 w-56" src="../storage/users/<?php echo $row['Picture'] ?>">
                 <?php
             } else {
                 ?>
-                <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                <img class="h-64 w-64" src="../storage/users/noprofil.png">
                 <?php
             }
             ?>

@@ -74,7 +74,7 @@ class ControllerUser {
         require_once 'ressources/modele/ModelUser.php';
 
         if(isset($_FILES['Picture'])) { // Check if the file is not empty
-            $folder = '\\storage\\users\\'; // Define the reception folder
+            $folder = './storage/users/'; // Define the reception folder
             $fileUpload = basename($_FILES['Picture']['name']); // Define the file's name
             $existExtension = array('.png', '.jpg','.gif','.jpeg'); // Define the exist extension for the security
             $extensionFile = strrchr($_FILES['Picture']['name'], '.'); // Get the file's extension
@@ -111,7 +111,7 @@ class ControllerUser {
             'Adress' => $_POST['Adress'],
             'NameTutor' => $_POST['NameTutor'],
             'MailTutor' => $_POST['MailTutor'],
-            'pwd' => $_POST['Password'],
+            'pwd' => password_hash($_POST['Password'], PASSWORD_DEFAULT),
             'Picture' => isset($_POST['Picture']) ? $_POST['Picture'] : null,
         );
         $modelUser = new ModelUser();

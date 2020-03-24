@@ -13,6 +13,11 @@ $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
 
+if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login')
+{
+    $request[0] = 'login';
+}
+
 function abort()
 {
     http_response_code(404);
@@ -55,6 +60,20 @@ switch ($request[0]) {
             $controllerUser->index();
         }
         break;
+
+    case 'car' :
+        require 'controller/ControlleurCar.php';
+        $controllerCar = new ControllerCar();
+
+        if(isset($_POST['envoyerUpdate'])){
+            $controllerCar->update();
+        }elseif (isset($_POST['envoyerInsert'])){
+            $controllerCar->insert();
+        }else{
+            $controllerCar->index();
+        }
+        break;
+
     case 'allUser' :
         require 'controller/ControllerAllUser.php';
         $controllerAllUser = new ControllerAllUser();

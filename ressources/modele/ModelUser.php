@@ -14,7 +14,8 @@ class ModelUser
 
    public function getUserAll(){
         $sql = "SELECT * 
-                    FROM Users";
+                    FROM Users
+                    ORDER BY Users.Last_name ASC, Users.First_name ASC";
         $statement = $this->connect()->prepare($sql);
         $statement->execute();
         return $statement;
@@ -44,7 +45,6 @@ class ModelUser
 
     public function updateUser($data)
     {
-        $db = database();
         $sql = "UPDATE Users
                     SET
                         Users.Level = :level,

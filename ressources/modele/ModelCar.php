@@ -2,7 +2,7 @@
 class ModelCar {
     private function connect() {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=intranet_cesi','root','');
+            $db = new PDO(DSN,USER,PASS);
         } catch(PDOException $e) {
             error_log($e->getMessage());
             return false;
