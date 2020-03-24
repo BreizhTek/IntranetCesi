@@ -25,7 +25,7 @@ Installation des dépendances :
 :wrench: Un système de routage est présent, les règles sont inscrites dans le fichier `.htaccess`.
 Si vous avez des problèmes avec des accès refuser cela peux venir de ce fichier.
 
-Le but est de redirigé les requêtes sur le fichier index.php qui se chargera de renvoyer le contenu.
+Le but est de redirigé les requêtes sur le fichier `index.php` qui se chargera de renvoyer le contenu.
 
 ## Chat
 
