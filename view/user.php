@@ -9,16 +9,20 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="my-12 mx-12">
-        <form action="user" method="POST" class="w-full max-w-lg" enctype="multipart/form-data">
+    <div>
+        <form action="user" method="POST" class="w-full max-w-lg">
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
+                    <label
+                        for="Id"
+                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    >Id : </label>
                     <input
+                        type="text"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="Id"
                         name="Id"
                         value="<?php echo (($row <> "") ? $row['Id'] : "")?>"
-                        type="hidden"
                     >
                 </div>
             </div>
@@ -185,19 +189,13 @@
                 <input type="hidden" name="MAX_FILE_SIZE" value="100000">
                 Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
             </div>
-
             <?php
-            if (isset($row) && $row <> "" && $row['Picture'] <>""){
-                ?>
-                <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
-                <?php
-            } else {
-                ?>
-                <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
-                <?php
+            if($row <> "" && $row['Picture'] <>""){
+            ?>
+                <img src="\\storage\\users\\<?php echo $row['Picture'] ?>" width="270" height="295">
+            <?php
             }
             ?>
-        </br>
             <button
                 type="submit"
                 class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"

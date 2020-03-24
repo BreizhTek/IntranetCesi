@@ -31,6 +31,22 @@ class ModelUser
     }
 
     public function updateUser($data){
+
+    public function getUsersByClass($idClass){
+
+        $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name FROM users u WHERE u.Id_Class = :idClass;");
+
+        $request->bindValue(':idClass', $idClass);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
+
+
+    public function updateUser($data)
+    {
+        $db = database();
         $sql = "UPDATE users
                     SET
                         users.Level = :level,

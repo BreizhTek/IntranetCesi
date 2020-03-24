@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
-        <div class="bg-orange-400 h-screen w-screen">
+        <div class="bg-blue h-screen w-screen">
             <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
                 <div class="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-white sm:mx-0" style="height: 500px">
                     <div class="flex flex-col w-full md:w-1/2 p-4">
@@ -24,7 +24,7 @@
                                         <input type="checkbox" name="remember" id="remember" class="mr-2"> <label for="remember" class="text-sm text-grey-dark">Remember Me</label>
                                     </div>
                                     <div class="flex flex-col mt-8">
-                                        <button type="submit" class="cursor-pointer bg-orange-500 hover:bg-orange-400 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded">
+                                        <button type="submit" class="cursor-pointer bg-blue hover:bg-orange-400 shadow-xl px-5 py-2 inline-block text-orange-100 hover:text-white rounded">
                                             Login
                                         </button>
                                     </div>
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hidden md:block md:w-1/2 rounded-r-lg" style="url('') ; background-size: cover; background-position: center center;"></div>
+                    <div class="hidden md:block md:w-1/2 rounded-r-lg" style="background: url('./ressources/Pictures/acceuil_login.png'); background-size: cover; background-position: center center;" ></div>
                 </div>
             </div>
         </div>

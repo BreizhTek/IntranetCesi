@@ -1,0 +1,41 @@
+<?php
+
+
+class ModelClass
+{
+    private function connect()
+    {
+        try
+        {
+            $db = new PDO('mysql:host=localhost;dbname=intranet_cesi','root','');
+        }
+        catch(PDOException $e)
+        {
+            error_log($e->getMessage());
+            return false;
+        }
+
+        return $db;
+    }
+
+    public function findAll(){
+
+        $request = $this->connect()->prepare("SELECT c.Id, c.Name, year(c.Year_begin) AS Y_begin, year(c.Year_end) AS Y_end, c.etablishment FROM class c;");
+
+        $request->execute();
+
+        return $request->fetchAll();
+
+    }
+
+    public function find($idClass){
+
+        $request = $this->connect()->prepare("SELECT c.Id, c.Name, year(c.Year_begin) AS Y_begin, year(c.Year_end) AS Y_end, c.etablishment FROM class c WHERE c.Id = ;");
+        $request->bindValue(':userid', $idUser);
+        $request->execute();
+
+        return $request->fetchAll();
+
+    }
+
+}
