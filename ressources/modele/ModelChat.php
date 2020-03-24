@@ -54,7 +54,7 @@ class Chat {
 
         $request->execute();
 
-        return array_reverse($request->fetch());
+        return array_reverse($request->fetchAll());
 
     }
 
