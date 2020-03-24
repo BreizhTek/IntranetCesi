@@ -42,7 +42,7 @@ class ControllerLogin {
 
             }
 
-            header('Location: /layout');
+            header('Location: /');
             exit();
 
         } else {

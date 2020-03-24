@@ -15,6 +15,11 @@ $request = substr($request, 1);
 $request = explode('?', $request)[0];
 $request = explode('/', $request);
 
+if((!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0) AND $request[0] != 'login')
+{
+    $request[0] = 'login';
+}
+
 function abort()
 {
     http_response_code(404);

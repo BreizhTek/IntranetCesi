@@ -2,6 +2,16 @@
 
 ## Instructions
 
+Veuillez renseigné vos données de connexion en base de données.
+
+Dans :
+
+> db.php
+
+> ressources/modele/ModelSocketAuthorization.php
+
+Les champs sont explicite.
+
 ### Liste des commandes à executer
 
 Vous devez cloner le dépot :
@@ -10,7 +20,7 @@ Vous devez cloner le dépot :
 Installation des dépendances :
 >npm install
 
-:wrench: Un système de routage est présent, les règles sont inscrites dans le fichier .htaccess.
+:wrench: Un système de routage est présent, les règles sont inscrites dans le fichier `.htaccess`.
 Si vous avez des problèmes avec des accès refuser cela peux venir de ce fichier.
 
 Le but est de redirigé les requetes sur le fichier index.php qui se chargera de renvoyer le contenu.
