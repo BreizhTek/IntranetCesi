@@ -105,6 +105,9 @@ class ControllerDeposit
 
     public function folderCreation($p_folderName,  $p_folderPath){
 
+        echo $p_folderName;
+        echo $p_folderPath;
+
         if (!mkdir($p_folderPath)) {
             return json_encode(array('message' => 'Un problème est survenu. Veuillez réessayer.', 'name' => $p_folderName));
         }

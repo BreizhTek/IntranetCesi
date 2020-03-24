@@ -6,7 +6,7 @@ class ModelDeposit
     private function connect() //PDO Connexion
     {
         try {
-            $db = new PDO('DNS', 'USER', 'PASS');
+            $db = new PDO(DSN, USER, PASS);
         } catch (PDOException $e) {
             error_log($e->getMessage());
             return false;

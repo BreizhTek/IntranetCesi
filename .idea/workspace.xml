@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="14239a33-4e15-40c3-8878-49bc0c7aa22f" name="Default Changelist" comment="">
+    <list default="true" id="3c6b2261-0e30-40bd-86b2-8f8dd2f252d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/storage/Nouveau document texte.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
