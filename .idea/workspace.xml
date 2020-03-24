@@ -3,19 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="14239a33-4e15-40c3-8878-49bc0c7aa22f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerSignature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presence-check.php" beforeDir="false" afterPath="$PROJECT_DIR$/presence-check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/autre/img/cookie.png" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/autre/img/cookie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/css/depo.css" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/css/depo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/rgpd.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/rgpd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/js/signature.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/signature.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/rgpd.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/rgpd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/signature.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/signature.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
