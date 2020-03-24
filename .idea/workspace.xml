@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControlleurCar.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControlleurCar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelCar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelCar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/users/noprofil.png" beforeDir="false" afterPath="$PROJECT_DIR$/storage/users/noprofil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/car.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/car.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +114,7 @@
       <workItem from="1584396013651" duration="35000" />
       <workItem from="1584949623289" duration="4265000" />
       <workItem from="1585035964714" duration="3883000" />
+      <workItem from="1585041935832" duration="553000" />
     </task>
     <servers />
   </component>

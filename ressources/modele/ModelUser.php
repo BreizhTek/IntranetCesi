@@ -4,7 +4,7 @@ class ModelUser
 {
     private function connect() {
         try {
-            $db = new PDO('mysql:host=localhost;dbname=intranetcesi','root','');
+            $db = new PDO(DSN,USER,PASS);
         } catch(PDOException $e) {
             error_log($e->getMessage());
             return false;
@@ -29,8 +29,6 @@ class ModelUser
         $statement->execute();
         return $statement;
     }
-
-    public function updateUser($data){
 
     public function getUsersByClass($idClass){
 
