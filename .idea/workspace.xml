@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c6b2261-0e30-40bd-86b2-8f8dd2f252d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelCar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelCar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
+    <list default="true" id="4ba3e211-5be3-4a28-a4ee-a47cb33ade66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
