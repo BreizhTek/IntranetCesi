@@ -203,7 +203,7 @@ var displayFiles = () => {
 
         let data = {"name" : $("#folderInput").val(), "path": "./storage/" + $("#folderInput").val() };
         $.post('/api/folderCreation', data, function (message) {
-
+            $("#message").val('');
             $("#message").append(message.message);
             let messageTab = JSON.parse(message);
             addFile(messageTab.name, 'd', 0,  messageTab.author);
@@ -235,17 +235,18 @@ var displayFiles = () => {
                 messageTab.forEach(function (file) {
                     if (file.messageType == 's'){
 
+                        $("#message").val('');
                         $("#message").append(file.message);
                         addFile(file.name, 'f', file.size, file.author);
                     }else{
-
+                        $("#message").val('');
                         $("#message").append(file.message);
                     }
 
                 })
             },
             error: function (message, status, error) {
-
+                $("#message").val('');
                 $("#message").append("Une erreur est survenu, veuillez réessayer.");
             }
         });

@@ -9,9 +9,7 @@
 </head>
 <body class=" lg:overflow-visible min-h-screen flex flex-col">
 
-<?php require_once __DIR__ . "/../ressources/composants/header.php";?>
-
-<!------------------------ ERROR MESSAGE---------------------------------->
+<!------------------------ ERROR AND SUCCESS MESSAGE---------------------------------->
 <div  class="bg-teal-lightest border-t-4 border-teal rounded-b text-teal-darkest px-4 py-3 shadow-md my-2" >
 
     <div class="flex font-mono font-bold" id="message">
