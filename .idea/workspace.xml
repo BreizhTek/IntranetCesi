@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="">
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;index.php&#10;#&#9;ressources/modele/ModelLogin.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -66,6 +75,15 @@
       <workItem from="1582818964036" duration="384000" />
       <workItem from="1582823452899" duration="3068000" />
       <workItem from="1582876295945" duration="15942000" />
+      <workItem from="1584267412910" duration="1161000" />
+      <workItem from="1584562040441" duration="942000" />
+      <workItem from="1584708449234" duration="6977000" />
+      <workItem from="1584785155931" duration="5522000" />
+      <workItem from="1584799931686" duration="917000" />
+      <workItem from="1584808353623" duration="14037000" />
+      <workItem from="1584874717538" duration="7578000" />
+      <workItem from="1584948692888" duration="25791000" />
+      <workItem from="1585035756525" duration="3117000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <created>1582895461496</created>
@@ -109,9 +127,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895506595">
+    <state x="710" y="343" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584949462915">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="710" y="343" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584949462915" />
+    <state x="714" y="171" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582904870847">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="714" y="171" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582904870847" />
+    <state x="63" y="28" width="1813" height="987" key="CommitChangelistDialog2" timestamp="1584960209470">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="63" y="28" width="1813" height="987" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584960209470" />
     <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895506595" />
     <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -129,13 +156,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="672" y="256" key="MultipleFileMergeDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895647688" />
-    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
+    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1584969152937">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582825257008" />
-    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1582790673165">
+    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584969152937" />
+    <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582900894893" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1584974936553">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1584974936553" />
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
     <state x="461" y="182" key="SettingsEditor" timestamp="1582897914979">
       <screen x="0" y="0" width="1920" height="1080" />

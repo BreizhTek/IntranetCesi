@@ -2,6 +2,22 @@
 require_once "./db.php";
 class ModelUser
 {
+    private function connect()
+    {
+        try
+        {
+            $db = new PDO('mysql:host=localhost;dbname=intranet_cesi','root','');
+        }
+        catch(PDOException $e)
+        {
+            error_log($e->getMessage());
+            return false;
+        }
+
+        return $db;
+    }
+
+
    public function getUserAll(){
         $db = database();
         $sql = "SELECT * 
@@ -21,6 +37,19 @@ class ModelUser
         $statement->execute();
         return $statement;
     }
+
+
+    public function getUsersByClass($idClass){
+
+        $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name FROM users u WHERE u.Id_Class = :idClass;");
+
+        $request->bindValue(':idClass', $idClass);
+        $request->execute();
+
+        return $request->fetchAll();
+    }
+
+
 
     public function updateUser($data)
     {

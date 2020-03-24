@@ -4,6 +4,9 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require __DIR__ .'/controller/ControllerNotes.php';
+require __DIR__ .'/controller/ControllerClass.php';
+require __DIR__ .'/controller/ControllerUser.php';
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -111,6 +114,32 @@ switch ($request[0]) {
         session_destroy();
         header('Location: /login');
         exit();
+        break;
+
+    case 'layout' :
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
+        break;
+
+    case 'class' :
+        $class = new ControllerClass();
+        $class->index();
+        break;
+
+    case 'note-user' :
+
+        $notes = new ControllerNotes();
+        $notes->index();
+        break;
+
+    case 'note-add' :
+        if(!empty($_POST)){
+
+        } else {
+            $notes = new ControllerNotes();
+            $notes->addAction();
+        }
         break;
 
     default:
