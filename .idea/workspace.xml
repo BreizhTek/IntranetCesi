@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6b2261-0e30-40bd-86b2-8f8dd2f252d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/bdd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +194,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585058446521">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585058446521" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
