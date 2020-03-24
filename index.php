@@ -47,14 +47,13 @@ switch ($request[0]) {
         break;
     case 'user' :
         require 'controller/ControllerUser.php';
+        $controllerUser = new ControllerUser();
+
         if(isset($_POST['envoyerUpdate'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->update();
         }elseif (isset($_POST['envoyerInsert'])){
-            $controllerUser = new ControllerUser();
             $controllerUser->insert();
         }else{
-            $controllerUser = new ControllerUser();
             $controllerUser->index();
         }
         break;
@@ -64,33 +63,27 @@ switch ($request[0]) {
         $controllerAllUser->index();
         break;
     case 'api' :
+        require 'controller/ControllerDeposit.php';
+        $Deposit = new ControllerDeposit();
 
         if(!empty($request[1]) AND $request[1] == 'Upload')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->upload();
         }
 
         elseif(!empty($request[1]) AND $request[1] == 'fileDisplay')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->display();
         }
 
         elseif(!empty($request[1]) AND $request[1] == 'deleteFiles')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
             echo  $Deposit->delete();
         }
 
         elseif(!empty($request[1]) AND $request[1] == 'folderCreation')
         {
-            require 'controller/ControllerDeposit.php';
-            $Deposit = new ControllerDeposit();
-            echo  $Deposit->folderCreation();
+            echo  $Deposit->folderCreation($_POST['name'], $_POST['path']);
         }
 
 

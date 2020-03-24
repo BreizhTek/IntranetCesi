@@ -11,7 +11,8 @@ class ControllerDeposit
     }
 
      public function index() {
-//         require './ressources/composants/templatePage.php';
+
+           require './ressources/composants/header.php'; // HEADER
            require './view/deposit.php';
       }
 
@@ -74,7 +75,7 @@ class ControllerDeposit
 
     public function delete(){
 
-        $folderAddress = ".\\storage\\"; // folder address.
+        $folderAddress = "./storage/"; // folder address.
         if (isset($_POST['name'])) // Check if  name if empty
         {
                 $fileName = $folderAddress . $_POST['name'];
@@ -97,13 +98,16 @@ class ControllerDeposit
            }
            return json_encode($fileList);
        }else{
-           return json_encode('e');
+           return json_encode('La création de dossier a échoué.');
        }
 
 
     }
 
     public function folderCreation($p_folderName,  $p_folderPath){
+
+        echo $p_folderName;
+        echo $p_folderPath;
 
         if (!mkdir($p_folderPath)) {
             return json_encode(array('message' => 'Un problème est survenu. Veuillez réessayer.', 'name' => $p_folderName));

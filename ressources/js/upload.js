@@ -1,21 +1,30 @@
 $( document ).ready(function() {
 
+    var cpt = 1;
   //---------------- Add file to list function --------------------------------
     var addFile = (p_fileName, p_type, p_size, p_author) => {
 
         if(p_type == 'd'){
-            var classDefine = "flex flex-row w-full bg-red-200";
+            var classDefine = "flex  w-full bg-gray-300 border-1 my-2  ";
             var idDefine = 'd' + p_fileName;
             var position = $("#parentList");
             p_size = '';
            var size = '';
             // var imgAddress = ;
         }else{
-            var classDefine = "flex flex-row w-full";
+            if (cpt == 1){
+                var classDefine = "flex  w-full bg-gray-200 my-2 ";
+                cpt = 0;
+            }else{
+                cpt = 1;
+                var classDefine = "flex  w-full bg-gray-100 my-2  ";
+            }
+
             var idDefine = 'f' + p_fileName;
             var position = $("#parentNode").children().last();
             // var imgAddress = ;
             var size = '';
+
 
             if(p_size  < 100000){
                  size = "ko";
@@ -28,8 +37,6 @@ $( document ).ready(function() {
 
 
 
-
-
         <!-- File line Div creation -->
         let fileDiv = document.createElement("div");   <!-- Element creation -->
         fileDiv.setAttribute('id', idDefine);     <!-- ID define -->
@@ -37,7 +44,7 @@ $( document ).ready(function() {
 
         <!-- Check case creation -->
         let checkDiv = document.createElement("div");   <!-- Element creation -->
-        checkDiv.setAttribute('class', 'w-1/6 lg:w-1/12 border border-black text-center p-2'); <!-- Class define -->
+        checkDiv.setAttribute('class', 'w-1/6 lg:w-1/12 text-center p-2'); <!-- Class define -->
         checkDiv.setAttribute('id', p_fileName); <!-- Class define -->
         let checkText = document.createElement("input");   <!-- Element creation -->
         checkText.setAttribute('type', 'checkbox');     <!--  Define as checkbox -->
@@ -48,23 +55,26 @@ $( document ).ready(function() {
 
         <!-- Name file case creation and Text -->
         let nameDiv = document.createElement("div");   <!-- Element creation -->
-        nameDiv.setAttribute('class', 'w-5/6 lg:w-6/12 border border-black text-center'); <!-- Class define -->
+        nameDiv.setAttribute('class', 'w-5/6 lg:w-6/12  text-center'); <!-- Class define -->
         nameDiv.setAttribute('id', 'name' + p_fileName); <!-- Class define -->
         let nameText = document.createElement("p");   <!-- Element creation -->
+        nameText.setAttribute('class', 'font-mono'); <!-- Class define -->
         nameText.textContent = p_fileName;     <!-- insert text -->
 
         <!-- Author file case creation and Text -->
         let authorDiv = document.createElement("div");   <!-- Element creation -->
-        authorDiv.setAttribute('class', 'w-0 lg:w-3/12 border border-black text-center invisible lg:visible'); <!-- Class define -->
+        authorDiv.setAttribute('class', 'w-0 lg:w-3/12  text-center invisible lg:visible'); <!-- Class define -->
         authorDiv.setAttribute('id', 'author' + p_fileName); <!-- Class define -->
         let authorText = document.createElement("p");   <!-- Element creation -->
+        authorText.setAttribute('class', 'font-mono'); <!-- Class define -->
         authorText.textContent = p_author;     <!-- insert text -->
 
         <!-- Size file case creation and Text -->
         let sizeDiv = document.createElement("div");   <!-- Element creation -->
-        sizeDiv.setAttribute('class', 'w-0 lg:w-2/12 border border-black text-center invisible lg:visible'); <!-- Class define -->
+        sizeDiv.setAttribute('class', 'w-0 lg:w-2/12 text-center invisible lg:visible'); <!-- Class define -->
         sizeDiv.setAttribute('id', 'size' + p_fileName); <!-- Class define -->
         let sizeText = document.createElement("p");   <!-- Element creation -->
+        sizeText.setAttribute('class', 'font-mono'); <!-- Class define -->
         sizeText.textContent = p_size + ' ' + size;     <!-- insert text -->
 
 
@@ -87,13 +97,13 @@ $( document ).ready(function() {
         let childNode= $(event.target);
         let parentNode = childNode.parent().parent();
         console.log(parentNode);
-        if(parentNode.attr('id') != 'parentNode' && parentNode.attr('id') != 'parentList') {
+        if(parentNode.attr('id') != 'parentNode' && parentNode.attr('id') != 'parentList' && parentNode.attr('id') != 'mainDiv') {
 
             if (document.getElementById(parentNode.find("input").attr('id')).checked){
-                parentNode.prop('class', 'flex flex-row w-full');
+                parentNode.prop('class', 'flex  w-full bg-gray-500 border-1 my-2 ');
                 parentNode.find("input").prop("checked", false);
             }else {
-                parentNode.prop('class', 'flex flex-row w-full bg-red-200');
+                parentNode.prop('class', 'flex  w-full bg-gray-300 border-1 my-2 ');
                 parentNode.find("input").prop("checked", true);
             }
         }
@@ -130,7 +140,7 @@ $( document ).ready(function() {
     });
 
 
-  //---------------- Display files function --------------------------------
+//---------------- Display files function --------------------------------
 var displayFiles = () => {
 
     $.get("/api/fileDisplay", function (fileList) {   <!-- Get all file name -->
@@ -140,7 +150,6 @@ var displayFiles = () => {
       if (fileTab != 'e') {
 
        fileTab.forEach(function (file) {
-console.log()
            addFile(file.Name, file.Type, file.Size, file.Author);
 
        })
@@ -167,27 +176,26 @@ console.log()
         if($("#folderInput").val() == null || $("#folderInput").val() == ''){
 
             $("#btnValidation").prop('disabled', true);
-            $("#btnValidation").removeClass();
-            $("#btnValidation").addClass("bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-1/4");
+            // $("#btnValidation").removeClass();
+            $("#btnValidation").addClass("w-3/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white");
         }
         else{
 
 
             if(/^[a-zA-Z0-9]*$/.test($("#folderInput").val()) == false){
-                $("#folderInput").removeClass();
-                $("#folderInput").addClass("border border black");
+                // $("#folderInput").removeClass();
+                $("#folderInput").addClass("w-9/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer");
 
                 $("#btnValidation").prop('disabled', true);
                 $("#btnValidation").removeClass();
-                $("#btnValidation").addClass("bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded w-1/4");
+                $("#btnValidation").addClass("w-3/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white");
 
             }else{
                 $("#folderInput").removeClass();
-                $("#folderInput").addClass("bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded lg:w-3/4");
+                $("#folderInput").addClass("w-9/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer");
 
                 $("#btnValidation").prop('disabled', false);
-                $("#btnValidation").removeClass();
-                $("#btnalidation").addClass("bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-1/4");
+                $("#btValidation").addClass("w-3/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white");
             }
         }
 
@@ -196,11 +204,12 @@ console.log()
 
     $("#btnValidation").click(function () {
 
-        let data = {"name" : $("#folderInput").val(), "path": ".\\storage\\" + $("#folderInput").val() };
+        let data = {"name" : $("#folderInput").val(), "path": "./storage/" + $("#folderInput").val() };
         $.post('/api/folderCreation', data, function (message) {
 
+            $("#message").append(message.message);
             let messageTab = JSON.parse(message);
-                addFile(messageTab.name, 'd', 0,  messageTab.author);
+            addFile(messageTab.name, 'd', 0,  messageTab.author);
         });
     });
 
@@ -229,21 +238,21 @@ console.log()
                 messageTab.forEach(function (file) {
                     if (file.messageType == 's'){
 
-                        $("#uploadMessage").text(messageTab.message);
+                        $("#message").append(file.message);
                         addFile(file.name, 'f', file.size, file.author);
                     }else{
-                        $("#uploadMessage").text(messageTab.message);
+
+                        $("#message").append(file.message);
                     }
 
                 })
             },
             error: function (message, status, error) {
-                console.log("STATUT : " + status);
-                console.log("MESSAGE : " + message);
-                console.log("ERROR : " + error);
+
+                $("#message").append("Une erreur est survenu, veuillez réessayer.");
             }
         });
- //----------------- ------------------------------------------------------
+
     });
     $("#insertName").hide();
 

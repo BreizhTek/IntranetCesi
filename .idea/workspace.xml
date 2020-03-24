@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="" />
+    <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/Nouveau document texte.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/users/noprofil.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.txt" beforeDir="false" afterPath="$PROJECT_DIR$/store.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,26 +38,26 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/react/promise" />
-      <path value="$PROJECT_DIR$/vendor/react/dns" />
-      <path value="$PROJECT_DIR$/vendor/react/stream" />
-      <path value="$PROJECT_DIR$/vendor/react/cache" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/cboden/ratchet" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
       <path value="$PROJECT_DIR$/vendor/ratchet/rfc6455" />
-      <path value="$PROJECT_DIR$/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/vendor/cboden/ratchet" />
+      <path value="$PROJECT_DIR$/vendor/react/dns" />
+      <path value="$PROJECT_DIR$/vendor/react/event-loop" />
+      <path value="$PROJECT_DIR$/vendor/react/cache" />
+      <path value="$PROJECT_DIR$/vendor/react/stream" />
       <path value="$PROJECT_DIR$/vendor/react/socket" />
+      <path value="$PROJECT_DIR$/vendor/react/promise" />
+      <path value="$PROJECT_DIR$/vendor/react/promise-timer" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/evenement/evenement" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YLUo4aXOVKo6x8wvQRRwLY6yV9" />
@@ -90,7 +102,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="" />
+      <changelist id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
       <created>1582721539162</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -105,14 +117,23 @@
       <workItem from="1583589429306" duration="1276000" />
       <workItem from="1584396013651" duration="35000" />
       <workItem from="1584949623289" duration="4265000" />
-      <workItem from="1584994472031" duration="1348000" />
-      <workItem from="1584996429978" duration="32991000" />
-      <workItem from="1585035133567" duration="6676000" />
+      <workItem from="1585035964714" duration="3883000" />
+      <workItem from="1585041935832" duration="553000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -143,46 +164,53 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
-    <state x="224" y="84" key="DiffContextDialog" timestamp="1582895418413">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2219" y="84" width="2048" height="864" key="DiffContextDialog" timestamp="1585043061515">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="224" y="84" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895418413" />
+    <state x="2219" y="84" width="2048" height="864" key="DiffContextDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585043061515" />
     <state x="2907" y="295" width="424" height="487" key="FileChooserDialogImpl" timestamp="1584396046711">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1582813423755" />
     <state x="2907" y="295" width="424" height="487" key="FileChooserDialogImpl/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584396046711" />
-    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1585016041305">
+    <state x="2166" y="109" width="2048" height="897" key="MergeDialog" timestamp="1585040243487">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2166" y="109" width="2048" height="897" key="MergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040243487" />
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog" timestamp="1585040244969">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2913" y="273" width="564" height="566" key="MultipleFileMergeDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585040244969" />
+    <state x="739" y="354" key="NewPhpClassDialog" timestamp="1582825257008">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="739" y="354" key="NewPhpClassDialog/-1920.0.1536.864/0.0.1920.1080/1920.191.1366.768@0.0.1920.1080" timestamp="1585016041305" />
     <state x="739" y="354" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582825257008" />
-    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog" timestamp="1584969822209">
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog" timestamp="1584978065049">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
-    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584969822209" />
+    <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584978065049" />
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor" timestamp="1584949763653">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035149136">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/-1920.0.1536.864/0.0.1920.1080/1920.191.1366.768@0.0.1920.1080" timestamp="1585035149136" />
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
-    <state x="2795" y="364" key="com.intellij.ide.util.TipDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584396015426" />
-    <state x="771" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585014385793">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="771" y="459" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.864/0.0.1920.1080/1920.191.1366.768@0.0.1920.1080" timestamp="1585014385793" />
-    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1584958756176">
+    <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584958756176" />
+    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
+    <state x="2795" y="364" key="com.intellij.ide.util.TipDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585035963820" />
+    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1585039289061">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585039289061" />
     <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
+    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585046724554">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585046724554" />
   </component>
 </project>
