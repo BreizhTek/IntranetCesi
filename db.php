@@ -1,6 +1,6 @@
 <?php
 
-define('DSN', 'mysql:host=localhost;dbname=intranet_cesi');
+define('DSN', 'mysql:host=localhost;dbname=intranetcesi');
 define('USER', 'root');
 define('PASS', '');
 
