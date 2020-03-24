@@ -11,7 +11,6 @@ class ControllerDeposit
     }
 
      public function index() {
-//         require './ressources/composants/templatePage.php';
            require './view/deposit.php';
       }
 
