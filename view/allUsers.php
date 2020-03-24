@@ -20,11 +20,11 @@
                         <?php
                         if (isset($allUsers['Picture'])){
                             ?>
-                            <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $allUsers['Picture'] ?>">
+                            <img class="h-64 w-56" src="../storage/users/<?php echo $allUsers['Picture'] ?>">
                             <?php
                         } else {
                             ?>
-                            <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                            <img class="h-64 w-64" src="../storage/users/noprofil.png">
                             <?php
                         }
                         ?>
