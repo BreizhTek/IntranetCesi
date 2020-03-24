@@ -7,7 +7,7 @@ class ModelSignature
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;port=3308;dbname=intranet', 'root', '');
+            $db = new PDO(DSN, USER, PASS);
         }
         catch(PDOException $e)
         {
