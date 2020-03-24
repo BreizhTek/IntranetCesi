@@ -1,46 +1,59 @@
-<?php
-require './ressources/composants/templatePage.php';
-?>
-
-    <div class="container w-full mx-auto pt-20">
-
-        <div class="container mx-auto pt-10 sm:px-8">
-            <div>
-                <h2 class="text-2xl font-semibold leading-tight">Liste des utilisateurs</h2>
-            </div>
-            <div class="py-5">
-                <div class="-mx-4 sm:-mx-8 px-4 sm:px-8  overflow-x-auto">
-                    <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
-
-
-                        <table>
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trombinoscope</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="container my-4 mx-8 px-4 md:px-12">
+    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        <?php
+        foreach ($row as $allUsers){
+            ?>
+            <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-auto">
+                <article class="overflow-hidden rounded-lg shadow-lg">
+                    <a href="user/<?php echo $allUsers['Id'] ?>">
                         <?php
-                            foreach ($row as $allUsers){
+                        if (isset($allUsers['Picture'])){
                             ?>
-                                <tr>
-                                    <td>
-                                        <a href="user/<?php echo $allUsers['Id'] ?>">lien de modification</a>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['Id']) && $allUsers['Id'] <> "" && $allUsers['Id'] <> NULL) ? $allUsers['Id'] : "-" )?>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['Post']) && $allUsers['Post'] <> "" && $allUsers['Post'] <> NULL) ? $allUsers['Post'] : "-" )?>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['First_name']) && $allUsers['First_name'] <> "" && $allUsers['First_name'] <> NULL) ? $allUsers['First_name'] : "-" )?>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['Last_name']) && $allUsers['Last_name'] <> "" && $allUsers['Last_name'] <> NULL) ? $allUsers['Last_name'] : "-" )?>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['Phone']) && $allUsers['Phone'] <> "" && $allUsers['Phone'] <> NULL) ? $allUsers['Phone'] : "-" )?>
-                                    </td><td>
-                                        <?php echo ((isset($allUsers['Mail']) && $allUsers['Mail'] <> "" && $allUsers['Mail'] <> NULL) ? $allUsers['Mail'] : "-" )?>
-                                    </td>
-                                </tr>
+                            <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $allUsers['Picture'] ?>">
                             <?php
-                            }
+                        } else {
+                            ?>
+                            <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                            <?php
+                        }
                         ?>
-                        </table>
-                    </div>
-                </div>
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <?php
+                                echo (
+                                (
+                                    isset($allUsers['First_name'])
+                                    && $allUsers['First_name'] <> ""
+                                    && $allUsers['First_name'] <> NULL
+                                ) ? $allUsers['First_name'] : "-" );
+                                echo " - ";
+                                echo (
+                                (
+                                    isset($allUsers['Last_name'])
+                                    && $allUsers['Last_name'] <> ""
+                                    && $allUsers['Last_name'] <> NULL
+                                ) ? $allUsers['Last_name'] : "-" );
+                                ?>
+                            </h1>
+                        </header>
+                    </a>
+                </article>
             </div>
-        </div>
+            <?php
+        }
+        ?>
     </div>
-
+</div>
+</body>
+</html>

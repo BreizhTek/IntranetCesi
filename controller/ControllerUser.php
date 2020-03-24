@@ -2,6 +2,7 @@
 class ControllerUser {
 
     public function index(){
+        require_once 'ressources/modele/ModelCar.php';
         require_once 'ressources/modele/ModelUser.php';
         require './ressources/composants/templatePage.php';
         $request = $_SERVER['REQUEST_URI'];
@@ -9,7 +10,10 @@ class ControllerUser {
         $modelUser = new ModelUser();
         $userById = ((isset($req["2"])) ? $modelUser->getUserById($req["2"]) : NULL);
         $row = (($userById <> NULL) ? $userById->fetch(PDO::FETCH_ASSOC) : "");
-
+        $modelCar = new ModelCar();
+        $carByUser = ((isset($req["2"])) ? $modelCar->getCarByUser($req["2"]) : NULL);
+        $carByUser = (($carByUser <> NULL) ? $carByUser->fetchAll(PDO::FETCH_ASSOC) : "");
+        $nbCar = count($carByUser);
         require_once ('view/user.php');
     }
 
