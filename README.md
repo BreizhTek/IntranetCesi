@@ -65,6 +65,6 @@ Pour ce faire :
 
 ## Vous pouvez également consultez le site sans installation sur http://telougat.space
 
-## Réalisé par DOPPLER Quentin, LAINE Timothé, GROSDOIGT Quentin. & LAGOUTTE Lorenzo.
+## Réalisé par DOPPLER Quentin, LAINE Timothé, GROSDOIGT Quentin & LAGOUTTE Lorenzo.
 
 ### Vous pouvez contacter Lorenzo sur discord si vous rencontrez des problèmes.  :+1: :+1: :+1:
