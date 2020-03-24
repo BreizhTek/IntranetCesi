@@ -30,8 +30,6 @@ class ModelUser
         return $statement;
     }
 
-    public function updateUser($data){
-
     public function getUsersByClass($idClass){
 
         $request = $this->connect()->prepare("SELECT u.Id, u.Last_name, u.First_name FROM users u WHERE u.Id_Class = :idClass;");

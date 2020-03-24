@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControlleurCar.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControlleurCar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelCar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelCar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/car.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +115,14 @@
       <workItem from="1584949623289" duration="4265000" />
       <workItem from="1585035964714" duration="3883000" />
     </task>
+    <task id="LOCAL-00001" summary="recup">
+      <created>1585041553818</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585041553818</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +146,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Commit Quentin DOPPLER" />
     <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+    <MESSAGE value="recup" />
+    <option name="LAST_COMMIT_MESSAGE" value="recup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584960309959">
@@ -177,14 +188,23 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1585056395127">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585056395127" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585041578365">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585041578365" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585035963820" />
-    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1585039289061">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="2649" y="160" width="607" height="759" key="find.popup" timestamp="1585048244034">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="2649" y="160" width="607" height="759" key="find.popup/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585048244034" />
     <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585039289061" />
     <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
       <screen x="0" y="0" width="1920" height="1080" />

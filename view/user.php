@@ -190,12 +190,17 @@
                 Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
             </div>
             <?php
-            if($row <> "" && $row['Picture'] <>""){
-            ?>
-                <img src="\\storage\\users\\<?php echo $row['Picture'] ?>" width="270" height="295">
-            <?php
+            if (isset($row['Picture'])){
+                ?>
+                <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
+                <?php
+            } else {
+                ?>
+                <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                <?php
             }
             ?>
+            </br>
             <button
                 type="submit"
                 class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
@@ -203,5 +208,44 @@
             >Enregistrer</button>
         </form>
     </div>
-</body>
+    </br>
+    <?php if(isset($row) && $row <> null && $row <> ""){
+        ?>
+        <div>
+            <h1>Voiture(s) : (Nb : <?php echo $nbCar ?>)</h1>
+            <a href="../car">Ajout Voiture</a>
+            <table>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Plaque d'immatriculation</th>
+                    <th scope="col">Marque</th>
+                    <th scope="col">Modèle</th>
+                    <th scope="col">Couleur</th>
+                </tr>
+                <?php
+                foreach ($carByUser as $car){
+                    ?>
+                    <tr>
+                        <td>
+                            <a href="../car/<?php echo $car['Id'] ?>">Lien de modification</a>
+                        </td><td>
+                            <?php echo $car['Plate'] ?>
+                        </td><td>
+                            <?php echo ((isset($car['Brand']) && isset($car['Brand']) <> "" && isset($car['Brand']) <> null) ? $car['Brand'] : "-")?>
+                        </td><td>
+                            <?php echo ((isset($car['Model']) && isset($car['Model']) <> "" && isset($car['Model']) <> null) ? $car['Model'] : "-")?>
+                        </td><td>
+                            <?php echo ((isset($car['Color']) && isset($car['Color']) <> "" && isset($car['Color']) <> null) ? $car['Color'] : "-")?>
+                        </td>
+                    </tr>
+                    <?php
+                }
+                ?>
+            </table>
+            </br>
+        </div>
+    <?php
+    }
+    ?>
+    </body>
 </html>
