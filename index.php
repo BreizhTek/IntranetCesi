@@ -150,7 +150,34 @@ switch ($request[0]) {
         exit();
         break;
 
+    case 'layout' :
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
+        break;
+
+    case 'class' :
+        $class = new ControllerClass();
+        $class->index();
+        break;
+
+    case 'note-user' :
+
+        $notes = new ControllerNotes();
+        $notes->index();
+        break;
+
+    case 'note-add' :
+        if(!empty($_POST)){
+
+        } else {
+            $notes = new ControllerNotes();
+            $notes->addAction();
+        }
+        break;
+
     default:
+        http_response_code(404);
         abort();
         break;
 }

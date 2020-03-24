@@ -1,8 +1,8 @@
 <?php
 
 define('DSN', 'mysql:host=localhost;dbname=Intranet');
-define('USER', 'root');
-define('PASS', 'root');
+define('USER', 'admin');
+define('PASS', 'admin');
 
 function database() {
 
