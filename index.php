@@ -4,7 +4,10 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
-require __DIR__ . "/ressources/modele/ModelSocketAuthorization.php";
+require __DIR__ . "/controller/ControllerClass.php";
+require __DIR__ . "/controller/ControllerNotes.php";
+require_once "./db.php";
+require_once "./controller/api/ApiChat.php";
 
 $request = $_SERVER['REQUEST_URI'];
 
@@ -149,6 +152,7 @@ switch ($request[0]) {
 
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
+            $apiChat = new apiChat();
 
             if(!empty($_GET) AND isset($_GET['channel']) AND $_GET['channel'] != null AND $_SESSION)
             {
@@ -205,6 +209,7 @@ switch ($request[0]) {
         break;
 
 
+
     case 'login' :
         require('controller/ControllerLogin.php');
         $login = new ControllerLogin();
@@ -233,7 +238,28 @@ switch ($request[0]) {
         require 'presence-check.php';
         break;
 
+    case 'class' :
+        $class = new ControllerClass();
+        $class->index();
+        break;
+
+    case 'note-user' :
+
+        $notes = new ControllerNotes();
+        $notes->index();
+        break;
+
+    case 'note-add' :
+        if(!empty($_POST)){
+
+        } else {
+            $notes = new ControllerNotes();
+            $notes->addAction();
+        }
+        break;
+
     default:
+        http_response_code(404);
         abort();
         break;
 }

@@ -1,12 +1,17 @@
 <?php
 
+define('DSN', 'mysql:host=localhost;dbname=Intranet');
+define('USER', 'admin');
+define('PASS', 'admin');
+
 class Chat {
+
 
     private function connect()
     {
         try
         {
-            $db = new PDO('mysql:host=localhost;dbname=Intranet','root','root');
+            $db = new PDO(DSN,USER,PASS);
         }
         catch(PDOException $e)
         {
@@ -30,41 +35,6 @@ class Chat {
 
         return $request->fetchAll();
 
-    }
-
-    public function sendMessage($channelId, $message)
-    {
-
-        $date = new DateTime();
-        $date = $date->format('Y-m-d H:i:s');
-
-        $request = $this->connect()->prepare("INSERT INTO Messages (Content, Date) VALUES (:message, :date)");
-
-        $request->bindValue(':message', $message);
-
-        $request->bindValue(':date', $date);
-
-        $request->execute();
-
-        $request = $this->connect()->prepare("SELECT Id FROM Messages WHERE Content = :message AND Date = :date");
-
-        $request->bindValue(':message', $message);
-
-        $request->bindValue(':date', $date);
-
-        $request->execute();
-
-        $messageId = $request->fetch()['Id'];
-
-        $request = $this->connect()->prepare("INSERT INTO Discussion (Id, Id_Channels, Id_Messages) VALUES (:userId, :channelId, :messageId)");
-
-        $request->bindValue(':userId', $_SESSION['User_ID']);
-
-        $request->bindValue('channelId', $channelId);
-
-        $request->bindValue('messageId', $messageId);
-
-        $request->execute();
     }
 
     public function getMessages($channelId)
@@ -200,6 +170,7 @@ class Chat {
 
     }
 
+
     public function addUserToAChannel($channelName, $userId)
     {
 
@@ -215,6 +186,100 @@ class Chat {
 
         return true;
 
+    }
+
+    public function isChannelOwner($channel)
+    {
+
+        $request = $this->connect()->prepare("SELECT Id FROM Channels WHERE Id_Users = :userId AND Id = :channelId");
+
+        $request->bindValue(':userId', $_SESSION['User_ID']);
+        $request->bindValue(':channelId', $channel);
+
+        $request->execute();
+
+        if (!empty($request->fetch()))
+            return true;
+
+        return false;
+    }
+
+    public function deleteChannel($channelId)
+    {
+        $this->deleteAllUsersInChannel($channelId);
+
+        $request = $this->connect()->prepare("DELETE FROM Channels WHERE Id = :channelId");
+
+        $request->bindValue(':channelId', $channelId);
+
+        $request->execute();
+
+        return true;
+    }
+
+    public function deleteMessage($messageId)
+    {
+
+        $request = $this->connect()->prepare("DELETE FROM Discussion WHERE Id_Messages = :messageId");
+
+        $request->bindValue(':messageId', $messageId);
+
+        $request->execute();
+
+        $request = $this->connect()->prepare("DELETE FROM Messages WHERE Id = :messageId");
+
+        $request->bindValue(':messageId', $messageId);
+
+        $request->execute();
+
+        return true;
+    }
+
+    private function deleteAllUsersInChannel($channelId)
+    {
+
+        $request = $this->connect()->prepare("DELETE FROM Channel_users WHERE Id = :channelId");
+
+        $request->bindValue(':channelId', $channelId);
+
+        $request->execute();
+
+        $request = $this->connect()->prepare("DELETE FROM Socket WHERE Id_Channels = :channelId");
+
+        $request->bindValue(':channelId', $channelId);
+
+        $request->execute();
+
+        return true;
+    }
+
+    public function deleteUserFromChannel($channelId, $userId)
+    {
+        $request = $this->connect()->prepare("DELETE FROM Channel_users WHERE Id = :channelId AND Id_Users = :userId");
+
+        $request->bindValue(':channelId', $channelId);
+        $request->bindValue(':userId', $userId);
+
+        $request->execute();
+
+        $request = $this->connect()->prepare("DELETE FROM Socket WHERE Id_Channels = :channelId AND Id_Users = :userId");
+
+        $request->bindValue(':channelId', $channelId);
+        $request->bindValue(':userId', $userId);
+
+        $request->execute();
+
+        return true;
+    }
+
+    public function getUsersIntoChannel($channel)
+    {
+        $request =$this->connect()->prepare("SELECT U.Last_name, U.First_name, U.Id FROM Users AS U
+                                                       INNER JOIN Channel_users AS C ON C.Id_Users = U.Id WHERE C.Id = :channelId");
+        $request->bindValue(':channelId', $channel);
+        $request->execute();
+
+        return $request->fetchAll();
     }
 
 }

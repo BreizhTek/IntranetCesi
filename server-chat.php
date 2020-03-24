@@ -4,8 +4,8 @@ use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
 use IntranetSocket\socketChat;
 
-require dirname(__DIR__) . '/IntranetCesi/vendor/autoload.php';
-require dirname(__DIR__) . '/IntranetCesi/controller/SocketChat.php';
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/controller/SocketChat.php';
 
 $server = IoServer::factory(
     new HttpServer(

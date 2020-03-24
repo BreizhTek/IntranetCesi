@@ -10,15 +10,19 @@
 </head>
 <body>
     <div>
-        <form action="user" method="POST" class="w-full max-w-lg" enctype="multipart/form-data">
+        <form action="user" method="POST" class="w-full max-w-lg">
             <div class="flex flex-wrap -mx-3 mb-6">
                 <div class="w-full px-3">
+                    <label
+                        for="Id"
+                        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                    >Id : </label>
                     <input
+                        type="text"
                         class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                         id="Id"
                         name="Id"
                         value="<?php echo (($row <> "") ? $row['Id'] : "")?>"
-                        type="hidden"
                     >
                 </div>
             </div>

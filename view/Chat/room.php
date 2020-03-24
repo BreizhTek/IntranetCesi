@@ -15,6 +15,8 @@
 </head>
 <body>
 
+<?php require_once __DIR__ . "/../../ressources/composants/header.php";?>
+
 <input type="hidden" value="<?php echo $User; ?>" id="User">
 <input type="hidden" value="<?php echo $Channel; ?>" id="Channel">
 <input type="hidden" value="<?php echo $Token; ?>" id="Token">
@@ -22,7 +24,7 @@
 
 <div class="w-full min-h-screen flex flex-row justify-center items-center">
 
-    <div class="w-full lg:flex lg:flex-row lg:mx-2 xl:mx-0 justify-center">
+    <div class="w-full lg:flex lg:flex-row mx-4 lg:mx-2 xl:mx-0 justify-center">
 
         <div class="bg-blue p-2 lg:w-2/3 xl:w-1/2 lg:p-4 xl:p-8 rounded-lg">
 
@@ -30,7 +32,7 @@
                 <h1><?php echo $ChannelName; ?></h1>
             </div>
 
-            <div id="displayMessages" style="height: 700px;" class="w-full bg-white rounded-lg overflow-y-scroll">
+            <div id="displayMessages" style="height: 450px;" class="w-full bg-white rounded-lg overflow-y-scroll">
             </div>
 
             <form onsubmit="eventSendMessage();return false" id="formMessage" class="w-full flex flex-row p-4">
@@ -40,18 +42,42 @@
 
         </div>
 
-        <div class="h-full mt-4 lg:mt-0 lg:ml-8 bg-blue p-8 rounded-lg text-white">
-            <h3 class="font-bold">Ajouter un utilisateur</h3>
+        <div class="h-full text-white">
 
-            <div class="mt-2">
+            <div class="my-4 lg:mt-0 lg:ml-8 bg-blue p-8 rounded-lg">
+                <h3 class="font-bold pb-2">Utilisateurs :</h3>
 
-                <input type="text" class="rounded-full px-2 text-black" id="inputNewUser" placeholder="E-mail"/>
-                <button onclick="addNewUser()" class="ml-2 bg-white rounded-lg text-black p-1 px-2">Ajouter</button>
-
-                <div id="responseAddUser" class="font-bold text-red-400"></div>
+                <div id="usersList" style="max-height: 200px;" class="overflow-y-scroll bg-white text-black p-2 rounded-lg">
+                </div>
 
             </div>
+
+            <div class="mt-4 lg:mt-0 lg:ml-8 bg-blue p-8 rounded-lg">
+                <h3 class="font-bold">Ajouter un utilisateur</h3>
+
+                <div class="mt-2">
+
+                    <input type="text" class="rounded-full px-2 text-black" id="inputNewUser" placeholder="E-mail"/>
+                    <button onclick="addNewUser()" class="ml-2 mt-2 md:mt-0 lg:mt-2 xl:mt-0 bg-white rounded-lg text-black p-1 px-2">Ajouter</button>
+
+                    <div id="responseAddUser" class="font-bold text-red-400"></div>
+
+                </div>
+            </div>
+
+            <?php if ($channelOwner) { ?>
+
+            <div class="mt-4 lg:ml-8 bg-blue p-4 rounded-lg">
+
+                <button onclick="deleteChannel()" class="text-red-400">Supprimer le channel</button>
+
+            </div>
+
+            <?php } ?>
+
         </div>
+
+
 
     </div>
 
@@ -74,17 +100,17 @@
             if (message && name)
             {
 
-                return '<div class="w-full p-4 flex flex-row">'
+                return '<div class="w-full p-2 flex flex-row">'
                     + '<p class="flex items-center font-bold">' + name + '</p>'
-                    + '<p class="ml-4 bg-blue p-4 rounded-lg text-white">' + message + '</p>'
+                    + '<p class="ml-4 bg-blue p-2 rounded-lg text-white">' + message + '</p>'
                     + '</div>';
 
             }
             else
             {
 
-                return '<div class="w-full p-4 flex flex-row justify-end">'
-                + '<p class="ml-4 bg-blue p-4 rounded-lg text-white">' + message + '</p>'
+                return '<div class="w-full p-2 flex flex-row justify-end">'
+                + '<p class="ml-4 bg-blue p-2 rounded-lg text-white">' + message + '</p>'
                 + '</div>';
 
             }
@@ -108,11 +134,10 @@
             user.parentNode.removeChild(user);
             channel.parentNode.removeChild(channel);
             token.parentNode.removeChild(token);
+            name.parentNode.removeChild(name);
         };
 
         conn.onmessage = function(e) {
-
-            console.log(e.data);
 
             let data = JSON.parse(e.data);
 
@@ -135,6 +160,8 @@
         };
 
         $(document).ready(function() {
+
+            getUsers();
 
             $.get("/api/chat/", {channel: channel.value})
                 .done(function( data ) {
@@ -162,6 +189,46 @@
                 });
 
         });
+
+        function deleteChannel()
+        {
+            $.get("/api/chat/", {deletechannel: channel.value})
+                .done(function () {
+                    window.location.href = "/chat";
+                })
+
+        }
+
+        function getUsers()
+        {
+            let usersList = document.getElementById('usersList');
+
+            usersList.innerHTML = "";
+
+            $.get('/api/chat/', {getuserslist: channel.value})
+                .done(function(data)
+                {
+                    for (let i=0; i<data.content.length;i++)
+                    {
+                        if (data.owner && data.content[i].Id !== user.value)
+                        {
+                            usersList.innerHTML = usersList.innerHTML + '<div class="flex flex-row justify-between my-2"><p class="text-sm">' + data.content[i].First_name + ' ' + data.content[i].Last_name + '</p><button onclick="deleteUser(' + channel.value + ',' + data.content[i].Id + ')" class="bg-red-500 px-2 rounded-full font-extrabold">-</button></div>';
+                        }
+                        else
+                        {
+                            usersList.innerHTML = usersList.innerHTML + '<p class="text-sm my-2">' + data.content[i].First_name + ' ' + data.content[i].Last_name + '</p>';
+                        }
+                    }
+                })
+        }
+
+        function deleteUser(channelId, userId)
+        {
+            $.get("/api/chat/", {deleteuserfromchannel: userId, channelid: channelId})
+                .done(function(){
+                    getUsers();
+                })
+        }
 
         function eventSendMessage()
         {
@@ -194,6 +261,8 @@
                     if (data.message === 'ok')
                     {
                         response.append("Utilisateur ajouté !");
+                        newUser.value = "";
+                        getUsers();
                     }
                     else
                     {

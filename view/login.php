@@ -10,9 +10,9 @@
             crossorigin="anonymous"></script>
         <script src="ressources/js/rgpd.js"></script>
         <link rel="stylesheet" href="../style.css">
-
     </head>
     <body>
+
     <div id="rgpd" class="fixed flex items-center justify-center h-screen"></div>
         <div class="bg-orange-400 h-screen w-screen">
             <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
