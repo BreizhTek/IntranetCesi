@@ -33,6 +33,7 @@
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="Plate"
                     name="Plate"
+                    required="required"
                     value="<?php echo (($row <> "") ? $row['Plate'] : "")?>"
                 >
             </div>
