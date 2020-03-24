@@ -33,7 +33,16 @@ class ControllerNotes
 
     public function addAction(){
         if(!empty($_POST)){
-            $this->_editNotes();
+            $data = array(
+                'IdUsers' => $_POST['IdUsers'],
+                'IdClasses' => $_POST['IdClasses'],
+                'IdNotes' => $_POST['IdNotes'],
+
+            );
+            $modelNotes = new Notes();
+            $modelNotes->save($data);
+            require_once __DIR__ . "/../view/Notes/indexNotes.php";
+
         } else {
             $request = $_SERVER['REQUEST_URI'];
             $req = explode("/", $request);
@@ -53,23 +62,12 @@ class ControllerNotes
 
     public function editAction($idNotes){
         if(!empty($_POST)){
-            $this->_editNotes();
+
         } else {
             require_once __DIR__ . "/../view/Notes/noteEdit.php";
         }
     }
 
-
-    private function _editNotes(){
-        $data = array(
-            'Id_Users' => $_POST['idUser'],
-            'Id_Classes' => $_POST['idClasses'],
-            'Id_Notes' => $_POST['notes'],
-
-        );
-        $modelNotesr = new ModelNotes();
-        $userUpdate = $modelNotesr->save($data);
-    }
 
 
 

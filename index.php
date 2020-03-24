@@ -163,7 +163,8 @@ switch ($request[0]) {
 
     case 'note-add' :
         if(!empty($_POST)){
-
+            $notes = new ControllerNotes();
+            $notes->addAction();
         } else {
             $notes = new ControllerNotes();
             $notes->addAction();

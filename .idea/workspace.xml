@@ -4,14 +4,10 @@
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ControllerNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelClasses.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Class/indexClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Class/indexClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/Notes/indexNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Notes/indexNotes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Notes/noteAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Notes/noteAdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
