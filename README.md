@@ -2,6 +2,16 @@
 
 ## Instructions
 
+Veuillez renseigné vos données de connexion en base de données.
+
+Dans :
+
+> db.php
+
+> ressources/modele/ModelSocketAuthorization.php
+
+Les champs sont explicite.
+
 ### Liste des commandes à executer
 
 Vous devez cloner le dépot :

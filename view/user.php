@@ -197,11 +197,11 @@
             <?php
             if (isset($row['Picture'])){
                 ?>
-                <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
+                <img class="h-64 w-56" src="../storage/users/<?php echo $row['Picture'] ?>">
                 <?php
             } else {
                 ?>
-                <img class="h-64 w-64" src="..\\storage\\users\\noprofil.png">
+                <img class="h-64 w-64" src="../storage/users/noprofil.png">
                 <?php
             }
             ?>
