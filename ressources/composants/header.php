@@ -1,8 +1,8 @@
 <?php
- $prenom = $_SESSION['Last_name'];
+ $prenom = $_SESSION['First_name'];
 ?>
 
-    <nav id="header" class="bg-blue text-white fixed w-full z-10 top-0 shadow">
+    <nav id="header" class="bg-blue text-white w-full z-10 top-0 shadow">
 
 
         <div class="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
@@ -68,7 +68,7 @@
             <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-blue text-white z-20" id="nav-content">
                 <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
                     <li class="mr-6 my-2 md:my-0">
-                        <a href="layout" class="block py-1 md:py-3 pl-1 align-middle text-orange-200 no-underline hover:text-gray-900 border-b-2 border-orange-200 hover:border-orange-600">
+                        <a href="/" class="block py-1 md:py-3 pl-1 align-middle text-orange-200 no-underline hover:text-gray-900 border-b-2 border-orange-200 hover:border-orange-600">
                             <i class="fas fa-home fa-fw mr-3 text-orange-600"></i><span class="pb-1 md:pb-0 text-sm">Acceuil</span>
                         </a>
                     </li>

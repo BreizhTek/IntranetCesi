@@ -22,23 +22,16 @@ function abort()
     exit();
 }
 
-if (!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0)
-{
-    $request[0] = 'login';
-}
-
 switch ($request[0]) {
-    case '/' :
-        echo "dqsddqs";
-        // require __DIR__ . '/views/404.php';
-        break;
     case 'depo' :
          require 'controller/ControllerDeposit.php';
          $Deposit = new ControllerDeposit();
          $Deposit->index(); // Display deposit page
         break;
     case '' :
-        echo password_hash('123', PASSWORD_DEFAULT);
+        require('controller/ControllerLayout.php');
+        $layout = new ControllerLayout();
+        $layout->index();
         break;
     case 'chat' :
         $chat = new ControllerChat();
@@ -150,12 +143,6 @@ switch ($request[0]) {
         session_destroy();
         header('Location: /login');
         exit();
-        break;
-
-    case 'layout' :
-        require('controller/ControllerLayout.php');
-        $layout = new ControllerLayout();
-        $layout->index();
         break;
 
     case 'class' :
