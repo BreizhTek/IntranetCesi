@@ -79,6 +79,21 @@ switch ($request[0]) {
             echo  $Deposit->display();
         }
 
+        elseif(!empty($request[1]) AND $request[1] == 'fileDelete')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->delete();
+        }
+
+        elseif(!empty($request[1]) AND $request[1] == 'folderCreation')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo  $Deposit->folderCreation();
+        }
+
+
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
             $apiChat = new apiChat();
@@ -164,6 +179,14 @@ switch ($request[0]) {
             $notes->addAction();
         }
         break;
+
+    case 'signature' :
+    {
+    require 'controller/ControllerSignature.php';
+        $sign = new ControllerSignature();
+        echo  $sign->sign();
+    }
+    break;
 
     default:
         http_response_code(404);
