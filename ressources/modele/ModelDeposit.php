@@ -16,6 +16,7 @@ class ModelDeposit
     }
 
 
+    // Insert file into DB
     public function insertFile($p_name, $p_size, $p_type)
     {
         try {
@@ -26,7 +27,7 @@ class ModelDeposit
             $request->bindValue(':size',  $p_size);
             $request->bindValue(':type',  $p_type);
             $request->bindValue(':author',  $author);
-            $request->execute(); // Request to confirm the studnent signature in the DB
+            $request->execute();
 
             return true;
         }
@@ -37,6 +38,7 @@ class ModelDeposit
 
     }
 
+    // Get file characteristic
     public function displayFile()
     {
         try {
@@ -51,12 +53,13 @@ class ModelDeposit
 
     }
 
+    // Delete file in the DB
     public function deleteFile()
     {
         try {
             $request = $this->connect()->prepare("DELETE FROM Deposit WHERE Name= :name  "); // Prepare statement
             $request->bindValue(':name',  $_POST['name']);
-            $request->execute(); // Request to confirm the student signature in the DB
+            $request->execute();
 
             return true;
         }

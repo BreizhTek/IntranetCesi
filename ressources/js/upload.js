@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
     var cpt = 1;
-  //---------------- Add file to list function --------------------------------
+  //---------------- Add file to list  --------------------------------
     var addFile = (p_fileName, p_type, p_size, p_author) => {
 
         if(p_type == 'd'){
@@ -26,10 +26,11 @@ $( document ).ready(function() {
             var size = '';
 
 
+            <!-- Convertion in KO is the file size < 1 mo -->
             if(p_size  < 100000){
                  size = "ko";
                 p_size = Math.round(p_size / 1024);
-            }else{
+            }else{              <!-- Convertion in MO is the file size > 1 mo -->
                  size = "mo";
                 p_size = Math.round((p_size / 1024) / 1024);
             }
@@ -99,7 +100,7 @@ $( document ).ready(function() {
         console.log(parentNode);
         if(parentNode.attr('id') != 'parentNode' && parentNode.attr('id') != 'parentList' && parentNode.attr('id') != 'mainDiv') {
 
-            if (document.getElementById(parentNode.find("input").attr('id')).checked){
+            if (document.getElementById(parentNode.find("input").attr('id')).checked){ <!-- Change layout if the line is checked -->
                 parentNode.prop('class', 'flex  w-full bg-gray-500 border-1 my-2 ');
                 parentNode.find("input").prop("checked", false);
             }else {
@@ -111,16 +112,15 @@ $( document ).ready(function() {
     });
 
  //---------------- Delete files function --------------------------------
-
-
     $("#btnDelete").click(function() {
 
+            <!-- Get all input checked -->
         var lineTab = new Array();
         var checkedBoxes = document.querySelectorAll('input[name=checkFile]:checked');
 
-
        [].forEach.call(checkedBoxes, function (div) {
            data = { "name":div.parentNode.id };
+           <!-- Send the line to controller to delete in folder & DB -->
            $.post("/api/deleteFiles", data, function (message) {
                let line = div.parentNode.parentNode;
                line.remove();
@@ -132,11 +132,8 @@ $( document ).ready(function() {
                }else{
                    //error
                }
-
-
            });
         });
-
     });
 
 
@@ -149,7 +146,7 @@ var displayFiles = () => {
 
        fileTab.forEach(function (file) {
 
-           addFile(file.Name, file.Type, file.Size, file.Author);
+           addFile(file.Name, file.Type, file.Size, file.Author);   <!-- Display file by file -->
 
        });
 

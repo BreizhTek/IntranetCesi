@@ -108,7 +108,7 @@ class ControllerDeposit
         echo $p_folderName;
         echo $p_folderPath;
 
-        if (!mkdir($p_folderPath)) {
+        if (!mkdir($p_folderPath)) { // Try to create the folder, if the folder is alraidy created, it return error
             return json_encode(array('message' => 'Un problème est survenu. Veuillez réessayer.', 'name' => $p_folderName));
         }
         if ($this->deposit->insertFile($p_folderName, 0, 'd') == true) {
