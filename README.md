@@ -63,4 +63,8 @@ Pour ce faire :
 - Avatar des utilisateurs personnalisé
 - Suppression d'un message dans le chat
 
-# Vous pouvez également consultez le site sans installation sur http://telougat.space
+## Vous pouvez également consultez le site sans installation sur http://telougat.space
+
+## Réalisé par DOPPLER Quentin, LAINE Timothé, GROSDOIGT Quentin. & LAGOUTTE Lorenzo.
+
+### Vous pouvez contacter Lorenzo sur discord si vous rencontrez des problèmes.  :+1: :+1: :+1:
