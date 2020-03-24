@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;index.php&#10;#&#9;ressources/modele/ModelLogin.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/composants/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/composants/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
-    </list>
+    <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;index.php&#10;#&#9;ressources/modele/ModelLogin.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +70,7 @@
       <workItem from="1584808353623" duration="14037000" />
       <workItem from="1584874717538" duration="7578000" />
       <workItem from="1584948692888" duration="25791000" />
-      <workItem from="1585035756525" duration="3117000" />
+      <workItem from="1585035756525" duration="3439000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
       <created>1582895461496</created>
