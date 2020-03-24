@@ -1,19 +1,34 @@
 $( document ).ready(function() {
 
   //---------------- Add file to list function --------------------------------
-    var addFile = (p_fileName, p_type) => {
+    var addFile = (p_fileName, p_type, p_size, p_author) => {
 
         if(p_type == 'd'){
             var classDefine = "flex flex-row w-full bg-red-200";
             var idDefine = 'd' + p_fileName;
             var position = $("#parentList");
+            p_size = '';
+           var size = '';
             // var imgAddress = ;
         }else{
             var classDefine = "flex flex-row w-full";
             var idDefine = 'f' + p_fileName;
             var position = $("#parentNode").children().last();
             // var imgAddress = ;
+            var size = '';
+
+            if(p_size  < 100000){
+                 size = "ko";
+                p_size = Math.round(p_size / 1024);
+            }else{
+                 size = "mo";
+                p_size = Math.round((p_size / 1024) / 1024);
+            }
         }
+
+
+
+
 
         <!-- File line Div creation -->
         let fileDiv = document.createElement("div");   <!-- Element creation -->
@@ -23,8 +38,10 @@ $( document ).ready(function() {
         <!-- Check case creation -->
         let checkDiv = document.createElement("div");   <!-- Element creation -->
         checkDiv.setAttribute('class', 'w-1/6 lg:w-1/12 border border-black text-center p-2'); <!-- Class define -->
+        checkDiv.setAttribute('id', p_fileName); <!-- Class define -->
         let checkText = document.createElement("input");   <!-- Element creation -->
         checkText.setAttribute('type', 'checkbox');     <!--  Define as checkbox -->
+        checkText.setAttribute('name', 'checkFile');     <!--  Define as checkbox -->
         // checkText.setAttribute('checked', 'uncheck');     <!--  Define as checkbox -->
         checkText.setAttribute('id', 'check' + p_fileName);     <!-- ID define -->
         checkText.setAttribute('class', 'text-center');     <!-- Class define -->
@@ -32,7 +49,7 @@ $( document ).ready(function() {
         <!-- Name file case creation and Text -->
         let nameDiv = document.createElement("div");   <!-- Element creation -->
         nameDiv.setAttribute('class', 'w-5/6 lg:w-6/12 border border-black text-center'); <!-- Class define -->
-        nameDiv.setAttribute('id', p_fileName); <!-- Class define -->
+        nameDiv.setAttribute('id', 'name' + p_fileName); <!-- Class define -->
         let nameText = document.createElement("p");   <!-- Element creation -->
         nameText.textContent = p_fileName;     <!-- insert text -->
 
@@ -41,14 +58,14 @@ $( document ).ready(function() {
         authorDiv.setAttribute('class', 'w-0 lg:w-3/12 border border-black text-center invisible lg:visible'); <!-- Class define -->
         authorDiv.setAttribute('id', 'author' + p_fileName); <!-- Class define -->
         let authorText = document.createElement("p");   <!-- Element creation -->
-        authorText.textContent = "Timothé LAINE";     <!-- insert text -->
+        authorText.textContent = p_author;     <!-- insert text -->
 
         <!-- Size file case creation and Text -->
         let sizeDiv = document.createElement("div");   <!-- Element creation -->
         sizeDiv.setAttribute('class', 'w-0 lg:w-2/12 border border-black text-center invisible lg:visible'); <!-- Class define -->
         sizeDiv.setAttribute('id', 'size' + p_fileName); <!-- Class define -->
         let sizeText = document.createElement("p");   <!-- Element creation -->
-        sizeText.textContent = "10 mo";     <!-- insert text -->
+        sizeText.textContent = p_size + ' ' + size;     <!-- insert text -->
 
 
         position.after(fileDiv);
@@ -65,17 +82,11 @@ $( document ).ready(function() {
     };
 
     // --------------- Check validation ---------------- //
-    // $("#parentList").children().click(function(e) {
-    //
-    //     console.log(e.target.id);
-    //     console.log($(this));
-    // });
-
     $('#parentNode').bind('click', function(event) {
 
         let childNode= $(event.target);
         let parentNode = childNode.parent().parent();
-
+        console.log(parentNode);
         if(parentNode.attr('id') != 'parentNode' && parentNode.attr('id') != 'parentList') {
 
             if (document.getElementById(parentNode.find("input").attr('id')).checked){
@@ -87,25 +98,52 @@ $( document ).ready(function() {
             }
         }
 
+    });
+
+ //---------------- Delete files function --------------------------------
 
 
+    $("#btnDelete").click(function() {
+
+        var lineTab = new Array();
+        var checkedBoxes = document.querySelectorAll('input[name=checkFile]:checked');
+
+
+       [].forEach.call(checkedBoxes, function (div) {
+           data = { "name":div.parentNode.id };
+           $.post("/api/deleteFiles", data, function (message) {
+               let line = div.parentNode.parentNode;
+               line.remove();
+
+               let messageTab = JSON.parse(message);
+
+               if (message == true){
+
+               }else{
+                   //error
+               }
+
+
+           });
+        });
 
     });
+
 
   //---------------- Display files function --------------------------------
 var displayFiles = () => {
 
     $.get("/api/fileDisplay", function (fileList) {   <!-- Get all file name -->
 
-        let check = JSON.parse(fileList);
-      if (check != 'e') {
-       fileList = fileList.replace(/\[|]|"/g, '');  <!-- Remove special character -->
-       let fileTab = fileList.split(',');   <!-- create file table -->
+        let fileTab = JSON.parse(fileList);
+
+      if (fileTab != 'e') {
 
        fileTab.forEach(function (file) {
-           addFile(file, 'f');
+console.log()
+           addFile(file.Name, file.Type, file.Size, file.Author);
 
-       });
+       })
    }
     });
 };
@@ -162,7 +200,7 @@ var displayFiles = () => {
         $.post('/api/folderCreation', data, function (message) {
 
             let messageTab = JSON.parse(message);
-                addFile(messageTab.name, 'd');
+                addFile(messageTab.name, 'd', 0,  messageTab.author);
         });
     });
 
@@ -187,9 +225,16 @@ var displayFiles = () => {
             data: formData,
             success: function (message,  status) {
                 let messageTab = JSON.parse(message);
-                $("#uploadMessage").text(messageTab.message);
+
                 messageTab.forEach(function (file) {
-                    addFile(file.name, 'f');
+                    if (file.messageType == 's'){
+
+                        $("#uploadMessage").text(messageTab.message);
+                        addFile(file.name, 'f', file.size, file.author);
+                    }else{
+                        $("#uploadMessage").text(messageTab.message);
+                    }
+
                 })
             },
             error: function (message, status, error) {

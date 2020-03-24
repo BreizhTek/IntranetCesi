@@ -1,10 +1,11 @@
 $( document ).ready(function() {
 
-
+<!-------------------- Get the day date-------------------------------------------- -->
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     $("#todayDate").append(date);
 
+ <!-------------------- Modal action-------------------------------------------- -->
     function toggleModal() {
 
         const body = document.querySelector('body');
@@ -14,43 +15,52 @@ $( document ).ready(function() {
         body.classList.toggle('modal-active');
     }
 
-    var openmodal = document.querySelectorAll('.modal-open');
-    for (var i = 0; i < openmodal.length; i++) {
-        openmodal[i].addEventListener('click', function (event) {
+     <!-- Open the modal on click -->
+    var openmodal = document.querySelector('#btnOpen');
+        openmodal.addEventListener('click', function (event) {
             event.preventDefault();
-            toggleModal()
-        })
+            toggleModal();
+        });
+
+     <!-- Close the modal function -->
+    function closeModal(p_id) {
+        var closemodal = document.querySelector('#' + p_id);
+            closemodal.addEventListener('click', toggleModal)
     }
 
-    const overlay = document.querySelector('.modal-overlay');
-    overlay.addEventListener('click', toggleModal);
+    <!-- Close the modal on Close click-->
+    $("#btnClose").click(function () {  closeModal('btnClose'); });
 
-    var closemodal = document.querySelectorAll('.modal-close');
-    for (var i = 0; i < closemodal.length; i++) {
-        closemodal[i].addEventListener('click', toggleModal)
-    }
 
-    document.onkeydown = function (evt) {
-        evt = evt || window.event;
-        var isEscape = false;
-        if ("key" in evt) {
-            isEscape = (evt.key === "Escape" || evt.key === "Esc")
+
+<!-------------------- request to confirm the sign in the DB-------------------------------------------- -->
+    $("#btnValidate").click(function () {  <!--  when the user click on sign button -->
+
+         <!-- Verify that the checkbox is checked -->
+        if (document.getElementById('checkSign').checked) {
+
+            closeModal('btnValidate');  <!-- Clode the modal -->
+
+            $.get("/api/sign", function (message) {
+
+                if(message == 'true'){   <!-- SQL SUCCESS -->
+                    $("#btnOpen").prop('disabled', true);
+                    $("#pen").remove();
+                    $("#btnText").html("Vous avez signé");
+                    $("#btnOpen").prop("class", "font-bold rounded border-b-2 border-green-600 bg-green-500 text-white shadow-md py-2 px-6 inline-flex items-center")
+
+                }else{ <!-- SQL ERROR -->
+
+                }
+
+            }).fail(function() { <!-- ERROR  -->
+
+            });
         } else {
-            isEscape = (evt.keyCode === 27)
+
+            $("#checkValidation").prop('class', 'bg-white border-2 rounded border-red-400 w-6 h-6 flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500')
         }
-        if (isEscape && document.body.classList.contains('modal-active')) {
-            toggleModal()
-        }
-    };
-
-$("#sign").click(function () {
-
-    $.get("/api/sign", function (fileList) {
-
 
     });
-});
-
-
 
 });

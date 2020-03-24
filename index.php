@@ -140,6 +140,13 @@ switch ($request[0]) {
             echo $Deposit->folderCreation($_POST['name'], $_POST['path']);
         }
 
+        elseif(!empty($request[1]) AND $request[1] == 'deleteFiles')
+        {
+            require 'controller/ControllerDeposit.php';
+            $Deposit = new ControllerDeposit();
+            echo $Deposit->delete();
+        }
+
         elseif(!empty($request[1]) AND $request[1] == 'chat')
         {
 
@@ -179,11 +186,6 @@ switch ($request[0]) {
 
         }
 
-        else
-        {
-            abort();
-        }
-
         elseif(!empty($request[1]) AND $request[1] == 'sign')
         {
             require 'controller/ControllerSignature.php';
@@ -192,8 +194,15 @@ switch ($request[0]) {
         }
 
 
-        break;
 
+
+        else
+        {
+            abort();
+        }
+
+
+        break;
 
 
     case 'login' :
@@ -216,7 +225,12 @@ switch ($request[0]) {
     case 'signature' :
         require 'controller/ControllerSignature.php';
         $signature = new ControllerSignature();
-        $signature->index(); // Display pop up to make the electronic signature
+        $signature->index();
+        break;
+
+
+    case 'check' :
+        require 'presence-check.php';
         break;
 
     default:

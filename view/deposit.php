@@ -11,18 +11,18 @@
 
 <!------------------------FILE'S UPLOAD---------------------------------->
 <!--<div>-->
-<!--        <div id="deposit" class="bg-gray-100">-->
-<!--            <form method="POST" id="formUpload" enctype="multipart/form-data">-->
-<!--                <input type="hidden" name="MAX_FILE_SIZE" value="100000"> // define the max file's size -->
-<!--                <input  type="file" name="selectedFile[]" multiple>  // Button to choose the file -->
-<!--                <input type="submit" id="btnUpload" />-->
-<!--            </form>-->
-<!--            <button  id="btnUpload" >DEpo</button> // Button to send the file -->
-<!---->
-<!--        </div>-->
-<!---->
-<!--    <div id="btnDelete">Supprimer</div>-->
-<!--    <div id="uploadMessage">SALUT</div>-->
+        <div id="deposit" class="bg-gray-100">
+            <form method="POST" id="formUpload" enctype="multipart/form-data">
+                <input type="hidden" name="MAX_FILE_SIZE" value="25000000">
+                <input  type="file" name="selectedFile[]" multiple>
+                <input type="submit" id="btnUpload" />
+            </form>
+            <button  id="btnUpload" >DEpo</button>
+
+        </div>
+
+    <div id="btnDelete">Supprimer</div>
+
 <!---->
 <!--    </div>-->
 
@@ -70,7 +70,7 @@
 
 
                 <div class=" bg-red-400 lg:w-11/12 m-2">
-                    <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-full">Supprimer</button>
+                    <button id="btnDel" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded w-full">Supprimer</button>
                 </div>
 
                 <div class=" bg-red-400  lg:w-11/12 m-2">
