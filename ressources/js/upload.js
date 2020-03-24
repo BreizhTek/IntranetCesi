@@ -196,7 +196,7 @@ console.log()
 
     $("#btnValidation").click(function () {
 
-        let data = {"name" : $("#folderInput").val(), "path": ".\\storage\\" + $("#folderInput").val() };
+        let data = {"name" : $("#folderInput").val(), "path": "./storage/" + $("#folderInput").val() };
         $.post('/api/folderCreation', data, function (message) {
 
             let messageTab = JSON.parse(message);

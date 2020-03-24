@@ -19,7 +19,7 @@ class ControllerDeposit
 
         if(isset($_FILES['selectedFile'])) // Check if the file is not empty
         {
-            $folder = '.\\storage\\'; // Define the reception folder
+            $folder = './storage/'; // Define the reception folder
             $forbiddenExtension = array('.php'); // Define the forbidden extension for the security
             $fileSizeMax = 250000000; // Define the maximum file's size
             $uploadReturn = array();
@@ -74,7 +74,7 @@ class ControllerDeposit
 
     public function delete(){
 
-        $folderAddress = ".\\storage\\"; // folder address.
+        $folderAddress = "./storage/"; // folder address.
         if (isset($_POST['name'])) // Check if  name if empty
         {
                 $fileName = $folderAddress . $_POST['name'];
