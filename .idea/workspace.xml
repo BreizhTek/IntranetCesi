@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c6b2261-0e30-40bd-86b2-8f8dd2f252d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ControllerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +186,10 @@
     </state>
     <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582790673165" />
     <state x="2979" y="463" width="349" height="151" key="NewPhpFileDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584978065049" />
+    <state x="3046" y="280" width="298" height="553" key="RollbackChangesDialog" timestamp="1585058525845">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3046" y="280" width="298" height="553" key="RollbackChangesDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585058525845" />
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor" timestamp="1584949763653">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
