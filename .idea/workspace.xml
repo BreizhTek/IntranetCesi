@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c7e6a4-5f7b-481f-a310-6c8219cea78c" name="Default Changelist" comment="Commit Quentin DOP : modification de la partie loginController et de la vue login.php - finalisation partie authentification">
-      <change afterPath="$PROJECT_DIR$/controller/ControllerDb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/api/ApiChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/api/ApiChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/api/ApiChat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/modele/ModelChat.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelChat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSocketAuthorization.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSocketAuthorization.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/server-chat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Chat/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/Chat/room.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/Chat/room.php" afterDir="false" />
     </list>
@@ -112,6 +113,7 @@
       <workItem from="1583589429306" duration="1276000" />
       <workItem from="1584396013651" duration="35000" />
       <workItem from="1584949623289" duration="4265000" />
+      <workItem from="1585035964714" duration="3883000" />
     </task>
     <servers />
   </component>
@@ -174,10 +176,10 @@
     </state>
     <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582789498845" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585035963820" />
-    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1584958756176">
+    <state x="2892" y="165" width="615" height="780" key="find.popup" timestamp="1585039289061">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
-    <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584958756176" />
+    <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585039289061" />
     <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

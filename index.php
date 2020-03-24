@@ -4,6 +4,7 @@ session_start();
 
 require __DIR__ . "/functions.php";
 require __DIR__ . "/controller/ControllerChat.php";
+require_once "./db.php";
 require_once "./controller/api/ApiChat.php";
 
 $request = $_SERVER['REQUEST_URI'];
@@ -19,6 +20,10 @@ function abort()
     exit();
 }
 
+if (!$_SESSION OR empty($_SESSION) OR count($_SESSION) == 0)
+{
+    $request[0] = 'login';
+}
 
 switch ($request[0]) {
     case '/' :
