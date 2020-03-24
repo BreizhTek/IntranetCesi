@@ -9,7 +9,9 @@
       <change afterPath="$PROJECT_DIR$/../userexo/modele/dao_inscription.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../userexo/ok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/allUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/allUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +117,14 @@
       <workItem from="1585035964714" duration="3883000" />
       <workItem from="1585041935832" duration="553000" />
     </task>
+    <task id="LOCAL-00001" summary="Correction user.php">
+      <created>1585059036840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585059036840</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +158,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/BreizhTek/IntranetCesi&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml" />
     <MESSAGE value="Commit Quentin DOPPLER" />
     <MESSAGE value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Quentin DOP : modification de la partie loginController et de la vue login.php" />
+    <MESSAGE value="Correction user.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction user.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2952" y="360" width="486" height="392" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585056908291">
@@ -159,9 +170,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2933" y="304" width="524" height="504" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584960309959" />
-    <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1582895456748">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2249" y="113" width="1342" height="836" key="CommitChangelistDialog2" timestamp="1585059034854">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="2249" y="113" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585059034854" />
     <state x="329" y="116" width="1342" height="836" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1582895456748" />
     <state x="2219" y="84" width="2048" height="864" key="DiffContextDialog" timestamp="1585043061515">
       <screen x="1920" y="0" width="2560" height="1080" />
@@ -194,10 +206,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2704" y="190" width="992" height="733" key="SettingsEditor/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1584949763653" />
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585058446521">
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2" timestamp="1585059051465">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585058446521" />
+    <state x="2472" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585059051465" />
     <state x="2795" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1585035963820">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -207,9 +219,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2892" y="165" width="615" height="780" key="find.popup/1920.0.2560.1080/0.30.1920.1051@1920.0.2560.1080" timestamp="1585039289061" />
-    <state x="677" y="331" key="git4idea.merge.GitPullDialog" timestamp="1582895470307">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2597" y="322" key="git4idea.merge.GitPullDialog" timestamp="1585059042269">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="2597" y="322" key="git4idea.merge.GitPullDialog/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1585059042269" />
     <state x="677" y="331" key="git4idea.merge.GitPullDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1582895470307" />
     <state x="2920" y="470" width="540" height="174" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585046724554">
       <screen x="1920" y="0" width="2560" height="1080" />

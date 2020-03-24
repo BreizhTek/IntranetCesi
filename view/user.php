@@ -195,7 +195,7 @@
                 Fichier : <input type="file" name="Picture" value="<?php echo(($row <> "") ? $row['Picture'] : "") ?>">
             </div>
             <?php
-            if (isset($row['Picture'])){
+            if (isset($row['Picture']) && $row['Picture'] <> "" && $row['Picture'] <> null){
                 ?>
                 <img class="h-64 w-56" src="..\\storage\\users\\<?php echo $row['Picture'] ?>">
                 <?php
