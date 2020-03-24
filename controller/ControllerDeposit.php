@@ -11,8 +11,7 @@ class ControllerDeposit
     }
 
      public function index() {
-
-           require './ressources/composants/header.php'; // HEADER
+//         require './ressources/composants/templatePage.php';
            require './view/deposit.php';
       }
 
@@ -98,7 +97,7 @@ class ControllerDeposit
            }
            return json_encode($fileList);
        }else{
-           return json_encode('La création de dossier a échoué.');
+           return json_encode(false);
        }
 
 

@@ -4,14 +4,7 @@
     <list default="true" id="be4ca205-511d-4093-bbd9-1b6832d5052d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ControllerDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ControllerUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ControllerUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ressources/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelDeposit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" beforeDir="false" afterPath="$PROJECT_DIR$/ressources/modele/ModelSignature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/Nouveau document texte.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/users/noprofil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.txt" beforeDir="false" afterPath="$PROJECT_DIR$/store.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/deposit.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/deposit.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

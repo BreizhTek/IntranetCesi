@@ -140,20 +140,19 @@ $( document ).ready(function() {
     });
 
 
-//---------------- Display files function --------------------------------
+  //---------------- Display files function --------------------------------
 var displayFiles = () => {
 
     $.get("/api/fileDisplay", function (fileList) {   <!-- Get all file name -->
 
         let fileTab = JSON.parse(fileList);
 
-      if (fileTab != 'e') {
-
        fileTab.forEach(function (file) {
+
            addFile(file.Name, file.Type, file.Size, file.Author);
 
-       })
-   }
+       });
+
     });
 };
 
@@ -195,6 +194,7 @@ var displayFiles = () => {
                 $("#folderInput").addClass("w-9/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer");
 
                 $("#btnValidation").prop('disabled', false);
+                $("#btnValidation").removeClass();
                 $("#btValidation").addClass("w-3/12 p-2 flex flex-row items-center  justify-center bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white");
             }
         }
@@ -254,8 +254,8 @@ var displayFiles = () => {
         });
 
     });
-    $("#insertName").hide();
 
+    $("#insertName").hide();
     displayFiles();     <!-- Display file -->
 
 
