@@ -79,7 +79,7 @@ switch ($request[0]) {
             echo  $Deposit->display();
         }
 
-        elseif(!empty($request[1]) AND $request[1] == 'fileDelete')
+        elseif(!empty($request[1]) AND $request[1] == 'deleteFiles')
         {
             require 'controller/ControllerDeposit.php';
             $Deposit = new ControllerDeposit();
